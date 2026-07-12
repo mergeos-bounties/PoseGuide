@@ -1,0 +1,19 @@
+{
+  "id": "library_nook",
+  "name": "Library Nook",
+  "tags": [
+    "indoor",
+    "warm",
+    "books",
+    "portrait",
+    "quiet",
+    "editorial"
+  ],
+  "expected_poses": [
+    "kneel_profile",
+    "seated_profile",
+    "looking_away",
+    "over_shoulder"
+  ],
+  "notes": "Warm tungsten shelves; shallow DOF; quiet contemplative mood."
+}

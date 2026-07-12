@@ -1,0 +1,90 @@
+{
+  "id": "kneel_profile",
+  "name": "Kneel Profile",
+  "standing": false,
+  "tags": [
+    "indoor",
+    "studio",
+    "profile",
+    "portrait",
+    "editorial",
+    "fashion"
+  ],
+  "tips": [
+    "Kneel tall through the spine",
+    "Front knee soft; back foot relaxed",
+    "Chin slightly lifted off the shoulder"
+  ],
+  "camera_cues": [
+    "profile or three-quarter",
+    "mid-body crop option",
+    "soft side key light"
+  ],
+  "joints": {
+    "nose": [
+      0.58,
+      0.26,
+      0.05
+    ],
+    "l_shoulder": [
+      0.48,
+      0.36,
+      0.0
+    ],
+    "r_shoulder": [
+      0.62,
+      0.36,
+      0.08
+    ],
+    "l_elbow": [
+      0.44,
+      0.48,
+      0.0
+    ],
+    "r_elbow": [
+      0.68,
+      0.48,
+      0.05
+    ],
+    "l_wrist": [
+      0.46,
+      0.58,
+      0.0
+    ],
+    "r_wrist": [
+      0.66,
+      0.56,
+      0.02
+    ],
+    "l_hip": [
+      0.5,
+      0.58,
+      0.0
+    ],
+    "r_hip": [
+      0.58,
+      0.58,
+      0.04
+    ],
+    "l_knee": [
+      0.48,
+      0.78,
+      0.05
+    ],
+    "r_knee": [
+      0.62,
+      0.72,
+      0.08
+    ],
+    "l_ankle": [
+      0.46,
+      0.92,
+      0.05
+    ],
+    "r_ankle": [
+      0.7,
+      0.82,
+      0.1
+    ]
+  }
+}
