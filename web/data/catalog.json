@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.5",
+  "poseguide_version": "0.2.6",
   "poses": [
     {
       "camera_cues": [
@@ -1185,6 +1185,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "power_stance",
+        "looking_away",
+        "over_shoulder",
+        "lean_on_rail"
+      ],
+      "id": "rooftop_night",
+      "mood": [],
+      "name": "Rooftop Night City",
+      "tags": [
+        "outdoor",
+        "urban",
+        "night",
+        "city",
+        "dramatic",
+        "portrait"
+      ]
+    },
+    {
       "composition": {
         "leading_lines": "crosswalk",
         "shutter": "fast"
@@ -1262,11 +1282,13 @@
     "cafe",
     "casual",
     "cinematic",
+    "city",
     "cityscape",
     "classic",
     "clean",
     "confident",
     "daylight",
+    "dramatic",
     "dynamic",
     "edgy",
     "editorial",
@@ -1281,6 +1303,7 @@
     "moody",
     "motion",
     "natural light",
+    "night",
     "outdoor",
     "portrait",
     "professional",

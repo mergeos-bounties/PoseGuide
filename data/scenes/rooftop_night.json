@@ -1,0 +1,7 @@
+{
+  "id": "rooftop_night",
+  "name": "Rooftop Night City",
+  "tags": ["outdoor", "urban", "night", "city", "dramatic", "portrait"],
+  "expected_poses": ["power_stance", "looking_away", "over_shoulder", "lean_on_rail"],
+  "notes": "City lights bokeh; strong silhouette edges; cool contrast."
+}
