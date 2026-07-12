@@ -1,0 +1,19 @@
+{
+  "id": "subway_platform",
+  "name": "Subway Platform",
+  "tags": [
+    "urban",
+    "indoor",
+    "transit",
+    "candid",
+    "cool_light",
+    "street"
+  ],
+  "expected_poses": [
+    "lean_forward",
+    "walk_toward_camera",
+    "hands_in_pockets",
+    "looking_away"
+  ],
+  "notes": "Cool fluorescent wash; leading lines from tracks; keep subject sharp."
+}

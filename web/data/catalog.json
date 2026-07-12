@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.9",
+  "poseguide_version": "0.2.10",
   "poses": [
     {
       "camera_cues": [
@@ -526,6 +526,96 @@
         "kneel tall through the spine",
         "front knee soft; back foot relaxed",
         "chin slightly lifted off the shoulder"
+      ]
+    },
+    {
+      "camera_cues": [
+        "slight high angle",
+        "three-quarter body",
+        "motion blur option"
+      ],
+      "id": "lean_forward",
+      "joints": {
+        "l_ankle": [
+          0.4,
+          0.9,
+          0.08
+        ],
+        "l_elbow": [
+          0.36,
+          0.46,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          -0.02
+        ],
+        "l_knee": [
+          0.42,
+          0.72,
+          0.05
+        ],
+        "l_shoulder": [
+          0.4,
+          0.34,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.56,
+          0.0
+        ],
+        "nose": [
+          0.52,
+          0.24,
+          0.05
+        ],
+        "r_ankle": [
+          0.58,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.64,
+          0.46,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.34,
+          0.02
+        ],
+        "r_wrist": [
+          0.62,
+          0.56,
+          0.0
+        ]
+      },
+      "name": "Lean Forward",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "candid",
+        "street",
+        "dynamic",
+        "portrait",
+        "editorial"
+      ],
+      "tips": [
+        "hinge from hips, not rounded upper back",
+        "weight mostly on front foot",
+        "hands free or lightly clasped"
       ]
     },
     {
@@ -1581,6 +1671,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "lean_forward",
+        "walk_toward_camera",
+        "hands_in_pockets",
+        "looking_away"
+      ],
+      "id": "subway_platform",
+      "mood": [],
+      "name": "Subway Platform",
+      "tags": [
+        "urban",
+        "indoor",
+        "transit",
+        "candid",
+        "cool_light",
+        "street"
+      ]
+    },
+    {
       "composition": {
         "background": "texture_wall",
         "subject_placement": "center_left"
@@ -1622,6 +1732,7 @@
     "clean",
     "colorful",
     "confident",
+    "cool_light",
     "crowded",
     "daylight",
     "dramatic",
@@ -1655,6 +1766,7 @@
     "soft_light",
     "street",
     "studio",
+    "transit",
     "urban",
     "wall",
     "warm",
