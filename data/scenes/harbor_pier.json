@@ -1,0 +1,19 @@
+{
+  "id": "harbor_pier",
+  "name": "Harbor Pier Morning",
+  "tags": [
+    "outdoor",
+    "water",
+    "morning",
+    "travel",
+    "blue",
+    "wide"
+  ],
+  "expected_poses": [
+    "point_forward",
+    "walk_toward_camera",
+    "looking_away",
+    "lean_on_rail"
+  ],
+  "notes": "Cool marine light; long pier lines; keep horizon level."
+}

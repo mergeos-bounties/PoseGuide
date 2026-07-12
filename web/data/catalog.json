@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.13",
+  "poseguide_version": "0.2.14",
   "poses": [
     {
       "camera_cues": [
@@ -1151,6 +1151,96 @@
     },
     {
       "camera_cues": [
+        "three-quarter body",
+        "space in point direction",
+        "mid shutter"
+      ],
+      "id": "point_forward",
+      "joints": {
+        "l_ankle": [
+          0.38,
+          0.9,
+          0.08
+        ],
+        "l_elbow": [
+          0.34,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.42,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.72,
+          0.05
+        ],
+        "l_shoulder": [
+          0.38,
+          0.34,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.6,
+          0.0
+        ],
+        "nose": [
+          0.48,
+          0.22,
+          0.02
+        ],
+        "r_ankle": [
+          0.56,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.36,
+          0.05
+        ],
+        "r_hip": [
+          0.54,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.34,
+          0.0
+        ],
+        "r_wrist": [
+          0.86,
+          0.34,
+          0.08
+        ]
+      },
+      "name": "Point Forward",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "action",
+        "directional",
+        "editorial",
+        "portrait",
+        "dynamic"
+      ],
+      "tips": [
+        "extend arm fully without locking elbow hard",
+        "eyes follow the point",
+        "plant front foot toward camera direction"
+      ]
+    },
+    {
+      "camera_cues": [
         "straight-on or slight low angle"
       ],
       "id": "power_stance",
@@ -1790,6 +1880,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "point_forward",
+        "walk_toward_camera",
+        "looking_away",
+        "lean_on_rail"
+      ],
+      "id": "harbor_pier",
+      "mood": [],
+      "name": "Harbor Pier Morning",
+      "tags": [
+        "outdoor",
+        "water",
+        "morning",
+        "travel",
+        "blue",
+        "wide"
+      ]
+    },
+    {
       "composition": {
         "fill": "bounce",
         "key_light": "window"
@@ -2051,6 +2161,7 @@
     "athletic",
     "balcony",
     "beach",
+    "blue",
     "books",
     "business",
     "cafe",
@@ -2066,6 +2177,7 @@
     "cool_light",
     "crowded",
     "daylight",
+    "directional",
     "dramatic",
     "dynamic",
     "edgy",
@@ -2104,9 +2216,11 @@
     "thoughtful",
     "trail",
     "transit",
+    "travel",
     "urban",
     "wall",
     "warm",
+    "water",
     "wide",
     "window",
     "yoga"
