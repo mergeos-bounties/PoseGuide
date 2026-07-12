@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 from poseguide.config import RUNS_DIR
 from poseguide.data.loader import list_scene_files, load_scene

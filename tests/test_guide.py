@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from poseguide.data.loader import list_pose_files, list_sample_files, list_scene_files
+from poseguide.data.loader import list_sample_files, list_scene_files
 from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_tags
 from poseguide.guide.score import score_subject_against_pose
 from poseguide.render.overlay import write_guidance_overlay
