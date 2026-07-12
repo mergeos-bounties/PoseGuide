@@ -9,13 +9,15 @@ from rich.table import Table
 from poseguide import __version__
 from poseguide.config import OUT_DIR
 from poseguide.data.loader import list_pose_files, list_scene_files, load_pose, load_scene
+from poseguide.guide.demo import PRESETS, run_demo
 from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_tags
 from poseguide.guide.score import score_subject_against_pose
 from poseguide.render.overlay import write_guidance_overlay
+from poseguide.render.svg import render_pose_svg
 from poseguide.train.toy_train import train_toy
 
 app = typer.Typer(
-    help="PoseGuide — photography pose guidance training toolkit.",
+    help="PoseGuide — photography pose guidance (scene → standing pose coach).",
     no_args_is_help=True,
 )
 poses_app = typer.Typer(help="Standing pose catalog")
@@ -35,6 +37,19 @@ def version_cmd() -> None:
     console.print(f"Poses: {len(list_pose_files())} | Scenes: {len(list_scene_files())}")
 
 
+@app.command("demo")
+def demo_cmd(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
+    """End-to-end demo: preset scene tags → pose recommendations + SVG stick figure."""
+    try:
+        result = run_demo(preset)
+    except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        console.print(f"Presets: {', '.join(PRESETS)}")
+        raise typer.Exit(1) from exc
+    console.print_json(data=result)
+    console.print(f"[green]SVG[/green] {result.get('svg_path')}")
+
+
 @poses_app.command("list")
 def poses_list() -> None:
     files = list_pose_files()
@@ -50,6 +65,20 @@ def poses_list() -> None:
         tags = ", ".join(pose.get("tags") or [])
         table.add_row(str(pose.get("id")), str(pose.get("name")), tags)
     console.print(table)
+
+
+@poses_app.command("svg")
+def poses_svg(
+    pose: str = typer.Option(..., "--pose", "-p"),
+    out: Path | None = typer.Option(None, "--out", "-o"),
+) -> None:
+    out_path = out or (OUT_DIR / f"{pose}.svg")
+    try:
+        path = render_pose_svg(pose, out_path)
+    except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(1) from exc
+    console.print(f"[green]Wrote[/green] {path}")
 
 
 @scenes_app.command("list")
@@ -73,10 +102,11 @@ def scenes_list() -> None:
 @guide_app.command("recommend")
 def guide_recommend(
     scene: Path | None = typer.Option(None, "--scene", "-s", exists=True, dir_okay=False),
-    tags: str | None = typer.Option(None, "--tags", "-t", help="Comma-separated scene tags"),
+    tags: str | None = typer.Option(None, "--tags", "-t"),
     top: int = typer.Option(3, "--top", "-k", min=1, max=20),
     subject: Path | None = typer.Option(None, "--subject", exists=True, dir_okay=False),
     overlay_out: Path | None = typer.Option(None, "--overlay-out"),
+    svg: bool = typer.Option(True, "--svg/--no-svg"),
 ) -> None:
     if scene is None and not tags:
         console.print("[red]Provide --scene or --tags[/red]")
@@ -86,10 +116,13 @@ def guide_recommend(
     else:
         result = recommend_for_tags(tags or "", top_k=top)
     console.print_json(data=result)
-    if overlay_out or result.get("recommendations"):
-        out = overlay_out or (OUT_DIR / "last_overlay.json")
-        path = write_guidance_overlay(result, out)
-        console.print(f"[dim]overlay[/dim] {path}")
+    out = overlay_out or (OUT_DIR / "last_overlay.json")
+    path = write_guidance_overlay(result, out)
+    console.print(f"[dim]overlay[/dim] {path}")
+    if svg and result.get("recommendations"):
+        pose_id = str(result["recommendations"][0]["pose_id"])
+        svg_path = render_pose_svg(pose_id, OUT_DIR / f"{pose_id}.svg")
+        console.print(f"[dim]svg[/dim] {svg_path}")
 
 
 @guide_app.command("score")
@@ -102,6 +135,16 @@ def guide_score(
     except KeyError as exc:
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(code=1) from exc
+    console.print_json(data=result)
+
+
+@guide_app.command("demo")
+def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
+    try:
+        result = run_demo(preset)
+    except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(1) from exc
     console.print_json(data=result)
 
 

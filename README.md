@@ -32,30 +32,17 @@ pip install -e ".[dev]"
 poseguide --help
 ```
 
-## Commands
+## Commands (runnable)
 
 ```bash
-# Version + catalog size
 poseguide version
-
-# List bundled standing poses
+poseguide demo --preset beach          # recommend + SVG stick figure
 poseguide poses list
-
-# List scene samples
 poseguide scenes list
-
-# Recommend poses for a scene file or free-text tags
-poseguide guide recommend --scene data/scenes/beach_sunset.json
 poseguide guide recommend --tags "urban,wall,daylight" --top 3
-
-# Score a subject landmark sequence against a target pose
 poseguide guide score --pose contrapposto --subject data/samples/subject_contrapposto.json
-
-# Train toy ranker report
+poseguide poses svg --pose power_stance --out data/out/power.svg
 poseguide train toy --epochs 3
-
-# Export last training report
-poseguide train report
 ```
 
 ## Layout
