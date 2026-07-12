@@ -1,0 +1,1186 @@
+{
+  "poseguide_version": "0.2.3",
+  "poses": [
+    {
+      "camera_cues": [
+        "chest-up or 3/4"
+      ],
+      "id": "arms_crossed",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.48,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.55,
+          0.45,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.52,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.45,
+          0.45,
+          0.0
+        ]
+      },
+      "name": "Arms Crossed",
+      "standing": true,
+      "tags": [
+        "studio",
+        "indoor",
+        "portrait",
+        "confident",
+        "business"
+      ],
+      "tips": [
+        "soft grip, not clenched",
+        "one hip slightly out"
+      ]
+    },
+    {
+      "camera_cues": [
+        "3/4 body crop",
+        "eye-level or slight low angle"
+      ],
+      "id": "contrapposto",
+      "joints": {
+        "l_ankle": [
+          0.42,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.56,
+          0.0
+        ],
+        "l_knee": [
+          0.43,
+          0.74,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.57,
+          0.88,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.71,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.64,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Contrapposto",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "outdoor",
+        "urban",
+        "daylight",
+        "classic"
+      ],
+      "tips": [
+        "weight on one leg",
+        "soft s-curve in the torso",
+        "relax the free shoulder"
+      ]
+    },
+    {
+      "camera_cues": [
+        "vertical frame",
+        "leave headroom"
+      ],
+      "id": "hands_in_pockets",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.4,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.6,
+          0.48,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.56,
+          0.58,
+          0.0
+        ]
+      },
+      "name": "Hands in Pockets",
+      "standing": true,
+      "tags": [
+        "urban",
+        "casual",
+        "street",
+        "daylight",
+        "wall"
+      ],
+      "tips": [
+        "thumbs out of pockets for natural hands",
+        "slight lean into the wall"
+      ]
+    },
+    {
+      "camera_cues": [
+        "full body if background is strong"
+      ],
+      "id": "hands_on_hips",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.64,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Hands on Hips",
+      "standing": true,
+      "tags": [
+        "beach",
+        "outdoor",
+        "casual",
+        "daylight",
+        "portrait"
+      ],
+      "tips": [
+        "elbows soft",
+        "weight on back leg"
+      ]
+    },
+    {
+      "camera_cues": [
+        "include environment",
+        "rule of thirds on subject"
+      ],
+      "id": "lean_on_rail",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.42,
+          0.4,
+          0.0
+        ],
+        "l_hip": [
+          0.46,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.48,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.58,
+          0.4,
+          0.0
+        ],
+        "r_hip": [
+          0.54,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.48,
+          0.0
+        ]
+      },
+      "name": "Lean on Rail",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "urban",
+        "balcony",
+        "cityscape",
+        "evening"
+      ],
+      "tips": [
+        "elbow soft on the rail",
+        "hips back slightly"
+      ]
+    },
+    {
+      "camera_cues": [
+        "profile or 3/4 face",
+        "negative space on gaze side"
+      ],
+      "id": "looking_away",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.54,
+          0.13,
+          0.05
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.64,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Looking Away",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "golden_hour",
+        "outdoor",
+        "emotional",
+        "beach"
+      ],
+      "tips": [
+        "chin slightly down",
+        "eyes toward the light source"
+      ]
+    },
+    {
+      "camera_cues": [
+        "shallow dof",
+        "catchlight in eyes"
+      ],
+      "id": "over_shoulder",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.48,
+          0.3,
+          0.05
+        ],
+        "l_wrist": [
+          0.36,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.56,
+          0.14,
+          0.05
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.28,
+          -0.02
+        ],
+        "r_wrist": [
+          0.64,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Over the Shoulder",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "golden_hour",
+        "outdoor",
+        "romantic",
+        "forest"
+      ],
+      "tips": [
+        "twist torso gently",
+        "chin toward shoulder"
+      ]
+    },
+    {
+      "camera_cues": [
+        "straight-on or slight low angle"
+      ],
+      "id": "power_stance",
+      "joints": {
+        "l_ankle": [
+          0.4,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.27,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.6,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.27,
+          0.0
+        ],
+        "r_wrist": [
+          0.64,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Power Stance",
+      "standing": true,
+      "tags": [
+        "urban",
+        "business",
+        "indoor",
+        "studio",
+        "confident"
+      ],
+      "tips": [
+        "feet shoulder-width",
+        "shoulders back",
+        "chin level"
+      ]
+    },
+    {
+      "camera_cues": [
+        "three-quarter or pure profile",
+        "eye-level or slightly above"
+      ],
+      "id": "seated_profile",
+      "joints": {
+        "l_ankle": [
+          0.48,
+          0.88,
+          0.05
+        ],
+        "l_elbow": [
+          0.38,
+          0.48,
+          -0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.46,
+          0.74,
+          0.05
+        ],
+        "l_shoulder": [
+          0.42,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.4,
+          0.58,
+          0.0
+        ],
+        "nose": [
+          0.55,
+          0.18,
+          0.05
+        ],
+        "r_ankle": [
+          0.6,
+          0.86,
+          0.08
+        ],
+        "r_elbow": [
+          0.62,
+          0.46,
+          0.06
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.02
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.08
+        ],
+        "r_shoulder": [
+          0.58,
+          0.3,
+          0.08
+        ],
+        "r_wrist": [
+          0.6,
+          0.56,
+          0.04
+        ]
+      },
+      "name": "Seated Profile",
+      "standing": false,
+      "tags": [
+        "studio",
+        "indoor",
+        "portrait",
+        "profile",
+        "editorial"
+      ],
+      "tips": [
+        "sit tall with weight on one hip",
+        "turn shoulders slightly toward camera",
+        "hands relaxed on lap or chair arm"
+      ]
+    },
+    {
+      "camera_cues": [
+        "shutter 1/250+",
+        "lead room in front"
+      ],
+      "id": "walk_toward_camera",
+      "joints": {
+        "l_ankle": [
+          0.48,
+          0.86,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.48,
+          0.7,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.54,
+          0.74,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.64,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Walk Toward Camera",
+      "standing": true,
+      "tags": [
+        "street",
+        "urban",
+        "motion",
+        "daylight",
+        "outdoor"
+      ],
+      "tips": [
+        "mid-stride freeze",
+        "front foot toward camera"
+      ]
+    },
+    {
+      "camera_cues": [
+        "expose for face",
+        "include window rim light"
+      ],
+      "id": "window_light_stand",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.28,
+          0.02
+        ],
+        "l_wrist": [
+          0.36,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.48,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.56,
+          0.28,
+          -0.02
+        ],
+        "r_wrist": [
+          0.64,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Window Light Stand",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "window",
+        "soft_light",
+        "portrait",
+        "home"
+      ],
+      "tips": [
+        "face the window at 45 degrees",
+        "far shoulder slightly back"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "composition": {
+        "horizon": "lower_third",
+        "subject_placement": "right_third"
+      },
+      "expected_poses": [
+        "looking_away",
+        "hands_on_hips",
+        "over_shoulder"
+      ],
+      "id": "beach_sunset",
+      "mood": [
+        "warm",
+        "romantic"
+      ],
+      "name": "Beach Sunset",
+      "tags": [
+        "beach",
+        "outdoor",
+        "golden_hour",
+        "portrait",
+        "daylight"
+      ]
+    },
+    {
+      "composition": {
+        "include": "skyline",
+        "subject_placement": "left_third"
+      },
+      "expected_poses": [
+        "lean_on_rail",
+        "looking_away",
+        "contrapposto"
+      ],
+      "id": "city_balcony",
+      "mood": [
+        "cinematic"
+      ],
+      "name": "City Balcony",
+      "tags": [
+        "urban",
+        "balcony",
+        "cityscape",
+        "evening",
+        "outdoor"
+      ]
+    },
+    {
+      "composition": {
+        "depth": "path_leading_lines"
+      },
+      "expected_poses": [
+        "over_shoulder",
+        "looking_away",
+        "contrapposto"
+      ],
+      "id": "forest_path",
+      "mood": [
+        "soft",
+        "moody"
+      ],
+      "name": "Forest Path",
+      "tags": [
+        "forest",
+        "outdoor",
+        "golden_hour",
+        "romantic",
+        "portrait"
+      ]
+    },
+    {
+      "composition": {
+        "fill": "bounce",
+        "key_light": "window"
+      },
+      "expected_poses": [
+        "window_light_stand",
+        "looking_away",
+        "arms_crossed"
+      ],
+      "id": "home_window",
+      "mood": [
+        "intimate"
+      ],
+      "name": "Home Window Light",
+      "tags": [
+        "indoor",
+        "window",
+        "soft_light",
+        "portrait",
+        "home"
+      ]
+    },
+    {
+      "composition": {
+        "vertical_lines": "architecture"
+      },
+      "expected_poses": [
+        "power_stance",
+        "arms_crossed",
+        "hands_in_pockets"
+      ],
+      "id": "office_lobby",
+      "mood": [
+        "professional"
+      ],
+      "name": "Office Lobby",
+      "tags": [
+        "indoor",
+        "business",
+        "urban",
+        "confident",
+        "studio"
+      ]
+    },
+    {
+      "composition": {
+        "leading_lines": "crosswalk",
+        "shutter": "fast"
+      },
+      "expected_poses": [
+        "walk_toward_camera",
+        "hands_in_pockets",
+        "power_stance"
+      ],
+      "id": "street_crossing",
+      "mood": [
+        "dynamic"
+      ],
+      "name": "Street Crossing",
+      "tags": [
+        "street",
+        "urban",
+        "motion",
+        "daylight",
+        "outdoor"
+      ]
+    },
+    {
+      "composition": {
+        "backdrop": "seamless",
+        "lighting": "butterfly_or_loop"
+      },
+      "expected_poses": [
+        "power_stance",
+        "arms_crossed",
+        "hands_on_hips"
+      ],
+      "id": "studio_gray",
+      "mood": [
+        "clean"
+      ],
+      "name": "Studio Gray Backdrop",
+      "tags": [
+        "studio",
+        "indoor",
+        "portrait",
+        "business",
+        "confident"
+      ]
+    },
+    {
+      "composition": {
+        "background": "texture_wall",
+        "subject_placement": "center_left"
+      },
+      "expected_poses": [
+        "hands_in_pockets",
+        "contrapposto",
+        "lean_on_rail"
+      ],
+      "id": "urban_wall",
+      "mood": [
+        "edgy"
+      ],
+      "name": "Urban Wall",
+      "tags": [
+        "urban",
+        "wall",
+        "street",
+        "daylight",
+        "casual"
+      ]
+    }
+  ],
+  "schema": "poseguide.web.catalog.v1",
+  "tags": [
+    "balcony",
+    "beach",
+    "business",
+    "casual",
+    "cinematic",
+    "cityscape",
+    "classic",
+    "clean",
+    "confident",
+    "daylight",
+    "dynamic",
+    "edgy",
+    "editorial",
+    "emotional",
+    "evening",
+    "forest",
+    "golden_hour",
+    "home",
+    "indoor",
+    "intimate",
+    "moody",
+    "motion",
+    "outdoor",
+    "portrait",
+    "professional",
+    "profile",
+    "romantic",
+    "soft",
+    "soft_light",
+    "street",
+    "studio",
+    "urban",
+    "wall",
+    "warm",
+    "window"
+  ]
+}
