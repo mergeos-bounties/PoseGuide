@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PoseGuide Web Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PoseGuide</p>
+        <h1>Scene to pose</h1>
+      </div>
+      <output id="runStatus" class="status-pill">Loading catalog</output>
+    </header>
+
+    <main class="workspace">
+      <section class="controls" aria-label="Scene controls">
+        <label class="field">
+          <span>Scene</span>
+          <select id="scenePreset"></select>
+        </label>
+
+        <fieldset class="tag-field">
+          <legend>Tags</legend>
+          <div id="tagChips" class="chip-grid" aria-live="polite"></div>
+          <div class="inline-control">
+            <input id="customTags" type="text" inputmode="text" autocomplete="off" placeholder="urban, daylight">
+            <button id="addTags" type="button">Add</button>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span>Background</span>
+          <input id="backgroundFile" type="file" accept="image/*">
+        </label>
+
+        <div class="api-row">
+          <label class="switch">
+            <input id="useApi" type="checkbox">
+            <span>Local API</span>
+          </label>
+          <input id="apiUrl" type="url" value="http://localhost:8000" aria-label="Local API URL">
+        </div>
+
+        <label class="field compact">
+          <span>Top poses</span>
+          <select id="topK">
+            <option value="3" selected>3</option>
+            <option value="5">5</option>
+            <option value="8">8</option>
+          </select>
+        </label>
+
+        <button id="recommend" class="primary" type="button">Recommend</button>
+      </section>
+
+      <section class="preview" aria-label="Pose preview">
+        <canvas id="poseCanvas" width="720" height="960"></canvas>
+      </section>
+
+      <section class="results" aria-label="Recommended poses">
+        <div class="section-heading">
+          <h2>Top poses</h2>
+          <output id="sourceLabel">Offline catalog</output>
+        </div>
+        <ol id="resultsList" class="result-list"></ol>
+      </section>
+    </main>
+  </body>
+</html>

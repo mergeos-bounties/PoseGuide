@@ -34,6 +34,7 @@ Product: [mergeos-bounties/PoseGuide](https://github.com/mergeos-bounties/PoseGu
 | **Score** | Compare subject landmarks vs target pose (scaffold) |
 | **Train / eval** | Toy calibration loop + scene evaluation metrics |
 | **Offline demo** | `poseguide demo --preset beach` end-to-end |
+| **Mobile web demo** | Static `web/` UI for scene tags, background preview, and top poses |
 
 ---
 
@@ -63,6 +64,14 @@ poseguide scenes list
 ```
 
 SVG / overlay outputs are written under the configured `OUT_DIR` (see `poseguide.config`).
+
+Static web demo:
+
+```powershell
+python -m http.server 5173
+```
+
+Open `http://localhost:5173/web/` and see [`web/README.md`](web/README.md) for the optional local API contract.
 
 ---
 
@@ -94,6 +103,7 @@ poseguide demo -p studio
 | Pose catalog | `data/poses/` |
 | Scene samples | `data/scenes/` |
 | Demo presets | `poseguide.guide.demo.PRESETS` |
+| Web demo catalog | `web/data/catalog.json` |
 
 ---
 
@@ -105,9 +115,11 @@ src/poseguide/
   guide/          # recommend, score, demo presets
   render/         # SVG stick figure, overlay JSON
   data/loader.py  # poses & scenes
+  web/catalog.py  # static web catalog export
   train/          # toy calibration
   eval/           # metrics
 docs/screenshots/
+web/
 ```
 
 ---
