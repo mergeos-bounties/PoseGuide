@@ -1,0 +1,19 @@
+{
+  "id": "neon_alley",
+  "name": "Neon Alley Night",
+  "tags": [
+    "outdoor",
+    "urban",
+    "night",
+    "neon",
+    "street",
+    "moody"
+  ],
+  "expected_poses": [
+    "hand_on_chin",
+    "lean_forward",
+    "looking_away",
+    "over_shoulder"
+  ],
+  "notes": "Magenta/cyan spill; wet pavement reflections; keep face key from one neon side."
+}
