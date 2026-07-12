@@ -1,0 +1,19 @@
+{
+  "id": "mountain_trail",
+  "name": "Mountain Trail Vista",
+  "tags": [
+    "outdoor",
+    "nature",
+    "trail",
+    "daylight",
+    "wide",
+    "adventure"
+  ],
+  "expected_poses": [
+    "back_to_camera",
+    "walk_toward_camera",
+    "looking_away",
+    "lean_forward"
+  ],
+  "notes": "Distant ridges; cool air haze; keep horizon clean behind subject."
+}

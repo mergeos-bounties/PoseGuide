@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.11",
+  "poseguide_version": "0.2.12",
   "poses": [
     {
       "camera_cues": [
@@ -85,6 +85,96 @@
       "tips": [
         "soft grip, not clenched",
         "one hip slightly out"
+      ]
+    },
+    {
+      "camera_cues": [
+        "full body or 3/4",
+        "rim light edge",
+        "leading lines ahead of subject"
+      ],
+      "id": "back_to_camera",
+      "joints": {
+        "l_ankle": [
+          0.56,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.64,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.56,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.58,
+          0.34,
+          -0.02
+        ],
+        "l_wrist": [
+          0.62,
+          0.6,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.22,
+          -0.05
+        ],
+        "r_ankle": [
+          0.44,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.36,
+          0.48,
+          0.0
+        ],
+        "r_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.44,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.42,
+          0.34,
+          -0.02
+        ],
+        "r_wrist": [
+          0.38,
+          0.6,
+          0.0
+        ]
+      },
+      "name": "Back to Camera",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "editorial",
+        "silhouette",
+        "portrait",
+        "moody",
+        "fashion"
+      ],
+      "tips": [
+        "turn shoulders away; soft glance over one side optional",
+        "weight even or slight hip shift",
+        "hands relaxed at sides or in pockets"
       ]
     },
     {
@@ -1673,6 +1763,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "back_to_camera",
+        "walk_toward_camera",
+        "looking_away",
+        "lean_forward"
+      ],
+      "id": "mountain_trail",
+      "mood": [],
+      "name": "Mountain Trail Vista",
+      "tags": [
+        "outdoor",
+        "nature",
+        "trail",
+        "daylight",
+        "wide",
+        "adventure"
+      ]
+    },
+    {
       "composition": {
         "vertical_lines": "architecture"
       },
@@ -1827,6 +1937,7 @@
   "schema": "poseguide.web.catalog.v1",
   "tags": [
     "action",
+    "adventure",
     "athletic",
     "balcony",
     "beach",
@@ -1872,11 +1983,13 @@
     "profile",
     "quiet",
     "romantic",
+    "silhouette",
     "soft",
     "soft_light",
     "sports",
     "street",
     "studio",
+    "trail",
     "transit",
     "urban",
     "wall",
