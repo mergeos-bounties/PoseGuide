@@ -1,0 +1,23 @@
+{
+  "id": "studio_gray",
+  "name": "Studio Gray Backdrop",
+  "tags": [
+    "studio",
+    "indoor",
+    "portrait",
+    "business",
+    "confident"
+  ],
+  "mood": [
+    "clean"
+  ],
+  "expected_poses": [
+    "power_stance",
+    "arms_crossed",
+    "hands_on_hips"
+  ],
+  "composition": {
+    "backdrop": "seamless",
+    "lighting": "butterfly_or_loop"
+  }
+}

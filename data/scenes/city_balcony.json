@@ -1,0 +1,23 @@
+{
+  "id": "city_balcony",
+  "name": "City Balcony",
+  "tags": [
+    "urban",
+    "balcony",
+    "cityscape",
+    "evening",
+    "outdoor"
+  ],
+  "mood": [
+    "cinematic"
+  ],
+  "expected_poses": [
+    "lean_on_rail",
+    "looking_away",
+    "contrapposto"
+  ],
+  "composition": {
+    "include": "skyline",
+    "subject_placement": "left_third"
+  }
+}

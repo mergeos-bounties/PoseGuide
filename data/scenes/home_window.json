@@ -1,0 +1,23 @@
+{
+  "id": "home_window",
+  "name": "Home Window Light",
+  "tags": [
+    "indoor",
+    "window",
+    "soft_light",
+    "portrait",
+    "home"
+  ],
+  "mood": [
+    "intimate"
+  ],
+  "expected_poses": [
+    "window_light_stand",
+    "looking_away",
+    "arms_crossed"
+  ],
+  "composition": {
+    "key_light": "window",
+    "fill": "bounce"
+  }
+}

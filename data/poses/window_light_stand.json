@@ -1,0 +1,87 @@
+{
+  "id": "window_light_stand",
+  "name": "Window Light Stand",
+  "standing": true,
+  "tags": [
+    "indoor",
+    "window",
+    "soft_light",
+    "portrait",
+    "home"
+  ],
+  "tips": [
+    "Face the window at 45 degrees",
+    "Far shoulder slightly back"
+  ],
+  "camera_cues": [
+    "expose for face",
+    "include window rim light"
+  ],
+  "joints": {
+    "nose": [
+      0.48,
+      0.12,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.28,
+      0.02
+    ],
+    "r_shoulder": [
+      0.56,
+      0.28,
+      -0.02
+    ],
+    "l_elbow": [
+      0.38,
+      0.42,
+      0.0
+    ],
+    "r_elbow": [
+      0.62,
+      0.42,
+      0.0
+    ],
+    "l_wrist": [
+      0.36,
+      0.55,
+      0.0
+    ],
+    "r_wrist": [
+      0.64,
+      0.55,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.45,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.9,
+      0.0
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "office_lobby",
+  "name": "Office Lobby",
+  "tags": [
+    "indoor",
+    "business",
+    "urban",
+    "confident",
+    "studio"
+  ],
+  "mood": [
+    "professional"
+  ],
+  "expected_poses": [
+    "power_stance",
+    "arms_crossed",
+    "hands_in_pockets"
+  ],
+  "composition": {
+    "vertical_lines": "architecture"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "street_crossing",
+  "name": "Street Crossing",
+  "tags": [
+    "street",
+    "urban",
+    "motion",
+    "daylight",
+    "outdoor"
+  ],
+  "mood": [
+    "dynamic"
+  ],
+  "expected_poses": [
+    "walk_toward_camera",
+    "hands_in_pockets",
+    "power_stance"
+  ],
+  "composition": {
+    "leading_lines": "crosswalk",
+    "shutter": "fast"
+  }
+}

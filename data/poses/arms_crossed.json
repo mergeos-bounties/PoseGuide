@@ -1,0 +1,86 @@
+{
+  "id": "arms_crossed",
+  "name": "Arms Crossed",
+  "standing": true,
+  "tags": [
+    "studio",
+    "indoor",
+    "portrait",
+    "confident",
+    "business"
+  ],
+  "tips": [
+    "Soft grip, not clenched",
+    "One hip slightly out"
+  ],
+  "camera_cues": [
+    "chest-up or 3/4"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.12,
+      0.0
+    ],
+    "l_shoulder": [
+      0.42,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.58,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.48,
+      0.42,
+      0.0
+    ],
+    "r_elbow": [
+      0.52,
+      0.42,
+      0.0
+    ],
+    "l_wrist": [
+      0.55,
+      0.45,
+      0.0
+    ],
+    "r_wrist": [
+      0.45,
+      0.45,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.45,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.9,
+      0.0
+    ]
+  }
+}

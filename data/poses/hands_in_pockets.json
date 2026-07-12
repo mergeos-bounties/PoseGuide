@@ -1,0 +1,87 @@
+{
+  "id": "hands_in_pockets",
+  "name": "Hands in Pockets",
+  "standing": true,
+  "tags": [
+    "urban",
+    "casual",
+    "street",
+    "daylight",
+    "wall"
+  ],
+  "tips": [
+    "Thumbs out of pockets for natural hands",
+    "Slight lean into the wall"
+  ],
+  "camera_cues": [
+    "vertical frame",
+    "leave headroom"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.12,
+      0.0
+    ],
+    "l_shoulder": [
+      0.42,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.58,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.4,
+      0.48,
+      0.0
+    ],
+    "r_elbow": [
+      0.6,
+      0.48,
+      0.0
+    ],
+    "l_wrist": [
+      0.44,
+      0.58,
+      0.0
+    ],
+    "r_wrist": [
+      0.56,
+      0.58,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.45,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.9,
+      0.0
+    ]
+  }
+}

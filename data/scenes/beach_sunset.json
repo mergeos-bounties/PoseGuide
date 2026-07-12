@@ -1,0 +1,24 @@
+{
+  "id": "beach_sunset",
+  "name": "Beach Sunset",
+  "tags": [
+    "beach",
+    "outdoor",
+    "golden_hour",
+    "portrait",
+    "daylight"
+  ],
+  "mood": [
+    "warm",
+    "romantic"
+  ],
+  "expected_poses": [
+    "looking_away",
+    "hands_on_hips",
+    "over_shoulder"
+  ],
+  "composition": {
+    "horizon": "lower_third",
+    "subject_placement": "right_third"
+  }
+}

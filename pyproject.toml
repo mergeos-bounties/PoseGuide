@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poseguide"
+version = "0.1.0"
+description = "Pose guidance training: recommend photography poses for backgrounds and standing shots"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "MergeOS / ThanhTrucSolutions" }]
+keywords = ["pose", "photography", "guidance", "mediapipe", "ml", "standing-pose"]
+dependencies = [
+  "typer>=0.12",
+  "rich>=13.7",
+  "pydantic>=2.6",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.4",
+]
+torch = [
+  "torch>=2.2",
+]
+vision = [
+  "opencv-python-headless>=4.9",
+  "mediapipe>=0.10",
+  "Pillow>=10.0",
+]
+api = [
+  "fastapi>=0.110",
+  "uvicorn>=0.27",
+]
+
+[project.scripts]
+poseguide = "poseguide.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

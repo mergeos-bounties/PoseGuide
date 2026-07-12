@@ -1,0 +1,87 @@
+{
+  "id": "power_stance",
+  "name": "Power Stance",
+  "standing": true,
+  "tags": [
+    "urban",
+    "business",
+    "indoor",
+    "studio",
+    "confident"
+  ],
+  "tips": [
+    "Feet shoulder-width",
+    "Shoulders back",
+    "Chin level"
+  ],
+  "camera_cues": [
+    "straight-on or slight low angle"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.12,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.27,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.27,
+      0.0
+    ],
+    "l_elbow": [
+      0.38,
+      0.42,
+      0.0
+    ],
+    "r_elbow": [
+      0.62,
+      0.42,
+      0.0
+    ],
+    "l_wrist": [
+      0.36,
+      0.55,
+      0.0
+    ],
+    "r_wrist": [
+      0.64,
+      0.55,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.4,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.6,
+      0.9,
+      0.0
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "forest_path",
+  "name": "Forest Path",
+  "tags": [
+    "forest",
+    "outdoor",
+    "golden_hour",
+    "romantic",
+    "portrait"
+  ],
+  "mood": [
+    "soft",
+    "moody"
+  ],
+  "expected_poses": [
+    "over_shoulder",
+    "looking_away",
+    "contrapposto"
+  ],
+  "composition": {
+    "depth": "path_leading_lines"
+  }
+}

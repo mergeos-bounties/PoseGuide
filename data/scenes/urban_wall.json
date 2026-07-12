@@ -1,0 +1,23 @@
+{
+  "id": "urban_wall",
+  "name": "Urban Wall",
+  "tags": [
+    "urban",
+    "wall",
+    "street",
+    "daylight",
+    "casual"
+  ],
+  "mood": [
+    "edgy"
+  ],
+  "expected_poses": [
+    "hands_in_pockets",
+    "contrapposto",
+    "lean_on_rail"
+  ],
+  "composition": {
+    "background": "texture_wall",
+    "subject_placement": "center_left"
+  }
+}
