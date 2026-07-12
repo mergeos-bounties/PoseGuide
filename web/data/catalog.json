@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.3",
+  "poseguide_version": "0.2.5",
   "poses": [
     {
       "camera_cues": [
@@ -786,6 +786,95 @@
     },
     {
       "camera_cues": [
+        "slight high angle",
+        "three-quarter body"
+      ],
+      "id": "sit_cross_legged",
+      "joints": {
+        "l_ankle": [
+          0.42,
+          0.7,
+          0.08
+        ],
+        "l_elbow": [
+          0.34,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.32,
+          0.62,
+          0.05
+        ],
+        "l_shoulder": [
+          0.4,
+          0.34,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.58,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.22,
+          0.0
+        ],
+        "r_ankle": [
+          0.58,
+          0.7,
+          0.08
+        ],
+        "r_elbow": [
+          0.66,
+          0.48,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.68,
+          0.62,
+          0.05
+        ],
+        "r_shoulder": [
+          0.6,
+          0.34,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.58,
+          0.0
+        ]
+      },
+      "name": "Sit Cross-Legged",
+      "standing": false,
+      "tags": [
+        "indoor",
+        "studio",
+        "floor",
+        "casual",
+        "yoga",
+        "portrait"
+      ],
+      "tips": [
+        "sit tall through the spine",
+        "hands rest on knees or one hand supports behind",
+        "soft gaze off-camera"
+      ]
+    },
+    {
+      "camera_cues": [
         "shutter 1/250+",
         "lead room in front"
       ],
@@ -985,6 +1074,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "looking_away",
+        "lean_on_rail",
+        "seated_profile",
+        "window_light_stand"
+      ],
+      "id": "cafe_window",
+      "mood": [],
+      "name": "Cafe Window Seat",
+      "tags": [
+        "indoor",
+        "cafe",
+        "window",
+        "natural light",
+        "portrait",
+        "casual"
+      ]
+    },
+    {
       "composition": {
         "include": "skyline",
         "subject_placement": "left_third"
@@ -1150,6 +1259,7 @@
     "balcony",
     "beach",
     "business",
+    "cafe",
     "casual",
     "cinematic",
     "cityscape",
@@ -1162,6 +1272,7 @@
     "editorial",
     "emotional",
     "evening",
+    "floor",
     "forest",
     "golden_hour",
     "home",
@@ -1169,6 +1280,7 @@
     "intimate",
     "moody",
     "motion",
+    "natural light",
     "outdoor",
     "portrait",
     "professional",
@@ -1181,6 +1293,7 @@
     "urban",
     "wall",
     "warm",
-    "window"
+    "window",
+    "yoga"
   ]
 }
