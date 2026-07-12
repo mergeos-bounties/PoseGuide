@@ -141,6 +141,33 @@ def guide_score(
     console.print_json(data=result)
 
 
+@guide_app.command("composition")
+def guide_composition(pose: str = typer.Option(..., "--pose", "-p")) -> None:
+    """Rule-of-thirds composition analysis for a catalog pose."""
+    from poseguide.guide.composition import composition_report
+
+    try:
+        console.print_json(data=composition_report(pose))
+    except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(code=1) from exc
+
+
+@guide_app.command("coach")
+def guide_coach(
+    pose: str = typer.Option(..., "--pose", "-p"),
+    subject: Path | None = typer.Option(None, "--subject", "-i", exists=True, dir_okay=False),
+) -> None:
+    """Coach mode: composition tips + target SVG (+ optional subject score)."""
+    from poseguide.guide.composition import coach_bundle
+
+    try:
+        console.print_json(data=coach_bundle(pose, subject_path=subject))
+    except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(code=1) from exc
+
+
 @guide_app.command("demo")
 def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
     try:
