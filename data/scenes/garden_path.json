@@ -1,0 +1,19 @@
+{
+  "id": "garden_path",
+  "name": "Garden Path Morning",
+  "tags": [
+    "outdoor",
+    "nature",
+    "morning",
+    "green",
+    "soft_light",
+    "portrait"
+  ],
+  "expected_poses": [
+    "stretch_reach",
+    "walk_toward_camera",
+    "looking_away",
+    "contrapposto"
+  ],
+  "notes": "Dappled leaf light; soft gold hour; keep highlights on shoulders."
+}
