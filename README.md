@@ -1,101 +1,140 @@
 # PoseGuide
 
-**PoseGuide** trains and runs **photography pose guidance**:
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-0.2.1-0E8A16.svg)](pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MergeOS](https://img.shields.io/badge/MergeOS-bounties-5319E7.svg)](https://github.com/mergeos-bounties)
+
+**PoseGuide** is a photography **pose coach**: scene tags → ranked standing poses, stick-figure SVG overlays, and offline demos — no camera required for the CLI smoke path.
+
+Product: [mergeos-bounties/PoseGuide](https://github.com/mergeos-bounties/PoseGuide)
+
+---
+
+## Table of contents
+
+- [Highlights](#highlights)
+- [Screenshots](#screenshots)
+- [Quick start](#quick-start)
+- [CLI reference](#cli-reference)
+- [Presets & data](#presets--data)
+- [Architecture](#architecture)
+- [Development](#development)
+- [MergeOS bounties](#mergeos-bounties)
+- [License](#license)
+
+---
+
+## Highlights
 
 | Mode | Description |
 | --- | --- |
-| **Scene → pose** | Background / scene tags → ranked standing poses |
-| **Live coach** | Compare a subject's landmarks to a target pose (scaffold) |
-| **Overlay** | Emit guidance cues for framing (JSON / text overlay stubs) |
+| **Scene → pose** | Tags (beach, urban, studio…) → ranked pose catalog matches |
+| **SVG stick figure** | Render target pose joints as guidance overlay |
+| **Score** | Compare subject landmarks vs target pose (scaffold) |
+| **Train / eval** | Toy calibration loop + scene evaluation metrics |
+| **Offline demo** | `poseguide demo --preset beach` end-to-end |
 
-Built under [mergeos-bounties](https://github.com/mergeos-bounties) so delivery can be funded as MergeOS tasks with MRG payouts.
-
+---
 
 ## Screenshots
 
-Real captures from running the product demo (PoseGuide).
+Live demo captures (recommend + stick figure).
 
-![Beach preset · pose recommend + stick figure](docs/screenshots/demo-beach.png)
+| Beach | Urban | Studio |
+| :---: | :---: | :---: |
+| ![Beach](docs/screenshots/demo-beach.png) | ![Urban](docs/screenshots/demo-urban.png) | ![Studio](docs/screenshots/demo-studio.png) |
+| *Beach preset* | *Urban preset* | *Studio preset* |
 
-*Beach preset · pose recommend + stick figure*
-
-![Urban preset demo](docs/screenshots/demo-urban.png)
-
-*Urban preset demo*
-
-![Studio preset demo](docs/screenshots/demo-studio.png)
-
-*Studio preset demo*
-
-## Stack
-
-- Python 3.11+
-- CLI: `typer` + `rich`
-- Pose library + scene samples (JSON)
-- Toy ranker (tag overlap + landmark prototypes)
-- Optional vision extras (MediaPipe / OpenCV) via bounties
-- Inference API sketch (FastAPI optional)
+---
 
 ## Quick start
 
-```bash
+```powershell
 cd PoseGuide
 python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-
+.\.venv\Scripts\activate
 pip install -e ".[dev]"
-poseguide --help
-```
 
-## Commands (runnable)
-
-```bash
 poseguide version
-poseguide demo --preset beach          # recommend + SVG stick figure
+poseguide demo --preset beach
 poseguide poses list
 poseguide scenes list
-poseguide guide recommend --tags "urban,wall,daylight" --top 3
-poseguide guide score --pose contrapposto --subject data/samples/subject_contrapposto.json
-poseguide poses svg --pose power_stance --out data/out/power.svg
-poseguide train toy --epochs 3
 ```
 
-## Layout
+SVG / overlay outputs are written under the configured `OUT_DIR` (see `poseguide.config`).
 
+---
+
+## CLI reference
+
+| Command | Purpose |
+| --- | --- |
+| `poseguide version` | Version + pose/scene counts |
+| `poseguide demo -p beach` | Full recommend + SVG for a preset |
+| `poseguide poses list` | Standing pose catalog |
+| `poseguide poses svg -p <id>` | Render one pose SVG |
+| `poseguide scenes list` | Scene samples |
+| `poseguide guide …` | Recommend / score helpers |
+| `poseguide train` / `eval` | Toy train + evaluation |
+
+**Presets:** `beach`, `urban`, `studio`, `forest`, `office`
+
+```powershell
+poseguide demo -p urban
+poseguide demo -p studio
 ```
+
+---
+
+## Presets & data
+
+| Area | Location |
+| --- | --- |
+| Pose catalog | `data/poses/` |
+| Scene samples | `data/scenes/` |
+| Demo presets | `poseguide.guide.demo.PRESETS` |
+
+---
+
+## Architecture
+
+```text
 src/poseguide/
   cli.py
-  config.py
-  data/           # loaders for poses + scenes
-  models/         # toy ranker + pose library
-  guide/          # recommend + score pipelines
-  train/          # training stubs
-  render/         # overlay / cue stubs
-  api/            # optional FastAPI
-data/poses/       # standing pose templates
-data/scenes/      # background / scene samples
-data/samples/     # subject landmark demos
-docs/BOUNTY.md
+  guide/          # recommend, score, demo presets
+  render/         # SVG stick figure, overlay JSON
+  data/loader.py  # poses & scenes
+  train/          # toy calibration
+  eval/           # metrics
+docs/screenshots/
 ```
+
+---
+
+## Development
+
+```powershell
+pytest -q
+ruff check src tests
+poseguide demo -p beach
+```
+
+---
 
 ## MergeOS bounties
 
-1. Star this repo + [mergeos](https://github.com/mergeos-bounties/mergeos)
-2. Claim an issue labeled `bounty`
-3. Also claim on MergeOS [issue #1](https://github.com/mergeos-bounties/mergeos/issues/1)
-4. Open a PR with tests/evidence
-5. Maintainer merges and credits MRG (25/50/100/200)
+Star repo + [mergeos](https://github.com/mergeos-bounties/mergeos) → claim bounty issue → PR to **master** → MRG **25–200**.  
+Evidence: demo SVG / screenshots of stick figures + recommend JSON.
 
-See [docs/BOUNTY.md](docs/BOUNTY.md).
+---
 
-## Privacy
+## Tiếng Việt
 
-- Prefer consented photos and public pose datasets with clear licenses.
-- Do not ship private client images without permission.
-- Document dataset licenses in every PR that adds data.
+**PoseGuide** gợi ý tư thế chụp ảnh theo scene (beach/urban/studio…), vẽ stick figure SVG. Chạy: `poseguide demo -p beach`.
+
+---
 
 ## License
 
-MIT
+MIT · MergeOS / ThanhTrucSolutions
