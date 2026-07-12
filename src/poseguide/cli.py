@@ -14,6 +14,7 @@ from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_ta
 from poseguide.guide.score import score_subject_against_pose
 from poseguide.render.overlay import write_guidance_overlay
 from poseguide.render.svg import render_pose_svg
+from poseguide.eval.metrics import evaluate_scenes
 from poseguide.train.toy_train import train_toy
 
 app = typer.Typer(
@@ -24,10 +25,12 @@ poses_app = typer.Typer(help="Standing pose catalog")
 scenes_app = typer.Typer(help="Background / scene samples")
 guide_app = typer.Typer(help="Recommend and score poses")
 train_app = typer.Typer(help="Training")
+eval_app = typer.Typer(help="Evaluation")
 app.add_typer(poses_app, name="poses")
 app.add_typer(scenes_app, name="scenes")
 app.add_typer(guide_app, name="guide")
 app.add_typer(train_app, name="train")
+app.add_typer(eval_app, name="eval")
 console = Console()
 
 
@@ -146,6 +149,19 @@ def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1) from exc
     console.print_json(data=result)
+
+
+@eval_app.command("scenes")
+def eval_scenes(top: int = typer.Option(3, "--top", "-k", min=1, max=20)) -> None:
+    import json
+    from poseguide.config import RUNS_DIR
+
+    report = evaluate_scenes(top_k=top)
+    RUNS_DIR.mkdir(parents=True, exist_ok=True)
+    path = RUNS_DIR / "eval_scenes.json"
+    path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    console.print(f"[green]hit@{top}[/green]={report['hit_at_k']} n={report['n_labeled']}")
+    console.print(f"Report: {path}")
 
 
 @train_app.command("toy")
