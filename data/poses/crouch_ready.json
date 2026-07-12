@@ -1,0 +1,90 @@
+{
+  "id": "crouch_ready",
+  "name": "Crouch Ready",
+  "standing": false,
+  "tags": [
+    "outdoor",
+    "action",
+    "street",
+    "athletic",
+    "dynamic",
+    "portrait"
+  ],
+  "tips": [
+    "Weight on balls of feet",
+    "Knees soft, chest open toward camera",
+    "Hands free near thighs or lightly clasped"
+  ],
+  "camera_cues": [
+    "slight low angle",
+    "three-quarter body",
+    "fast shutter for motion"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.28,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.38,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.38,
+      0.0
+    ],
+    "l_elbow": [
+      0.36,
+      0.5,
+      0.02
+    ],
+    "r_elbow": [
+      0.64,
+      0.5,
+      0.02
+    ],
+    "l_wrist": [
+      0.38,
+      0.6,
+      0.0
+    ],
+    "r_wrist": [
+      0.62,
+      0.6,
+      0.0
+    ],
+    "l_hip": [
+      0.44,
+      0.58,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.58,
+      0.0
+    ],
+    "l_knee": [
+      0.4,
+      0.72,
+      0.05
+    ],
+    "r_knee": [
+      0.6,
+      0.72,
+      0.05
+    ],
+    "l_ankle": [
+      0.42,
+      0.88,
+      0.08
+    ],
+    "r_ankle": [
+      0.58,
+      0.88,
+      0.08
+    ]
+  }
+}

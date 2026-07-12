@@ -1,0 +1,19 @@
+{
+  "id": "market_day",
+  "name": "Outdoor Market Day",
+  "tags": [
+    "outdoor",
+    "street",
+    "crowded",
+    "colorful",
+    "daylight",
+    "candid"
+  ],
+  "expected_poses": [
+    "crouch_ready",
+    "walk_toward_camera",
+    "looking_away",
+    "hands_in_pockets"
+  ],
+  "notes": "Busy stall colors; soft overhead sun; candid motion friendly."
+}

@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.6",
+  "poseguide_version": "0.2.7",
   "poses": [
     {
       "camera_cues": [
@@ -173,6 +173,96 @@
         "weight on one leg",
         "soft s-curve in the torso",
         "relax the free shoulder"
+      ]
+    },
+    {
+      "camera_cues": [
+        "slight low angle",
+        "three-quarter body",
+        "fast shutter for motion"
+      ],
+      "id": "crouch_ready",
+      "joints": {
+        "l_ankle": [
+          0.42,
+          0.88,
+          0.08
+        ],
+        "l_elbow": [
+          0.36,
+          0.5,
+          0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.72,
+          0.05
+        ],
+        "l_shoulder": [
+          0.4,
+          0.38,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.6,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.28,
+          0.0
+        ],
+        "r_ankle": [
+          0.58,
+          0.88,
+          0.08
+        ],
+        "r_elbow": [
+          0.64,
+          0.5,
+          0.02
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.6,
+          0.72,
+          0.05
+        ],
+        "r_shoulder": [
+          0.6,
+          0.38,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.6,
+          0.0
+        ]
+      },
+      "name": "Crouch Ready",
+      "standing": false,
+      "tags": [
+        "outdoor",
+        "action",
+        "street",
+        "athletic",
+        "dynamic",
+        "portrait"
+      ],
+      "tips": [
+        "weight on balls of feet",
+        "knees soft, chest open toward camera",
+        "hands free near thighs or lightly clasped"
       ]
     },
     {
@@ -1163,6 +1253,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "crouch_ready",
+        "walk_toward_camera",
+        "looking_away",
+        "hands_in_pockets"
+      ],
+      "id": "market_day",
+      "mood": [],
+      "name": "Outdoor Market Day",
+      "tags": [
+        "outdoor",
+        "street",
+        "crowded",
+        "colorful",
+        "daylight",
+        "candid"
+      ]
+    },
+    {
       "composition": {
         "vertical_lines": "architecture"
       },
@@ -1276,17 +1386,22 @@
   ],
   "schema": "poseguide.web.catalog.v1",
   "tags": [
+    "action",
+    "athletic",
     "balcony",
     "beach",
     "business",
     "cafe",
+    "candid",
     "casual",
     "cinematic",
     "city",
     "cityscape",
     "classic",
     "clean",
+    "colorful",
     "confident",
+    "crowded",
     "daylight",
     "dramatic",
     "dynamic",
