@@ -1,0 +1,7 @@
+{
+  "id": "cafe_window",
+  "name": "Cafe Window Seat",
+  "tags": ["indoor", "cafe", "window", "natural light", "portrait", "casual"],
+  "expected_poses": ["looking_away", "lean_on_rail", "seated_profile", "window_light_stand"],
+  "notes": "Soft side light from glass; half-body seated or lean."
+}

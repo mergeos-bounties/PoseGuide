@@ -187,7 +187,12 @@ def eval_scenes(top: int = typer.Option(3, "--top", "-k", min=1, max=20)) -> Non
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
     path = RUNS_DIR / "eval_scenes.json"
     path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    console.print(f"[green]hit@{top}[/green]={report['hit_at_k']} n={report['n_labeled']}")
+    console.print(
+        f"[green]hit@{top}[/green]={report['hit_at_k']} "
+        f"P@{top}={report.get('precision_at_k')} "
+        f"R@{top}={report.get('recall_at_k')} "
+        f"n={report['n_labeled']}/{report['n_scenes']}"
+    )
     console.print(f"Report: {path}")
 
 
