@@ -7,7 +7,7 @@
 
 **PoseGuide** is a photography **pose coach**: scene tags → ranked standing poses, stick-figure SVG overlays, and offline demos — no camera required for the CLI smoke path.
 
-Product: [mergeos-bounties/PoseGuide](https://github.com/mergeos-bounties/PoseGuide)
+**Product:** [mergeos-bounties/PoseGuide](https://github.com/mergeos-bounties/PoseGuide)
 
 ---
 
@@ -19,7 +19,7 @@ Product: [mergeos-bounties/PoseGuide](https://github.com/mergeos-bounties/PoseGu
 - [CLI reference](#cli-reference)
 - [Presets & data](#presets--data)
 - [Diagrams](#diagrams)
-- [Architecture](#architecture)
+- [Repository layout](#repository-layout)
 - [Development](#development)
 - [MergeOS bounties](#mergeos-bounties)
 - [License](#license)
@@ -79,7 +79,7 @@ SVG / overlay outputs are written under the configured `OUT_DIR` (see `poseguide
 | `poseguide guide …` | Recommend / score helpers |
 | `poseguide train` / `eval` | Toy train + evaluation |
 
-**Presets:** `beach`, `urban`, `studio`, `forest`, `office`
+**Presets:** `beach` · `urban` · `studio` · `forest` · `office`
 
 ```powershell
 poseguide demo -p urban
@@ -98,18 +98,16 @@ poseguide demo -p studio
 
 ---
 
-
 ## Diagrams
 
-System architecture and workflow — shown full-width below.  
-Open the HTML files for **dark/light theme toggle** and export (PNG/SVG).
+System architecture and workflow — full width. Open the HTML files for **dark/light theme** and export (PNG/SVG).
 
 ### Architecture
 
 [Open interactive diagram](docs/diagrams/architecture.html)
 
 <p align="center">
-  <img src="docs/diagrams/architecture.svg" alt="Architecture diagram" width="100%" />
+  <img src="docs/diagrams/architecture.svg" alt="PoseGuide architecture" width="100%" />
 </p>
 
 ### Workflow
@@ -117,12 +115,14 @@ Open the HTML files for **dark/light theme toggle** and export (PNG/SVG).
 [Open interactive diagram](docs/diagrams/workflow.html)
 
 <p align="center">
-  <img src="docs/diagrams/workflow.svg" alt="Workflow diagram" width="100%" />
+  <img src="docs/diagrams/workflow.svg" alt="PoseGuide workflow" width="100%" />
 </p>
 
 *Generated with [archify](https://github.com/tt-a1i).*
 
-## Architecture
+---
+
+## Repository layout
 
 ```text
 src/poseguide/
@@ -133,6 +133,7 @@ src/poseguide/
   train/          # toy calibration
   eval/           # metrics
 docs/screenshots/
+docs/diagrams/
 ```
 
 ---
@@ -149,14 +150,15 @@ poseguide demo -p beach
 
 ## MergeOS bounties
 
-Star repo + [mergeos](https://github.com/mergeos-bounties/mergeos) → claim bounty issue → PR to **master** → MRG **25–200**.  
-Evidence: demo SVG / screenshots of stick figures + recommend JSON.
+Star this repo + [mergeos](https://github.com/mergeos-bounties/mergeos) → claim bounty issue → PR to **master** → MRG **25–200**.
+
+Evidence: demo SVG / stick-figure screenshots + recommend JSON.
 
 ---
 
 ## Tiếng Việt
 
-**PoseGuide** gợi ý tư thế chụp ảnh theo scene (beach/urban/studio…), vẽ stick figure SVG. Chạy: `poseguide demo -p beach`.
+**PoseGuide** gợi ý tư thế chụp ảnh theo scene (beach / urban / studio…), vẽ stick figure SVG. Chạy: `poseguide demo -p beach`.
 
 ---
 
