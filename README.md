@@ -10,6 +10,23 @@
 
 Built under [mergeos-bounties](https://github.com/mergeos-bounties) so delivery can be funded as MergeOS tasks with MRG payouts.
 
+
+## Screenshots
+
+Real captures from running the product demo (PoseGuide).
+
+![Beach preset · pose recommend + stick figure](docs/screenshots/demo-beach.png)
+
+*Beach preset · pose recommend + stick figure*
+
+![Urban preset demo](docs/screenshots/demo-urban.png)
+
+*Urban preset demo*
+
+![Studio preset demo](docs/screenshots/demo-studio.png)
+
+*Studio preset demo*
+
 ## Stack
 
 - Python 3.11+
