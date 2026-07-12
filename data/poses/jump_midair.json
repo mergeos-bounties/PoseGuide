@@ -1,0 +1,90 @@
+{
+  "id": "jump_midair",
+  "name": "Jump Mid-Air",
+  "standing": false,
+  "tags": [
+    "outdoor",
+    "action",
+    "athletic",
+    "dynamic",
+    "sports",
+    "portrait"
+  ],
+  "tips": [
+    "Shoot peak hang time",
+    "Point toes and lengthen through arms",
+    "Keep face relaxed; strong core"
+  ],
+  "camera_cues": [
+    "fast shutter",
+    "slight low angle",
+    "full body with sky room"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.2,
+      0.0
+    ],
+    "l_shoulder": [
+      0.38,
+      0.3,
+      0.0
+    ],
+    "r_shoulder": [
+      0.62,
+      0.3,
+      0.0
+    ],
+    "l_elbow": [
+      0.28,
+      0.24,
+      0.05
+    ],
+    "r_elbow": [
+      0.72,
+      0.24,
+      0.05
+    ],
+    "l_wrist": [
+      0.22,
+      0.16,
+      0.08
+    ],
+    "r_wrist": [
+      0.78,
+      0.16,
+      0.08
+    ],
+    "l_hip": [
+      0.44,
+      0.48,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.48,
+      0.0
+    ],
+    "l_knee": [
+      0.4,
+      0.62,
+      0.05
+    ],
+    "r_knee": [
+      0.6,
+      0.62,
+      0.05
+    ],
+    "l_ankle": [
+      0.38,
+      0.76,
+      0.08
+    ],
+    "r_ankle": [
+      0.62,
+      0.76,
+      0.08
+    ]
+  }
+}

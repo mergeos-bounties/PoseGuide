@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.10",
+  "poseguide_version": "0.2.11",
   "poses": [
     {
       "camera_cues": [
@@ -436,6 +436,96 @@
       "tips": [
         "elbows soft",
         "weight on back leg"
+      ]
+    },
+    {
+      "camera_cues": [
+        "fast shutter",
+        "slight low angle",
+        "full body with sky room"
+      ],
+      "id": "jump_midair",
+      "joints": {
+        "l_ankle": [
+          0.38,
+          0.76,
+          0.08
+        ],
+        "l_elbow": [
+          0.28,
+          0.24,
+          0.05
+        ],
+        "l_hip": [
+          0.44,
+          0.48,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.62,
+          0.05
+        ],
+        "l_shoulder": [
+          0.38,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.22,
+          0.16,
+          0.08
+        ],
+        "nose": [
+          0.5,
+          0.2,
+          0.0
+        ],
+        "r_ankle": [
+          0.62,
+          0.76,
+          0.08
+        ],
+        "r_elbow": [
+          0.72,
+          0.24,
+          0.05
+        ],
+        "r_hip": [
+          0.56,
+          0.48,
+          0.0
+        ],
+        "r_knee": [
+          0.6,
+          0.62,
+          0.05
+        ],
+        "r_shoulder": [
+          0.62,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.78,
+          0.16,
+          0.08
+        ]
+      },
+      "name": "Jump Mid-Air",
+      "standing": false,
+      "tags": [
+        "outdoor",
+        "action",
+        "athletic",
+        "dynamic",
+        "sports",
+        "portrait"
+      ],
+      "tips": [
+        "shoot peak hang time",
+        "point toes and lengthen through arms",
+        "keep face relaxed; strong core"
       ]
     },
     {
@@ -1625,6 +1715,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "jump_midair",
+        "power_stance",
+        "stretch_reach",
+        "walk_toward_camera"
+      ],
+      "id": "sports_field",
+      "mood": [],
+      "name": "Sports Field Afternoon",
+      "tags": [
+        "outdoor",
+        "sports",
+        "daylight",
+        "action",
+        "green",
+        "wide"
+      ]
+    },
+    {
       "composition": {
         "leading_lines": "crosswalk",
         "shutter": "fast"
@@ -1764,12 +1874,14 @@
     "romantic",
     "soft",
     "soft_light",
+    "sports",
     "street",
     "studio",
     "transit",
     "urban",
     "wall",
     "warm",
+    "wide",
     "window",
     "yoga"
   ]

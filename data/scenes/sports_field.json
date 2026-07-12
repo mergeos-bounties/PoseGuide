@@ -1,0 +1,19 @@
+{
+  "id": "sports_field",
+  "name": "Sports Field Afternoon",
+  "tags": [
+    "outdoor",
+    "sports",
+    "daylight",
+    "action",
+    "green",
+    "wide"
+  ],
+  "expected_poses": [
+    "jump_midair",
+    "power_stance",
+    "stretch_reach",
+    "walk_toward_camera"
+  ],
+  "notes": "Open sky; green turf; use high shutter for freeze action."
+}
