@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.1",
+  "poseguide_version": "0.2.3",
   "poses": [
     {
       "camera_cues": [
@@ -698,6 +698,94 @@
     },
     {
       "camera_cues": [
+        "three-quarter or pure profile",
+        "eye-level or slightly above"
+      ],
+      "id": "seated_profile",
+      "joints": {
+        "l_ankle": [
+          0.48,
+          0.88,
+          0.05
+        ],
+        "l_elbow": [
+          0.38,
+          0.48,
+          -0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.46,
+          0.74,
+          0.05
+        ],
+        "l_shoulder": [
+          0.42,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.4,
+          0.58,
+          0.0
+        ],
+        "nose": [
+          0.55,
+          0.18,
+          0.05
+        ],
+        "r_ankle": [
+          0.6,
+          0.86,
+          0.08
+        ],
+        "r_elbow": [
+          0.62,
+          0.46,
+          0.06
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.02
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.08
+        ],
+        "r_shoulder": [
+          0.58,
+          0.3,
+          0.08
+        ],
+        "r_wrist": [
+          0.6,
+          0.56,
+          0.04
+        ]
+      },
+      "name": "Seated Profile",
+      "standing": false,
+      "tags": [
+        "studio",
+        "indoor",
+        "portrait",
+        "profile",
+        "editorial"
+      ],
+      "tips": [
+        "sit tall with weight on one hip",
+        "turn shoulders slightly toward camera",
+        "hands relaxed on lap or chair arm"
+      ]
+    },
+    {
+      "camera_cues": [
         "shutter 1/250+",
         "lead room in front"
       ],
@@ -1071,6 +1159,7 @@
     "daylight",
     "dynamic",
     "edgy",
+    "editorial",
     "emotional",
     "evening",
     "forest",
@@ -1083,6 +1172,7 @@
     "outdoor",
     "portrait",
     "professional",
+    "profile",
     "romantic",
     "soft",
     "soft_light",

@@ -1,0 +1,36 @@
+{
+  "id": "seated_profile",
+  "name": "Seated Profile",
+  "standing": false,
+  "tags": [
+    "studio",
+    "indoor",
+    "portrait",
+    "profile",
+    "editorial"
+  ],
+  "tips": [
+    "Sit tall with weight on one hip",
+    "Turn shoulders slightly toward camera",
+    "Hands relaxed on lap or chair arm"
+  ],
+  "camera_cues": [
+    "three-quarter or pure profile",
+    "eye-level or slightly above"
+  ],
+  "joints": {
+    "nose": [0.55, 0.18, 0.05],
+    "l_shoulder": [0.42, 0.32, 0.0],
+    "r_shoulder": [0.58, 0.30, 0.08],
+    "l_elbow": [0.38, 0.48, -0.02],
+    "r_elbow": [0.62, 0.46, 0.06],
+    "l_wrist": [0.40, 0.58, 0.0],
+    "r_wrist": [0.60, 0.56, 0.04],
+    "l_hip": [0.44, 0.58, 0.0],
+    "r_hip": [0.56, 0.58, 0.02],
+    "l_knee": [0.46, 0.74, 0.05],
+    "r_knee": [0.58, 0.72, 0.08],
+    "l_ankle": [0.48, 0.88, 0.05],
+    "r_ankle": [0.60, 0.86, 0.08]
+  }
+}
