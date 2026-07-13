@@ -10,6 +10,19 @@ from poseguide.render.overlay import (
     write_guidance_overlay,
 )
 
+# The PNG renderer needs the optional ``vision`` extra (opencv + numpy). CI's
+# ``[dev]`` install does not pull it in, so skip only the cv2-dependent tests
+# when the extra is absent — the JSON path and error-message tests still run.
+try:
+    import cv2  # noqa: F401
+    _HAS_CV2 = True
+except ImportError:
+    _HAS_CV2 = False
+
+_needs_cv2 = pytest.mark.skipif(
+    not _HAS_CV2, reason="vision extra (opencv) not installed"
+)
+
 
 def test_write_guidance_overlay_json(tmp_path: Path) -> None:
     out = tmp_path / "guidance.json"
@@ -18,6 +31,7 @@ def test_write_guidance_overlay_json(tmp_path: Path) -> None:
     assert "poseguide.overlay.v1" in path.read_text(encoding="utf-8")
 
 
+@_needs_cv2
 def test_render_overlay_png_target_only(tmp_path: Path) -> None:
     out = tmp_path / "overlay.png"
     result = render_overlay_png("contrapposto", out)
@@ -28,6 +42,7 @@ def test_render_overlay_png_target_only(tmp_path: Path) -> None:
     assert out.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n"
 
 
+@_needs_cv2
 def test_render_overlay_png_with_subject(tmp_path: Path) -> None:
     out = tmp_path / "overlay_subject.png"
     subject = {
@@ -42,11 +57,13 @@ def test_render_overlay_png_with_subject(tmp_path: Path) -> None:
     assert result.stat().st_size > 0
 
 
+@_needs_cv2
 def test_render_overlay_png_unknown_pose(tmp_path: Path) -> None:
     with pytest.raises(KeyError):
         render_overlay_png("not-a-real-pose", tmp_path / "x.png")
 
 
+@_needs_cv2
 def test_render_overlay_png_custom_size(tmp_path: Path) -> None:
     out = tmp_path / "sized.png"
     render_overlay_png("contrapposto", out, width=200, height=200)
