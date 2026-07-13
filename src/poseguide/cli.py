@@ -46,6 +46,30 @@ def version_cmd() -> None:
     console.print(f"Poses: {len(list_pose_files())} | Scenes: {len(list_scene_files())}")
 
 
+@app.command("stats")
+def stats_cmd() -> None:
+    """Catalog inventory: pose/scene counts and top tags."""
+    from collections import Counter
+
+    tags: Counter[str] = Counter()
+    standing = 0
+    for path in list_pose_files():
+        pose = load_pose(path)
+        if pose.get("standing"):
+            standing += 1
+        for t in pose.get("tags") or []:
+            tags[str(t).lower()] += 1
+    console.print_json(
+        data={
+            "version": __version__,
+            "poses": len(list_pose_files()),
+            "scenes": len(list_scene_files()),
+            "standing_poses": standing,
+            "top_tags": tags.most_common(10),
+        }
+    )
+
+
 @app.command("demo")
 def demo_cmd(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
     """End-to-end demo: preset scene tags → pose recommendations + SVG stick figure."""
