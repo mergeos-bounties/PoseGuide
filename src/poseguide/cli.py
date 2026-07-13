@@ -206,7 +206,11 @@ def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
 
 
 @eval_app.command("scenes")
-def eval_scenes(top: int = typer.Option(3, "--top", "-k", min=1, max=20)) -> None:
+def eval_scenes(
+    top: int = typer.Option(3, "--top", "-k", min=1, max=20),
+    table: bool = typer.Option(True, "--table/--json", help="Rich per-scene table vs raw JSON"),
+) -> None:
+    """Evaluate hit@k / precision / recall over labeled scenes."""
     import json
     from poseguide.config import RUNS_DIR
 
@@ -220,7 +224,57 @@ def eval_scenes(top: int = typer.Option(3, "--top", "-k", min=1, max=20)) -> Non
         f"R@{top}={report.get('recall_at_k')} "
         f"n={report['n_labeled']}/{report['n_scenes']}"
     )
+    if table and report.get("rows"):
+        t = Table(title=f"hit@{top} per scene")
+        t.add_column("Scene")
+        t.add_column("Hit")
+        t.add_column("Top poses")
+        t.add_column("Overlap")
+        for row in report["rows"]:
+            t.add_row(
+                str(row.get("scene")),
+                "yes" if row.get("hit") else "no",
+                ", ".join(str(x) for x in (row.get("top") or [])[:top]),
+                ", ".join(str(x) for x in (row.get("overlap") or [])),
+            )
+        console.print(t)
+    else:
+        console.print_json(data=report)
     console.print(f"Report: {path}")
+
+
+@poses_app.command("search")
+def poses_search(
+    query: str = typer.Argument(..., help="Substring over id/name/tags"),
+    limit: int = typer.Option(15, "--limit", "-n", min=1, max=50),
+) -> None:
+    """Search standing pose catalog by id, name, or tags."""
+    q = query.strip().lower()
+    hits = []
+    for path in list_pose_files():
+        pose = load_pose(path)
+        blob = " ".join(
+            [
+                str(pose.get("id") or ""),
+                str(pose.get("name") or ""),
+                " ".join(pose.get("tags") or []),
+            ]
+        ).lower()
+        if q in blob:
+            hits.append(pose)
+        if len(hits) >= limit:
+            break
+    table = Table(title=f"Pose search: {query} ({len(hits)})")
+    table.add_column("ID")
+    table.add_column("Name")
+    table.add_column("Tags")
+    for pose in hits:
+        table.add_row(
+            str(pose.get("id")),
+            str(pose.get("name")),
+            ", ".join((pose.get("tags") or [])[:6]),
+        )
+    console.print(table)
 
 
 @train_app.command("toy")
