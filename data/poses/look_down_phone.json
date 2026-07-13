@@ -1,0 +1,36 @@
+{
+  "id": "look_down_phone",
+  "name": "Look Down Phone",
+  "standing": true,
+  "tags": [
+    "street",
+    "candid",
+    "lifestyle",
+    "urban",
+    "portrait"
+  ],
+  "tips": [
+    "Hold phone at chest height, elbows soft",
+    "Chin slightly down toward the screen",
+    "Weight on one leg for a natural hip shift"
+  ],
+  "camera_cues": [
+    "eye-level three-quarter",
+    "shallow depth for bokeh street lights"
+  ],
+  "joints": {
+    "nose": [0.5, 0.18, 0.04],
+    "l_shoulder": [0.4, 0.3, -0.02],
+    "r_shoulder": [0.6, 0.3, 0.02],
+    "l_elbow": [0.38, 0.42, 0.02],
+    "r_elbow": [0.62, 0.42, 0.04],
+    "l_wrist": [0.46, 0.48, 0.06],
+    "r_wrist": [0.54, 0.48, 0.08],
+    "l_hip": [0.44, 0.54, 0.0],
+    "r_hip": [0.56, 0.54, 0.02],
+    "l_knee": [0.45, 0.72, 0.0],
+    "r_knee": [0.56, 0.72, 0.02],
+    "l_ankle": [0.45, 0.92, 0.0],
+    "r_ankle": [0.57, 0.9, 0.02]
+  }
+}

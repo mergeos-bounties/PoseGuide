@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.18",
+  "poseguide_version": "0.2.19",
   "poses": [
     {
       "camera_cues": [
@@ -1151,6 +1151,94 @@
       "tips": [
         "elbow soft on the rail",
         "hips back slightly"
+      ]
+    },
+    {
+      "camera_cues": [
+        "eye-level three-quarter",
+        "shallow depth for bokeh street lights"
+      ],
+      "id": "look_down_phone",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.42,
+          0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.3,
+          -0.02
+        ],
+        "l_wrist": [
+          0.46,
+          0.48,
+          0.06
+        ],
+        "nose": [
+          0.5,
+          0.18,
+          0.04
+        ],
+        "r_ankle": [
+          0.57,
+          0.9,
+          0.02
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.04
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.02
+        ],
+        "r_knee": [
+          0.56,
+          0.72,
+          0.02
+        ],
+        "r_shoulder": [
+          0.6,
+          0.3,
+          0.02
+        ],
+        "r_wrist": [
+          0.54,
+          0.48,
+          0.08
+        ]
+      },
+      "name": "Look Down Phone",
+      "standing": true,
+      "tags": [
+        "street",
+        "candid",
+        "lifestyle",
+        "urban",
+        "portrait"
+      ],
+      "tips": [
+        "hold phone at chest height, elbows soft",
+        "chin slightly down toward the screen",
+        "weight on one leg for a natural hip shift"
       ]
     },
     {
@@ -2573,6 +2661,7 @@
     "home",
     "indoor",
     "intimate",
+    "lifestyle",
     "moody",
     "morning",
     "motion",
