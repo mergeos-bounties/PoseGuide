@@ -1,0 +1,36 @@
+{
+  "id": "hands_behind_back",
+  "name": "Hands Behind Back",
+  "standing": true,
+  "tags": [
+    "portrait",
+    "studio",
+    "editorial",
+    "formal",
+    "standing"
+  ],
+  "tips": [
+    "Interlace fingers lightly behind the lower back",
+    "Roll shoulders back without puffing the chest",
+    "Shift weight onto one foot for a natural S-curve"
+  ],
+  "camera_cues": [
+    "eye-level three-quarter",
+    "slight low angle for authority"
+  ],
+  "joints": {
+    "nose": [0.5, 0.15, 0.03],
+    "l_shoulder": [0.4, 0.28, -0.02],
+    "r_shoulder": [0.6, 0.28, 0.02],
+    "l_elbow": [0.36, 0.42, -0.06],
+    "r_elbow": [0.64, 0.42, 0.06],
+    "l_wrist": [0.46, 0.48, -0.08],
+    "r_wrist": [0.54, 0.48, 0.08],
+    "l_hip": [0.44, 0.52, 0.0],
+    "r_hip": [0.56, 0.52, 0.02],
+    "l_knee": [0.45, 0.72, 0.0],
+    "r_knee": [0.56, 0.7, 0.02],
+    "l_ankle": [0.45, 0.92, 0.0],
+    "r_ankle": [0.57, 0.9, 0.02]
+  }
+}
