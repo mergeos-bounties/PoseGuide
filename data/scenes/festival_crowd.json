@@ -1,0 +1,19 @@
+{
+  "id": "festival_crowd",
+  "name": "Festival Crowd Edge",
+  "tags": [
+    "outdoor",
+    "festival",
+    "crowd",
+    "daylight",
+    "colorful",
+    "candid"
+  ],
+  "expected_poses": [
+    "arms_raised",
+    "jump_midair",
+    "walk_toward_camera",
+    "looking_away"
+  ],
+  "notes": "Colorful bokeh crowd; keep subject sharp at edge of frame."
+}

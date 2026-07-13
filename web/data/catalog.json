@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.14",
+  "poseguide_version": "0.2.15",
   "poses": [
     {
       "camera_cues": [
@@ -85,6 +85,96 @@
       "tips": [
         "soft grip, not clenched",
         "one hip slightly out"
+      ]
+    },
+    {
+      "camera_cues": [
+        "full body",
+        "slight low angle",
+        "leave sky room above hands"
+      ],
+      "id": "arms_raised",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.28,
+          0.18,
+          0.05
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.38,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.22,
+          0.08,
+          0.08
+        ],
+        "nose": [
+          0.5,
+          0.2,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.18,
+          0.05
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.32,
+          0.0
+        ],
+        "r_wrist": [
+          0.78,
+          0.08,
+          0.08
+        ]
+      },
+      "name": "Arms Raised Celebration",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "celebration",
+        "energy",
+        "full_body",
+        "portrait",
+        "sports"
+      ],
+      "tips": [
+        "reach tall through fingertips",
+        "soft knee bend for energy",
+        "chin slightly lifted, open chest"
       ]
     },
     {
@@ -1837,6 +1927,26 @@
       ]
     },
     {
+      "composition": {},
+      "expected_poses": [
+        "arms_raised",
+        "jump_midair",
+        "walk_toward_camera",
+        "looking_away"
+      ],
+      "id": "festival_crowd",
+      "mood": [],
+      "name": "Festival Crowd Edge",
+      "tags": [
+        "outdoor",
+        "festival",
+        "crowd",
+        "daylight",
+        "colorful",
+        "candid"
+      ]
+    },
+    {
       "composition": {
         "depth": "path_leading_lines"
       },
@@ -2167,6 +2277,7 @@
     "cafe",
     "candid",
     "casual",
+    "celebration",
     "cinematic",
     "city",
     "cityscape",
@@ -2175,6 +2286,7 @@
     "colorful",
     "confident",
     "cool_light",
+    "crowd",
     "crowded",
     "daylight",
     "directional",
@@ -2183,8 +2295,10 @@
     "edgy",
     "editorial",
     "emotional",
+    "energy",
     "evening",
     "fashion",
+    "festival",
     "floor",
     "forest",
     "full_body",
