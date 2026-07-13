@@ -12,7 +12,11 @@ from poseguide.data.loader import list_pose_files, list_scene_files, load_pose, 
 from poseguide.guide.demo import PRESETS, run_demo
 from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_tags
 from poseguide.guide.score import score_subject_against_pose
-from poseguide.render.overlay import write_guidance_overlay
+from poseguide.render.overlay import (
+    VisionUnavailableError,
+    render_overlay_png,
+    write_guidance_overlay,
+)
 from poseguide.render.svg import render_pose_svg
 from poseguide.eval.metrics import evaluate_scenes
 from poseguide.train.toy_train import train_toy
@@ -78,6 +82,27 @@ def poses_svg(
     out_path = out or (OUT_DIR / f"{pose}.svg")
     try:
         path = render_pose_svg(pose, out_path)
+    except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(1) from exc
+    console.print(f"[green]Wrote[/green] {path}")
+
+
+@poses_app.command("overlay")
+def poses_overlay(
+    pose: str = typer.Option(..., "--pose", "-p"),
+    out: Path | None = typer.Option(None, "--out", "-o"),
+    background: Path | None = typer.Option(None, "--bg", exists=True, dir_okay=False),
+    width: int = typer.Option(360, "--width", min=64, max=4096),
+    height: int = typer.Option(480, "--height", min=64, max=4096),
+) -> None:
+    """Render a PNG skeleton overlay for a target pose (needs vision extra)."""
+    out_path = out or (OUT_DIR / f"{pose}_overlay.png")
+    try:
+        path = render_overlay_png(pose, out_path, background=background, width=width, height=height)
+    except VisionUnavailableError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(1) from exc
     except KeyError as exc:
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1) from exc
