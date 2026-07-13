@@ -168,12 +168,6 @@ Evidence: demo SVG / stick-figure screenshots + recommend JSON.
 
 ---
 
-## Tiếng Việt
-
-**PoseGuide** gợi ý tư thế chụp ảnh theo scene (beach / urban / studio…), vẽ stick figure SVG. Chạy: `poseguide demo -p beach`.
-
----
-
 ## License
 
 MIT · MergeOS / ThanhTrucSolutions
