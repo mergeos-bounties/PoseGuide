@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.15",
+  "poseguide_version": "0.2.16",
   "poses": [
     {
       "camera_cues": [
@@ -1595,6 +1595,94 @@
     },
     {
       "camera_cues": [
+        "three-quarter front",
+        "slight low angle for legs"
+      ],
+      "id": "sit_on_stool",
+      "joints": {
+        "l_ankle": [
+          0.4,
+          0.9,
+          0.06
+        ],
+        "l_elbow": [
+          0.36,
+          0.44,
+          -0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.56,
+          0.0
+        ],
+        "l_knee": [
+          0.42,
+          0.72,
+          0.06
+        ],
+        "l_shoulder": [
+          0.4,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.4,
+          0.54,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.16,
+          0.04
+        ],
+        "r_ankle": [
+          0.6,
+          0.9,
+          0.08
+        ],
+        "r_elbow": [
+          0.64,
+          0.44,
+          0.02
+        ],
+        "r_hip": [
+          0.56,
+          0.56,
+          0.02
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.08
+        ],
+        "r_shoulder": [
+          0.6,
+          0.3,
+          0.02
+        ],
+        "r_wrist": [
+          0.6,
+          0.54,
+          0.02
+        ]
+      },
+      "name": "Sit on Stool",
+      "standing": false,
+      "tags": [
+        "studio",
+        "indoor",
+        "portrait",
+        "seated",
+        "fashion"
+      ],
+      "tips": [
+        "perch on the front edge of the stool",
+        "cross ankles lightly for a clean line",
+        "hands on thighs or one on the seat"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body",
         "slight low angle",
         "negative space above hands"
@@ -2321,6 +2409,7 @@
     "profile",
     "quiet",
     "romantic",
+    "seated",
     "silhouette",
     "soft",
     "soft_light",
