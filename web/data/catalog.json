@@ -2208,6 +2208,92 @@
         "face the window at 45 degrees",
         "far shoulder slightly back"
       ]
+    },
+    {
+      "id": "hand_wave",
+      "name": "Hand Wave",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "casual",
+        "greeting",
+        "daylight",
+        "outdoor"
+      ],
+      "tips": [
+        "Raise one hand near shoulder height",
+        "Soft smile, open torso to camera"
+      ],
+      "camera_cues": [
+        "waist-up or full body with negative space on wave side"
+      ],
+      "joints": {
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.42,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.22,
+          0.0
+        ],
+        "l_wrist": [
+          0.34,
+          0.55,
+          0.0
+        ],
+        "r_wrist": [
+          0.78,
+          0.12,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ]
+      }
     }
   ],
   "scenes": [
