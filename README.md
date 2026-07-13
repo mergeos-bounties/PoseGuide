@@ -87,6 +87,7 @@ Open `http://localhost:5173/web/` and see [`web/README.md`](web/README.md) for t
 | `poseguide scenes list` | Scene samples |
 | `poseguide guide …` | Recommend / score helpers |
 | `poseguide train` / `eval` | Toy train + evaluation |
+| `poseguide data extract -i <img> -o <json>` | Extract joints from a photo (optional `[vision]` extra) |
 
 **Presets:** `beach` · `urban` · `studio` · `forest` · `office`
 
@@ -129,6 +130,28 @@ System architecture and workflow — full width. Open the HTML files for **dark/
 </p>
 
 *Generated with [archify](https://github.com/tt-a1i).*
+
+---
+
+## Pose extraction (`[vision]` extra)
+
+Extract a normalized standing skeleton from a still photo into a PoseGuide
+subject JSON — same `joints` schema (`nose`, `l_shoulder`, `r_shoulder`, …)
+used everywhere else in the library.
+
+```powershell
+pip install -e ".[vision]"    # opencv-python-headless + mediapipe + Pillow
+poseguide data extract --image path/to/photo.jpg --out data/samples/custom.json
+```
+
+- **Graceful degradation:** the `mediapipe` / `cv2` imports are lazy. Without the
+  `[vision]` extra the CLI reports a clear, actionable error instead of crashing.
+- **Injectable detector:** `poseguide.data.extract.extract_pose(image_path, detector=…)`
+  accepts any callable that maps an image path to a MediaPipe landmark list, so
+  the mapping logic is fully unit-tested with a fake detector — no model binary
+  required. The default detector supports both the legacy `mediapipe.solutions`
+  API and the modern Tasks API (`PoseLandmarker`, via `POSEGUIDE_POSE_MODEL`).
+- **Privacy:** no images are committed; extraction writes only normalized joints.
 
 ---
 

@@ -26,11 +26,13 @@ scenes_app = typer.Typer(help="Background / scene samples")
 guide_app = typer.Typer(help="Recommend and score poses")
 train_app = typer.Typer(help="Training")
 eval_app = typer.Typer(help="Evaluation")
+data_app = typer.Typer(help="Data utilities (import/extract)")
 app.add_typer(poses_app, name="poses")
 app.add_typer(scenes_app, name="scenes")
 app.add_typer(guide_app, name="guide")
 app.add_typer(train_app, name="train")
 app.add_typer(eval_app, name="eval")
+app.add_typer(data_app, name="data")
 console = Console()
 
 
@@ -202,6 +204,22 @@ def train_toy_cmd(epochs: int = typer.Option(3, "--epochs", "-e", min=1, max=50)
     last = report["history"][-1]["hit_rate_at_3"]
     console.print(f"[green]Training complete[/green] hit@3={last}")
     console.print(f"Report: {report['report_path']}")
+
+
+@data_app.command("extract")
+def data_extract(
+    image: Path = typer.Option(..., "--image", "-i", exists=True, dir_okay=False),
+    out: Path = typer.Option(..., "--out", "-o"),
+) -> None:
+    """Extract joints from a photo into a PoseGuide subject JSON (MediaPipe)."""
+    from poseguide.data.extract import extract_to_file
+
+    try:
+        path = extract_to_file(image, out)
+    except RuntimeError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(code=1) from exc
+    console.print(f"[green]Wrote[/green] {path}")
 
 
 @train_app.command("report")
