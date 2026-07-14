@@ -1,0 +1,86 @@
+{
+  "id": "chin_rest",
+  "name": "Chin Rest on Hand",
+  "standing": false,
+  "tags": [
+    "portrait",
+    "seated",
+    "thoughtful",
+    "indoor",
+    "soft-light"
+  ],
+  "tips": [
+    "Elbow on table or knee; knuckles under chin lightly",
+    "Eyes soft toward camera or slightly off-axis"
+  ],
+  "camera_cues": [
+    "head-and-shoulders; shallow depth of field"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.22,
+      0.0
+    ],
+    "l_shoulder": [
+      0.38,
+      0.38,
+      0.0
+    ],
+    "r_shoulder": [
+      0.62,
+      0.38,
+      0.0
+    ],
+    "l_elbow": [
+      0.28,
+      0.55,
+      0.0
+    ],
+    "r_elbow": [
+      0.55,
+      0.48,
+      0.0
+    ],
+    "l_wrist": [
+      0.32,
+      0.68,
+      0.0
+    ],
+    "r_wrist": [
+      0.52,
+      0.32,
+      0.0
+    ],
+    "l_hip": [
+      0.42,
+      0.72,
+      0.0
+    ],
+    "r_hip": [
+      0.58,
+      0.72,
+      0.0
+    ],
+    "l_knee": [
+      0.42,
+      0.88,
+      0.0
+    ],
+    "r_knee": [
+      0.58,
+      0.88,
+      0.0
+    ],
+    "l_ankle": [
+      0.42,
+      0.98,
+      0.0
+    ],
+    "r_ankle": [
+      0.58,
+      0.98,
+      0.0
+    ]
+  }
+}
