@@ -34,10 +34,19 @@ class Pose(BaseModel):
     id: str = Field(min_length=1)
     name: str = Field(min_length=1)
     standing: bool = True
+    difficulty: str = "medium"
     tags: list[str] = Field(default_factory=list)
     tips: list[str] = Field(default_factory=list)
     camera_cues: list[str] = Field(default_factory=list)
     joints: dict[str, list[float]] = Field(default_factory=dict)
+
+    @field_validator("difficulty")
+    @classmethod
+    def _check_difficulty(cls, value: str) -> str:
+        allowed = {"easy", "medium", "hard"}
+        if value not in allowed:
+            raise ValueError(f"difficulty must be one of {allowed}, got {value!r}")
+        return value
 
     @field_validator("joints")
     @classmethod
