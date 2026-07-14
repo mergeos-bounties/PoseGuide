@@ -1,0 +1,89 @@
+{
+  "id": "kneel_propose",
+  "name": "Kneel Propose",
+  "standing": false,
+  "tags": [
+    "indoor",
+    "romantic",
+    "portrait",
+    "event",
+    "low angle"
+  ],
+  "tips": [
+    "Front knee at 90°",
+    "Upright chest",
+    "Soft smile to camera"
+  ],
+  "camera_cues": [
+    "slight low angle",
+    "include hands and face",
+    "shallow depth"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.22,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.34,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.34,
+      0.0
+    ],
+    "l_elbow": [
+      0.36,
+      0.46,
+      0.0
+    ],
+    "r_elbow": [
+      0.64,
+      0.46,
+      0.0
+    ],
+    "l_wrist": [
+      0.42,
+      0.56,
+      0.05
+    ],
+    "r_wrist": [
+      0.58,
+      0.56,
+      0.05
+    ],
+    "l_hip": [
+      0.45,
+      0.58,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.58,
+      0.0
+    ],
+    "l_knee": [
+      0.42,
+      0.78,
+      0.0
+    ],
+    "r_knee": [
+      0.58,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.4,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.62,
+      0.9,
+      0.0
+    ]
+  }
+}

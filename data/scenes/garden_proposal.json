@@ -1,0 +1,17 @@
+{
+  "id": "garden_proposal",
+  "name": "Garden Proposal Path",
+  "tags": [
+    "outdoor",
+    "garden",
+    "romantic",
+    "daylight",
+    "flowers"
+  ],
+  "expected_poses": [
+    "kneel_propose",
+    "walk_toward_camera",
+    "side_profile_look"
+  ],
+  "notes": "Soft bokeh flowers; keep subject sharp on path."
+}

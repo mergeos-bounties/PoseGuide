@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.24",
+  "poseguide_version": "0.2.25",
   "poses": [
     {
       "camera_cues": [
@@ -1060,6 +1060,95 @@
         "kneel tall through the spine",
         "front knee soft; back foot relaxed",
         "chin slightly lifted off the shoulder"
+      ]
+    },
+    {
+      "camera_cues": [
+        "slight low angle",
+        "include hands and face",
+        "shallow depth"
+      ],
+      "id": "kneel_propose",
+      "joints": {
+        "l_ankle": [
+          0.4,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.46,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.42,
+          0.78,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.34,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.56,
+          0.05
+        ],
+        "nose": [
+          0.5,
+          0.22,
+          0.0
+        ],
+        "r_ankle": [
+          0.62,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.64,
+          0.46,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.34,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.56,
+          0.05
+        ]
+      },
+      "name": "Kneel Propose",
+      "standing": false,
+      "tags": [
+        "indoor",
+        "romantic",
+        "portrait",
+        "event",
+        "low angle"
+      ],
+      "tips": [
+        "front knee at 90\u00b0",
+        "upright chest",
+        "soft smile to camera"
       ]
     },
     {
@@ -2692,6 +2781,24 @@
     {
       "composition": {},
       "expected_poses": [
+        "kneel_propose",
+        "walk_toward_camera",
+        "side_profile_look"
+      ],
+      "id": "garden_proposal",
+      "mood": [],
+      "name": "Garden Proposal Path",
+      "tags": [
+        "outdoor",
+        "garden",
+        "romantic",
+        "daylight",
+        "flowers"
+      ]
+    },
+    {
+      "composition": {},
+      "expected_poses": [
         "point_forward",
         "walk_toward_camera",
         "looking_away",
@@ -3019,13 +3126,16 @@
     "emotional",
     "energy",
     "evening",
+    "event",
     "fashion",
     "festival",
     "floor",
+    "flowers",
     "forest",
     "formal",
     "full body",
     "full_body",
+    "garden",
     "golden_hour",
     "green",
     "greeting",
@@ -3034,6 +3144,7 @@
     "indoor",
     "intimate",
     "lifestyle",
+    "low angle",
     "minimal",
     "moody",
     "morning",
