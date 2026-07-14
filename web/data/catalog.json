@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.26",
+  "poseguide_version": "0.2.27",
   "poses": [
     {
       "camera_cues": [
@@ -2032,6 +2032,92 @@
     },
     {
       "camera_cues": [
+        "head-and-shoulders or waist-up, arm in frame"
+      ],
+      "id": "selfie_peace",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.32,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.75,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.3,
+          0.62,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.18,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.7,
+          0.28,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.75,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.32,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.14,
+          0.0
+        ]
+      },
+      "name": "Selfie Peace Sign",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "casual",
+        "selfie",
+        "daylight",
+        "indoor"
+      ],
+      "tips": [
+        "raise hand near cheek with peace (v) sign",
+        "slight head tilt, eyes to lens"
+      ]
+    },
+    {
+      "camera_cues": [
         "true profile or 3/4 profile"
       ],
       "id": "side_profile_look",
@@ -3250,6 +3336,7 @@
     "quiet",
     "romantic",
     "seated",
+    "selfie",
     "silhouette",
     "soft",
     "soft light",
