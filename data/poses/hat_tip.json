@@ -1,0 +1,86 @@
+{
+  "id": "hat_tip",
+  "name": "Hat Tip",
+  "standing": true,
+  "tags": [
+    "portrait",
+    "outdoor",
+    "lifestyle",
+    "greeting",
+    "waist-up"
+  ],
+  "tips": [
+    "Fingers lightly touch brim; elbow soft",
+    "Chin slightly down; eyes to lens"
+  ],
+  "camera_cues": [
+    "waist-up; open sky or soft backlight"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.16,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.3,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.3,
+      0.0
+    ],
+    "l_elbow": [
+      0.34,
+      0.44,
+      0.0
+    ],
+    "r_elbow": [
+      0.72,
+      0.26,
+      0.0
+    ],
+    "l_wrist": [
+      0.36,
+      0.56,
+      0.0
+    ],
+    "r_wrist": [
+      0.58,
+      0.14,
+      0.0
+    ],
+    "l_hip": [
+      0.44,
+      0.58,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.58,
+      0.0
+    ],
+    "l_knee": [
+      0.44,
+      0.76,
+      0.0
+    ],
+    "r_knee": [
+      0.56,
+      0.76,
+      0.0
+    ],
+    "l_ankle": [
+      0.44,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.56,
+      0.92,
+      0.0
+    ]
+  }
+}
