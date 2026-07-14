@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.25",
+  "poseguide_version": "0.2.26",
   "poses": [
     {
       "camera_cues": [
@@ -1412,6 +1412,95 @@
       "tips": [
         "elbow soft on the rail",
         "hips back slightly"
+      ]
+    },
+    {
+      "camera_cues": [
+        "3/4 body",
+        "eye level",
+        "leave wall texture"
+      ],
+      "id": "lean_wall_casual",
+      "joints": {
+        "l_ankle": [
+          0.46,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.34,
+          0.4,
+          0.05
+        ],
+        "l_hip": [
+          0.46,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.46,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.28,
+          0.05
+        ],
+        "l_wrist": [
+          0.32,
+          0.5,
+          0.05
+        ],
+        "nose": [
+          0.52,
+          0.14,
+          0.0
+        ],
+        "r_ankle": [
+          0.58,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.68,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.7,
+          0.52,
+          0.0
+        ]
+      },
+      "name": "Lean Wall Casual",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "street",
+        "casual",
+        "portrait",
+        "urban"
+      ],
+      "tips": [
+        "one shoulder to wall",
+        "soft knee bend",
+        "look past camera"
       ]
     },
     {
