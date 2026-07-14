@@ -1,0 +1,19 @@
+{
+  "id": "yoga_studio_morning",
+  "name": "Yoga Studio Morning Light",
+  "tags": [
+    "indoor",
+    "yoga",
+    "studio",
+    "soft light",
+    "calm",
+    "minimal"
+  ],
+  "expected_poses": [
+    "yoga_tree",
+    "stretch_reach",
+    "sit_cross_legged",
+    "power_stance"
+  ],
+  "notes": "Soft window light; keep full body in frame for balance cues."
+}

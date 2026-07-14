@@ -1,9 +1,9 @@
 {
-  "poseguide_version": "0.2.19",
+  "poseguide_version": "0.2.24",
   "poses": [
     {
       "camera_cues": [
-        "chest-up or 3/4"
+        "chest-up or three-quarter body"
       ],
       "id": "arms_crossed",
       "joints": {
@@ -14,7 +14,7 @@
         ],
         "l_elbow": [
           0.48,
-          0.42,
+          0.4,
           0.0
         ],
         "l_hip": [
@@ -34,7 +34,7 @@
         ],
         "l_wrist": [
           0.55,
-          0.45,
+          0.42,
           0.0
         ],
         "nose": [
@@ -49,7 +49,7 @@
         ],
         "r_elbow": [
           0.52,
-          0.42,
+          0.4,
           0.0
         ],
         "r_hip": [
@@ -69,22 +69,22 @@
         ],
         "r_wrist": [
           0.45,
-          0.45,
+          0.42,
           0.0
         ]
       },
       "name": "Arms Crossed",
       "standing": true,
       "tags": [
-        "studio",
-        "indoor",
         "portrait",
+        "casual",
         "confident",
-        "business"
+        "indoor",
+        "daylight"
       ],
       "tips": [
-        "soft grip, not clenched",
-        "one hip slightly out"
+        "keep shoulders relaxed",
+        "chin slightly down for stronger jaw line"
       ]
     },
     {
@@ -533,6 +533,92 @@
         "light fingertips on chin; no hard press",
         "shoulders soft; neck long",
         "eyes slightly above camera or off to side"
+      ]
+    },
+    {
+      "camera_cues": [
+        "waist-up or full body with negative space on wave side"
+      ],
+      "id": "hand_wave",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.34,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.12,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.22,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.78,
+          0.12,
+          0.0
+        ]
+      },
+      "name": "Hand Wave",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "casual",
+        "greeting",
+        "daylight",
+        "outdoor"
+      ],
+      "tips": [
+        "raise one hand near shoulder height",
+        "soft smile, open torso to camera"
       ]
     },
     {
@@ -1064,6 +1150,92 @@
         "hinge from hips, not rounded upper back",
         "weight mostly on front foot",
         "hands free or lightly clasped"
+      ]
+    },
+    {
+      "camera_cues": [
+        "chest-up framing"
+      ],
+      "id": "lean_forward_desk",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.62,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.78,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.18,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.48,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.62,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.78,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.32,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Lean Forward Desk",
+      "standing": false,
+      "tags": [
+        "indoor",
+        "office",
+        "portrait",
+        "casual",
+        "seated"
+      ],
+      "tips": [
+        "elbows on desk",
+        "lean slightly toward camera"
       ]
     },
     {
@@ -1682,6 +1854,92 @@
     },
     {
       "camera_cues": [
+        "true profile or 3/4 profile"
+      ],
+      "id": "side_profile_look",
+      "joints": {
+        "l_ankle": [
+          0.48,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.46,
+          0.42,
+          0.05
+        ],
+        "l_hip": [
+          0.48,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.48,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.48,
+          0.28,
+          0.05
+        ],
+        "l_wrist": [
+          0.47,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.62,
+          0.14,
+          0.0
+        ],
+        "r_ankle": [
+          0.54,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.58,
+          0.44,
+          -0.05
+        ],
+        "r_hip": [
+          0.54,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.54,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.55,
+          0.3,
+          -0.05
+        ],
+        "r_wrist": [
+          0.6,
+          0.56,
+          0.0
+        ]
+      },
+      "name": "Side Profile Look",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "profile",
+        "studio",
+        "fashion",
+        "daylight"
+      ],
+      "tips": [
+        "chin slightly forward",
+        "far shoulder drop for length"
+      ]
+    },
+    {
+      "camera_cues": [
         "slight high angle",
         "three-quarter body"
       ],
@@ -2210,262 +2468,94 @@
       ]
     },
     {
-      "id": "hand_wave",
-      "name": "Hand Wave",
-      "standing": true,
-      "tags": [
-        "portrait",
-        "casual",
-        "greeting",
-        "daylight",
-        "outdoor"
-      ],
-      "tips": [
-        "Raise one hand near shoulder height",
-        "Soft smile, open torso to camera"
-      ],
       "camera_cues": [
-        "waist-up or full body with negative space on wave side"
+        "full body vertical",
+        "eye level",
+        "plain background"
       ],
+      "id": "yoga_tree",
       "joints": {
-        "nose": [
-          0.5,
-          0.12,
-          0.0
-        ],
-        "l_shoulder": [
-          0.42,
-          0.28,
-          0.0
-        ],
-        "r_shoulder": [
-          0.58,
-          0.28,
+        "l_ankle": [
+          0.46,
+          0.92,
           0.0
         ],
         "l_elbow": [
-          0.36,
-          0.42,
-          0.0
-        ],
-        "r_elbow": [
-          0.72,
-          0.22,
-          0.0
-        ],
-        "l_wrist": [
-          0.34,
-          0.55,
-          0.0
-        ],
-        "r_wrist": [
-          0.78,
-          0.12,
-          0.0
-        ],
-        "l_hip": [
-          0.45,
-          0.55,
-          0.0
-        ],
-        "r_hip": [
-          0.55,
-          0.55,
-          0.0
-        ],
-        "l_knee": [
-          0.45,
-          0.72,
-          0.0
-        ],
-        "r_knee": [
-          0.55,
-          0.72,
-          0.0
-        ],
-        "l_ankle": [
-          0.45,
-          0.9,
-          0.0
-        ],
-        "r_ankle": [
-          0.55,
-          0.9,
-          0.0
-        ]
-      }
-    },
-    {
-      "id": "lean_forward_desk",
-      "name": "Lean Forward Desk",
-      "standing": false,
-      "tags": [
-        "indoor",
-        "office",
-        "portrait",
-        "casual",
-        "seated"
-      ],
-      "tips": [
-        "Elbows on desk",
-        "Lean slightly toward camera"
-      ],
-      "camera_cues": [
-        "chest-up framing"
-      ],
-      "joints": {
-        "nose": [
-          0.5,
-          0.18,
-          0.0
-        ],
-        "l_shoulder": [
           0.4,
-          0.32,
-          0.0
-        ],
-        "r_shoulder": [
-          0.6,
-          0.32,
-          0.0
-        ],
-        "l_elbow": [
-          0.38,
-          0.48,
-          0.0
-        ],
-        "r_elbow": [
-          0.62,
-          0.48,
-          0.0
-        ],
-        "l_wrist": [
-          0.42,
-          0.55,
-          0.0
-        ],
-        "r_wrist": [
-          0.58,
-          0.55,
+          0.36,
           0.0
         ],
         "l_hip": [
-          0.44,
-          0.62,
-          0.0
-        ],
-        "r_hip": [
-          0.56,
-          0.62,
+          0.46,
+          0.52,
           0.0
         ],
         "l_knee": [
-          0.45,
-          0.78,
-          0.0
-        ],
-        "r_knee": [
-          0.55,
-          0.78,
-          0.0
-        ],
-        "l_ankle": [
-          0.45,
-          0.92,
-          0.0
-        ],
-        "r_ankle": [
-          0.55,
-          0.92,
-          0.0
-        ]
-      }
-    },
-    {
-      "id": "side_profile_look",
-      "name": "Side Profile Look",
-      "standing": true,
-      "tags": [
-        "portrait",
-        "profile",
-        "studio",
-        "fashion",
-        "daylight"
-      ],
-      "tips": [
-        "Chin slightly forward",
-        "Far shoulder drop for length"
-      ],
-      "camera_cues": [
-        "true profile or 3/4 profile"
-      ],
-      "joints": {
-        "nose": [
-          0.62,
-          0.14,
+          0.46,
+          0.72,
           0.0
         ],
         "l_shoulder": [
-          0.48,
-          0.28,
-          0.05
+          0.42,
+          0.26,
+          0.0
         ],
-        "r_shoulder": [
-          0.55,
-          0.3,
-          -0.05
-        ],
-        "l_elbow": [
+        "l_wrist": [
           0.46,
           0.42,
-          0.05
-        ],
-        "r_elbow": [
-          0.58,
-          0.44,
-          -0.05
-        ],
-        "l_wrist": [
-          0.47,
-          0.55,
           0.0
         ],
-        "r_wrist": [
-          0.6,
-          0.56,
-          0.0
-        ],
-        "l_hip": [
-          0.48,
-          0.55,
-          0.0
-        ],
-        "r_hip": [
-          0.54,
-          0.55,
-          0.0
-        ],
-        "l_knee": [
-          0.48,
-          0.72,
-          0.0
-        ],
-        "r_knee": [
-          0.54,
-          0.72,
-          0.0
-        ],
-        "l_ankle": [
-          0.48,
-          0.9,
+        "nose": [
+          0.5,
+          0.12,
           0.0
         ],
         "r_ankle": [
           0.54,
-          0.9,
+          0.7,
+          0.0
+        ],
+        "r_elbow": [
+          0.6,
+          0.36,
+          0.0
+        ],
+        "r_hip": [
+          0.54,
+          0.52,
+          0.0
+        ],
+        "r_knee": [
+          0.62,
+          0.58,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.26,
+          0.0
+        ],
+        "r_wrist": [
+          0.54,
+          0.42,
           0.0
         ]
-      }
+      },
+      "name": "Yoga Tree Pose",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "yoga",
+        "balance",
+        "full body",
+        "studio",
+        "calm"
+      ],
+      "tips": [
+        "press standing foot firmly into floor",
+        "knee opens to side without twisting hips",
+        "hands at heart or overhead with soft shoulders"
+      ]
     }
   ],
   "scenes": [
@@ -2872,6 +2962,26 @@
         "daylight",
         "casual"
       ]
+    },
+    {
+      "composition": {},
+      "expected_poses": [
+        "yoga_tree",
+        "stretch_reach",
+        "sit_cross_legged",
+        "power_stance"
+      ],
+      "id": "yoga_studio_morning",
+      "mood": [],
+      "name": "Yoga Studio Morning Light",
+      "tags": [
+        "indoor",
+        "yoga",
+        "studio",
+        "soft light",
+        "calm",
+        "minimal"
+      ]
     }
   ],
   "schema": "poseguide.web.catalog.v1",
@@ -2879,12 +2989,14 @@
     "action",
     "adventure",
     "athletic",
+    "balance",
     "balcony",
     "beach",
     "blue",
     "books",
     "business",
     "cafe",
+    "calm",
     "candid",
     "casual",
     "celebration",
@@ -2912,14 +3024,17 @@
     "floor",
     "forest",
     "formal",
+    "full body",
     "full_body",
     "golden_hour",
     "green",
+    "greeting",
     "headshot",
     "home",
     "indoor",
     "intimate",
     "lifestyle",
+    "minimal",
     "moody",
     "morning",
     "motion",
@@ -2927,6 +3042,7 @@
     "nature",
     "neon",
     "night",
+    "office",
     "outdoor",
     "portrait",
     "professional",
@@ -2936,6 +3052,7 @@
     "seated",
     "silhouette",
     "soft",
+    "soft light",
     "soft_light",
     "sports",
     "standing",
