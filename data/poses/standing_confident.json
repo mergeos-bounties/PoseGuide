@@ -1,0 +1,42 @@
+{
+  "id": "standing_confident",
+  "name": "Confident Standing",
+  "difficulty": "easy",
+  "category": "standing",
+  "joints": {
+    "head": [
+      0,
+      1.75,
+      0
+    ],
+    "shoulders": [
+      0,
+      1.55,
+      0.02
+    ],
+    "hips": [
+      0,
+      1.0,
+      0
+    ],
+    "knees": [
+      0,
+      0.5,
+      0
+    ],
+    "feet": [
+      0,
+      0,
+      0
+    ]
+  },
+  "tips": [
+    "Chest slightly forward",
+    "Hands at sides or on hips",
+    "Eye contact with camera"
+  ],
+  "camera_cues": [
+    "Slight low angle",
+    "Front-three-quarter"
+  ]
+}
