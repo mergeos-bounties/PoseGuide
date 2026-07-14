@@ -1,0 +1,87 @@
+{
+  "id": "phone_scroll",
+  "name": "Phone Scroll (looking down)",
+  "standing": true,
+  "tags": [
+    "portrait",
+    "casual",
+    "phone",
+    "lifestyle",
+    "daylight",
+    "indoor"
+  ],
+  "tips": [
+    "Chin slightly down toward phone at chest height",
+    "Elbows soft; keep face lit from above or window side"
+  ],
+  "camera_cues": [
+    "waist-up or three-quarter; phone in lower third"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.2,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.32,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.32,
+      0.0
+    ],
+    "l_elbow": [
+      0.34,
+      0.48,
+      0.0
+    ],
+    "r_elbow": [
+      0.66,
+      0.48,
+      0.0
+    ],
+    "l_wrist": [
+      0.42,
+      0.58,
+      0.0
+    ],
+    "r_wrist": [
+      0.58,
+      0.58,
+      0.0
+    ],
+    "l_hip": [
+      0.44,
+      0.58,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.58,
+      0.0
+    ],
+    "l_knee": [
+      0.44,
+      0.75,
+      0.0
+    ],
+    "r_knee": [
+      0.56,
+      0.75,
+      0.0
+    ],
+    "l_ankle": [
+      0.44,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.56,
+      0.92,
+      0.0
+    ]
+  }
+}
