@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Optional
 
 import typer
 from rich.console import Console
@@ -103,7 +104,7 @@ def poses_list() -> None:
 @poses_app.command("svg")
 def poses_svg(
     pose: str = typer.Option(..., "--pose", "-p"),
-    out: Path | None = typer.Option(None, "--out", "-o"),
+    out: Optional[Path] = typer.Option(None, "--out", "-o"),
 ) -> None:
     out_path = out or (OUT_DIR / f"{pose}.svg")
     try:
@@ -117,8 +118,8 @@ def poses_svg(
 @poses_app.command("overlay")
 def poses_overlay(
     pose: str = typer.Option(..., "--pose", "-p"),
-    out: Path | None = typer.Option(None, "--out", "-o"),
-    background: Path | None = typer.Option(None, "--bg", exists=True, dir_okay=False),
+    out: Optional[Path] = typer.Option(None, "--out", "-o"),
+    background: Optional[Path] = typer.Option(None, "--bg", exists=True, dir_okay=False),
     width: int = typer.Option(360, "--width", min=64, max=4096),
     height: int = typer.Option(480, "--height", min=64, max=4096),
 ) -> None:
@@ -155,11 +156,11 @@ def scenes_list() -> None:
 
 @guide_app.command("recommend")
 def guide_recommend(
-    scene: Path | None = typer.Option(None, "--scene", "-s", exists=True, dir_okay=False),
-    tags: str | None = typer.Option(None, "--tags", "-t"),
+    scene: Optional[Path] = typer.Option(None, "--scene", "-s", exists=True, dir_okay=False),
+    tags: Optional[str] = typer.Option(None, "--tags", "-t"),
     top: int = typer.Option(3, "--top", "-k", min=1, max=20),
-    subject: Path | None = typer.Option(None, "--subject", exists=True, dir_okay=False),
-    overlay_out: Path | None = typer.Option(None, "--overlay-out"),
+    subject: Optional[Path] = typer.Option(None, "--subject", exists=True, dir_okay=False),
+    overlay_out: Optional[Path] = typer.Option(None, "--overlay-out"),
     svg: bool = typer.Option(True, "--svg/--no-svg"),
 ) -> None:
     if scene is None and not tags:
@@ -207,7 +208,7 @@ def guide_composition(pose: str = typer.Option(..., "--pose", "-p")) -> None:
 @guide_app.command("coach")
 def guide_coach(
     pose: str = typer.Option(..., "--pose", "-p"),
-    subject: Path | None = typer.Option(None, "--subject", "-i", exists=True, dir_okay=False),
+    subject: Optional[Path] = typer.Option(None, "--subject", "-i", exists=True, dir_okay=False),
 ) -> None:
     """Coach mode: composition tips + target SVG (+ optional subject score)."""
     from poseguide.guide.composition import coach_bundle
@@ -269,34 +270,41 @@ def eval_scenes(
 
 @poses_app.command("search")
 def poses_search(
-    query: str = typer.Argument(..., help="Substring over id/name/tags"),
+    query: str = typer.Argument(..., help="Substring over id/name/tags/tips/camera cues"),
     limit: int = typer.Option(15, "--limit", "-n", min=1, max=50),
 ) -> None:
-    """Search standing pose catalog by id, name, or tags."""
+    """Search standing pose catalog by id, name, tags, tips, or camera cues."""
     q = query.strip().lower()
     hits = []
     for path in list_pose_files():
         pose = load_pose(path)
-        blob = " ".join(
-            [
-                str(pose.get("id") or ""),
-                str(pose.get("name") or ""),
-                " ".join(pose.get("tags") or []),
-            ]
-        ).lower()
-        if q in blob:
-            hits.append(pose)
+        searchable = {
+            "id": [str(pose.get("id") or "")],
+            "name": [str(pose.get("name") or "")],
+            "tags": [str(tag) for tag in (pose.get("tags") or [])],
+            "tips": [str(tip) for tip in (pose.get("tips") or [])],
+            "camera_cues": [str(cue) for cue in (pose.get("camera_cues") or [])],
+        }
+        matched_fields = [
+            field
+            for field, values in searchable.items()
+            if any(q in value.lower() for value in values)
+        ]
+        if matched_fields:
+            hits.append((pose, matched_fields))
         if len(hits) >= limit:
             break
     table = Table(title=f"Pose search: {query} ({len(hits)})")
     table.add_column("ID")
     table.add_column("Name")
     table.add_column("Tags")
-    for pose in hits:
+    table.add_column("Matched")
+    for pose, matched_fields in hits:
         table.add_row(
             str(pose.get("id")),
             str(pose.get("name")),
             ", ".join((pose.get("tags") or [])[:6]),
+            ", ".join(matched_fields),
         )
     console.print(table)
 

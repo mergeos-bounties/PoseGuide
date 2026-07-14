@@ -83,6 +83,7 @@ Open `http://localhost:5173/web/` and see [`web/README.md`](web/README.md) for t
 | `poseguide version` | Version + pose/scene counts |
 | `poseguide demo -p beach` | Full recommend + SVG for a preset |
 | `poseguide poses list` | Standing pose catalog |
+| `poseguide poses search <keyword>` | Search pose ids, names, tags, tips, and camera cues |
 | `poseguide poses svg -p <id>` | Render one pose SVG |
 | `poseguide scenes list` | Scene samples |
 | `poseguide guide …` | Recommend / score helpers |
