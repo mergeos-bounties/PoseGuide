@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.30",
+  "poseguide_version": "0.2.31",
   "poses": [
     {
       "camera_cues": [
@@ -3079,6 +3079,92 @@
         "knee opens to side without twisting hips",
         "hands at heart or overhead with soft shoulders"
       ]
+    },
+    {
+      "id": "book_reading",
+      "name": "Book Reading (seated)",
+      "standing": false,
+      "tags": [
+        "portrait",
+        "indoor",
+        "lifestyle",
+        "seated",
+        "study"
+      ],
+      "tips": [
+        "Hold book at mid-chest; elbows soft",
+        "Chin slightly down toward page; eyes toward lens on cue"
+      ],
+      "camera_cues": [
+        "waist-up seated; soft window side light"
+      ],
+      "joints": {
+        "nose": [
+          0.5,
+          0.2,
+          0.0
+        ],
+        "l_shoulder": [
+          0.38,
+          0.32,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.32,
+          0.0
+        ],
+        "l_elbow": [
+          0.32,
+          0.48,
+          0.0
+        ],
+        "r_elbow": [
+          0.68,
+          0.48,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.52,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.52,
+          0.0
+        ],
+        "l_hip": [
+          0.42,
+          0.62,
+          0.0
+        ],
+        "r_hip": [
+          0.58,
+          0.62,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.78,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.78,
+          0.0
+        ],
+        "l_ankle": [
+          0.44,
+          0.92,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ]
+      }
     }
   ],
   "scenes": [
