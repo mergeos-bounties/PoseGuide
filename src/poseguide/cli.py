@@ -283,17 +283,17 @@ def eval_scenes(
 def _build_markdown_report(report: dict, top: int) -> str:
     """Build a Markdown evaluation report from scene results."""
     lines = [
-        f"# PoseGuide Evaluation Report",
-        f"",
+        "# PoseGuide Evaluation Report",
+        "",
         f"**hit@{top}**: {report.get('hit_at_k', 'N/A')}  ",
         f"**Precision@{top}**: {report.get('precision_at_k', 'N/A')}  ",
         f"**Recall@{top}**: {report.get('recall_at_k', 'N/A')}  ",
         f"**Labeled scenes**: {report.get('n_labeled', 0)} / {report.get('n_scenes', 0)}",
-        f"",
-        f"## Per-Scene Results",
-        f"",
-        f"| Scene | Hit | Top Poses | Overlap |",
-        f"|-------|-----|-----------|---------|",
+        "",
+        "## Per-Scene Results",
+        "",
+        "| Scene | Hit | Top Poses | Overlap |",
+        "|-------|-----|-----------|---------|",
     ]
     for row in report.get("rows", []):
         scene = str(row.get("scene", "?"))
