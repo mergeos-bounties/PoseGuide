@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.29",
+  "poseguide_version": "0.2.30",
   "poses": [
     {
       "camera_cues": [
@@ -351,6 +351,92 @@
       "tips": [
         "elbow on table or knee; knuckles under chin lightly",
         "eyes soft toward camera or slightly off-axis"
+      ]
+    },
+    {
+      "camera_cues": [
+        "waist-up; window side light preferred"
+      ],
+      "id": "coffee_cup",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.34,
+          0.48,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.75,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.44,
+          0.52,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.16,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.66,
+          0.48,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.75,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.56,
+          0.52,
+          0.0
+        ]
+      },
+      "name": "Coffee Cup (both hands)",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "lifestyle",
+        "cafe",
+        "indoor",
+        "warm-light"
+      ],
+      "tips": [
+        "hold mug near sternum with both hands",
+        "soft smile; steam / cup as lower-third interest"
       ]
     },
     {
@@ -3527,6 +3613,7 @@
     "urban",
     "wall",
     "warm",
+    "warm-light",
     "water",
     "wide",
     "window",
