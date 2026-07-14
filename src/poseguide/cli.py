@@ -162,6 +162,7 @@ def guide_recommend(
     subject: Optional[Path] = typer.Option(None, "--subject", exists=True, dir_okay=False),
     overlay_out: Optional[Path] = typer.Option(None, "--overlay-out"),
     svg: bool = typer.Option(True, "--svg/--no-svg"),
+    difficulty: Optional[str] = typer.Option(None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard"),
 ) -> None:
     if scene is None and not tags:
         console.print("[red]Provide --scene or --tags[/red]")
@@ -170,6 +171,12 @@ def guide_recommend(
         result = recommend_for_scene_path(scene, top_k=top, subject_path=subject)
     else:
         result = recommend_for_tags(tags or "", top_k=top)
+    if difficulty:
+        recs = result.get("recommendations", [])
+        before = len(recs)
+        recs = [r for r in recs if r.get("difficulty", "medium") == difficulty]
+        result["recommendations"] = recs
+        console.print(f"[dim]difficulty={difficulty}[/dim] {before} -> {len(recs)} recommendations")
     console.print_json(data=result)
     out = overlay_out or (OUT_DIR / "last_overlay.json")
     path = write_guidance_overlay(result, out)
@@ -234,6 +241,7 @@ def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
 def eval_scenes(
     top: int = typer.Option(3, "--top", "-k", min=1, max=20),
     table: bool = typer.Option(True, "--table/--json", help="Rich per-scene table vs raw JSON"),
+    markdown: Optional[Path] = typer.Option(None, "--md", "--markdown", help="Export results as Markdown file"),
 ) -> None:
     """Evaluate hit@k / precision / recall over labeled scenes."""
     import json
@@ -265,7 +273,35 @@ def eval_scenes(
         console.print(t)
     else:
         console.print_json(data=report)
+    if markdown:
+        md_content = _build_markdown_report(report, top)
+        markdown.write_text(md_content, encoding="utf-8")
+        console.print(f"[green]Markdown report[/green] -> {markdown}")
     console.print(f"Report: {path}")
+
+
+def _build_markdown_report(report: dict, top: int) -> str:
+    """Build a Markdown evaluation report from scene results."""
+    lines = [
+        f"# PoseGuide Evaluation Report",
+        f"",
+        f"**hit@{top}**: {report.get('hit_at_k', 'N/A')}  ",
+        f"**Precision@{top}**: {report.get('precision_at_k', 'N/A')}  ",
+        f"**Recall@{top}**: {report.get('recall_at_k', 'N/A')}  ",
+        f"**Labeled scenes**: {report.get('n_labeled', 0)} / {report.get('n_scenes', 0)}",
+        f"",
+        f"## Per-Scene Results",
+        f"",
+        f"| Scene | Hit | Top Poses | Overlap |",
+        f"|-------|-----|-----------|---------|",
+    ]
+    for row in report.get("rows", []):
+        scene = str(row.get("scene", "?"))
+        hit = "yes" if row.get("hit") else "no"
+        top_poses = ", ".join(str(x) for x in (row.get("top") or [])[:top])
+        overlap = ", ".join(str(x) for x in (row.get("overlap") or []))
+        lines.append(f"| {scene} | {hit} | {top_poses} | {overlap} |")
+    return "\n".join(lines) + "\n"
 
 
 @poses_app.command("search")
