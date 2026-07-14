@@ -1,0 +1,47 @@
+{
+  "id": "standing_crossed_arms",
+  "name": "Crossed Arms Standing",
+  "difficulty": "medium",
+  "category": "standing",
+  "joints": {
+    "head": [
+      0,
+      1.7,
+      0
+    ],
+    "shoulders": [
+      0,
+      1.5,
+      0
+    ],
+    "arms": [
+      0.2,
+      1.2,
+      0.15
+    ],
+    "hips": [
+      0,
+      1.0,
+      0
+    ],
+    "knees": [
+      0,
+      0.5,
+      0
+    ],
+    "feet": [
+      0,
+      0,
+      0
+    ]
+  },
+  "tips": [
+    "Avoid tension in shoulders",
+    "Keep expression neutral or thoughtful",
+    "Weight on one leg okay"
+  ],
+  "camera_cues": [
+    "Front view",
+    "Waist up framing"
+  ]
+}
