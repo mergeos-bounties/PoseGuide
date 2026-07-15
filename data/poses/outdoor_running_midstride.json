@@ -1,0 +1,87 @@
+{
+  "id": "outdoor_running_midstride",
+  "name": "Outdoor Running Midstride",
+  "standing": true,
+  "difficulty": "medium",
+  "tags": [
+    "outdoor",
+    "motion",
+    "full body",
+    "sport",
+    "street"
+  ],
+  "tips": [
+    "Capture mid-stride with lead knee high",
+    "Arms opposite legs; torso upright"
+  ],
+  "camera_cues": [
+    "full body; 1/500s+ shutter; slight pan"
+  ],
+  "joints": {
+    "nose": [
+      0.52,
+      0.14,
+      0.0
+    ],
+    "l_shoulder": [
+      0.44,
+      0.26,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.26,
+      0.0
+    ],
+    "l_elbow": [
+      0.38,
+      0.38,
+      0.0
+    ],
+    "r_elbow": [
+      0.68,
+      0.36,
+      0.0
+    ],
+    "l_wrist": [
+      0.34,
+      0.48,
+      0.0
+    ],
+    "r_wrist": [
+      0.74,
+      0.44,
+      0.0
+    ],
+    "l_hip": [
+      0.46,
+      0.52,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.52,
+      0.0
+    ],
+    "l_knee": [
+      0.42,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.62,
+      0.68,
+      0.0
+    ],
+    "l_ankle": [
+      0.4,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.64,
+      0.86,
+      0.0
+    ]
+  }
+}
