@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.39",
+  "poseguide_version": "0.2.40",
   "poses": [
     {
       "camera_cues": [
@@ -3850,6 +3850,92 @@
         "r_ankle": [
           0.56,
           0.92,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "one_knee_down",
+      "name": "One Knee Down",
+      "standing": false,
+      "tags": [
+        "outdoor",
+        "proposal",
+        "full body",
+        "lifestyle",
+        "grounded"
+      ],
+      "tips": [
+        "One knee on ground; upright torso",
+        "Hands free or clasped; look to subject or lens"
+      ],
+      "camera_cues": [
+        "full body; slight high angle optional"
+      ],
+      "joints": {
+        "nose": [
+          0.5,
+          0.22,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.34,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.34,
+          0.0
+        ],
+        "l_elbow": [
+          0.34,
+          0.48,
+          0.0
+        ],
+        "r_elbow": [
+          0.66,
+          0.48,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.58,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.58,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.78,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.7,
+          0.0
+        ],
+        "l_ankle": [
+          0.44,
+          0.92,
+          0.0
+        ],
+        "r_ankle": [
+          0.62,
+          0.88,
           0.0
         ]
       }
