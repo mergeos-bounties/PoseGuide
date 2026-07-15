@@ -1,0 +1,37 @@
+{
+  "id": "leaning_rail",
+  "name": "Leaning on Rail",
+  "standing": true,
+  "tags": [
+    "portrait",
+    "outdoor",
+    "urban",
+    "relaxed",
+    "waist-up"
+  ],
+  "tips": [
+    "Lean back slightly with elbows resting on a railing or ledge",
+    "One foot crossed over the other at ankle level",
+    "Tilt head slightly for a candid feel"
+  ],
+  "camera_cues": [
+    "waist-up with railing in frame",
+    "golden-hour backlight",
+    "shallow depth of field"
+  ],
+  "joints": {
+    "nose": [0.5, 0.14, 0.0],
+    "l_shoulder": [0.39, 0.29, 0.0],
+    "r_shoulder": [0.61, 0.29, 0.0],
+    "l_elbow": [0.32, 0.46, 0.0],
+    "r_elbow": [0.68, 0.46, 0.0],
+    "l_wrist": [0.30, 0.54, 0.03],
+    "r_wrist": [0.70, 0.54, 0.03],
+    "l_hip": [0.43, 0.58, 0.0],
+    "r_hip": [0.57, 0.58, 0.0],
+    "l_knee": [0.41, 0.76, 0.0],
+    "r_knee": [0.59, 0.75, 0.0],
+    "l_ankle": [0.40, 0.92, 0.0],
+    "r_ankle": [0.60, 0.92, 0.0]
+  }
+}
