@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.51",
+  "poseguide_version": "0.2.52",
   "poses": [
     {
       "camera_cues": [
@@ -2625,6 +2625,92 @@
       "tips": [
         "lean outer shoulder to window frame; face toward light",
         "far hand on hip or frame; keep neck long"
+      ]
+    },
+    {
+      "camera_cues": [
+        "three-quarter body; eye-level; soft window fill"
+      ],
+      "id": "leaning_doorframe",
+      "joints": {
+        "l_ankle": [
+          0.4,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.44,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.42,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.34,
+          0.56,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.18,
+          0.0
+        ],
+        "r_ankle": [
+          0.58,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.54,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.7,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          -0.02
+        ],
+        "r_wrist": [
+          0.58,
+          0.5,
+          0.0
+        ]
+      },
+      "name": "Leaning Doorframe",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "standing",
+        "lean",
+        "portrait",
+        "doorway"
+      ],
+      "tips": [
+        "shoulder lightly against frame; weight on far leg",
+        "far hand in pocket or on hip; near hand free along frame"
       ]
     },
     {
@@ -5720,6 +5806,7 @@
     "daylight",
     "desk",
     "directional",
+    "doorway",
     "dramatic",
     "dynamic",
     "edgy",
