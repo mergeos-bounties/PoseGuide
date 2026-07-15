@@ -15,13 +15,12 @@ from poseguide.render.overlay import (
 # when the extra is absent — the JSON path and error-message tests still run.
 try:
     import cv2  # noqa: F401
+
     _HAS_CV2 = True
 except ImportError:
     _HAS_CV2 = False
 
-_needs_cv2 = pytest.mark.skipif(
-    not _HAS_CV2, reason="vision extra (opencv) not installed"
-)
+_needs_cv2 = pytest.mark.skipif(not _HAS_CV2, reason="vision extra (opencv) not installed")
 
 
 def test_write_guidance_overlay_json(tmp_path: Path) -> None:
@@ -77,7 +76,9 @@ def test_vision_unavailable_error_message_mentions_extra(monkeypatch) -> None:
     import poseguide.render.overlay as ov
 
     def _boom():
-        raise ov.VisionUnavailableError("PNG overlay needs the vision extra: pip install 'poseguide[vision]'")
+        raise ov.VisionUnavailableError(
+            "PNG overlay needs the vision extra: pip install 'poseguide[vision]'"
+        )
 
     monkeypatch.setattr(ov, "_require_cv2", _boom)
     with pytest.raises(VisionUnavailableError, match="vision"):

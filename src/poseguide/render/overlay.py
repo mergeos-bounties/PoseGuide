@@ -35,7 +35,7 @@ def write_guidance_overlay(result: dict, out_path: Path) -> Path:
 # ---------------------------------------------------------------------------
 
 # BGR colors (OpenCV uses BGR order)
-_TARGET_COLOR = (233, 158, 14)   # amber-ish for the target/guide pose
+_TARGET_COLOR = (233, 158, 14)  # amber-ish for the target/guide pose
 _SUBJECT_COLOR = (113, 204, 46)  # green for the live subject
 _JOINT_TARGET = (161, 105, 3)
 _JOINT_SUBJECT = (46, 137, 22)
@@ -116,9 +116,20 @@ def render_overlay_png(
         _draw_skeleton(img, subject_joints, width, height, _SUBJECT_COLOR, _JOINT_SUBJECT)
 
     title = str(pose.get("name") or target_pose_id)
-    cv2.putText(img, title, (12, 26), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (226, 232, 240), 1, cv2.LINE_AA)
+    cv2.putText(
+        img, title, (12, 26), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (226, 232, 240), 1, cv2.LINE_AA
+    )
     legend = "amber=guide  green=you" if subject_joints else "amber=guide"
-    cv2.putText(img, legend, (12, height - 14), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (148, 163, 184), 1, cv2.LINE_AA)
+    cv2.putText(
+        img,
+        legend,
+        (12, height - 14),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.4,
+        (148, 163, 184),
+        1,
+        cv2.LINE_AA,
+    )
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     if not cv2.imwrite(str(out_path), img):  # pragma: no cover - fs failure

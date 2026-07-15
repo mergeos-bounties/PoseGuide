@@ -162,7 +162,9 @@ def guide_recommend(
     subject: Optional[Path] = typer.Option(None, "--subject", exists=True, dir_okay=False),
     overlay_out: Optional[Path] = typer.Option(None, "--overlay-out"),
     svg: bool = typer.Option(True, "--svg/--no-svg"),
-    difficulty: Optional[str] = typer.Option(None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard"),
+    difficulty: Optional[str] = typer.Option(
+        None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard"
+    ),
 ) -> None:
     if scene is None and not tags:
         console.print("[red]Provide --scene or --tags[/red]")
@@ -241,7 +243,9 @@ def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
 def eval_scenes(
     top: int = typer.Option(3, "--top", "-k", min=1, max=20),
     table: bool = typer.Option(True, "--table/--json", help="Rich per-scene table vs raw JSON"),
-    markdown: Optional[Path] = typer.Option(None, "--md", "--markdown", help="Export results as Markdown file"),
+    markdown: Optional[Path] = typer.Option(
+        None, "--md", "--markdown", help="Export results as Markdown file"
+    ),
 ) -> None:
     """Evaluate hit@k / precision / recall over labeled scenes."""
     import json

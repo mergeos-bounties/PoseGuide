@@ -28,7 +28,14 @@ def composition_report(pose_id: str) -> dict:
         x, y = float(nose[0]), float(nose[1])
         tx, dx = nearest_third(x)
         ty, dy = nearest_third(y)
-        lines.append({"joint": "nose", "xy": [round(x, 3), round(y, 3)], "nearest_third": [tx, ty], "delta": [round(dx, 3), round(dy, 3)]})
+        lines.append(
+            {
+                "joint": "nose",
+                "xy": [round(x, 3), round(y, 3)],
+                "nearest_third": [tx, ty],
+                "delta": [round(dx, 3), round(dy, 3)],
+            }
+        )
         if dx < 0.08:
             tips.append("Eyes/head near a vertical third — strong portrait placement.")
         if y < 0.25:
@@ -67,7 +74,15 @@ def composition_report(pose_id: str) -> dict:
         "rule": "thirds",
         "analysis": lines,
         "tips": tips,
-        "score_hint": round(max(0.0, 1.0 - sum(a.get("delta", [0, 0])[0] for a in lines if "delta" in a) / max(1, len(lines))), 3),
+        "score_hint": round(
+            max(
+                0.0,
+                1.0
+                - sum(a.get("delta", [0, 0])[0] for a in lines if "delta" in a)
+                / max(1, len(lines)),
+            ),
+            3,
+        ),
     }
 
 

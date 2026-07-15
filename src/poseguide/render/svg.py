@@ -59,8 +59,8 @@ def render_pose_svg(pose_id: str, out_path: Path, *, width: int = 360, height: i
   <text x="16" y="28" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="16">{title}</text>
   <text x="16" y="48" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11">{tip_text}</text>
   <g transform="translate(0,20)">
-    {''.join(lines)}
-    {''.join(dots)}
+    {"".join(lines)}
+    {"".join(dots)}
   </g>
 </svg>
 '''
