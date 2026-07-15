@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.45",
+  "poseguide_version": "0.2.46",
   "poses": [
     {
       "camera_cues": [
@@ -3415,6 +3415,92 @@
         "feet shoulder-width",
         "shoulders back",
         "chin level"
+      ]
+    },
+    {
+      "camera_cues": [
+        "50\u201385mm; eye level; expose for face"
+      ],
+      "id": "seated_cafe_laptop",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.94,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.5,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.64,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.8,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.36,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.6,
+          0.0
+        ],
+        "nose": [
+          0.52,
+          0.24,
+          0.0
+        ],
+        "r_ankle": [
+          0.58,
+          0.94,
+          0.0
+        ],
+        "r_elbow": [
+          0.66,
+          0.5,
+          0.0
+        ],
+        "r_hip": [
+          0.58,
+          0.64,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.8,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.36,
+          0.0
+        ],
+        "r_wrist": [
+          0.6,
+          0.6,
+          0.0
+        ]
+      },
+      "name": "Seated Cafe Laptop",
+      "standing": false,
+      "tags": [
+        "indoor",
+        "seated",
+        "cafe",
+        "portrait",
+        "window"
+      ],
+      "tips": [
+        "sit at 45\u00b0 to window; laptop/notebook just below chest line",
+        "shoulders relaxed; slight lean toward key light"
       ]
     },
     {
