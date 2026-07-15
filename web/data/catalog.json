@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.53",
+  "poseguide_version": "0.2.54",
   "poses": [
     {
       "camera_cues": [
@@ -1922,6 +1922,92 @@
         "shoot peak hang time",
         "point toes and lengthen through arms",
         "keep face relaxed; strong core"
+      ]
+    },
+    {
+      "camera_cues": [
+        "full body; slight low angle; fast shutter"
+      ],
+      "id": "jump_midair_arms_open",
+      "joints": {
+        "l_ankle": [
+          0.38,
+          0.84,
+          0.0
+        ],
+        "l_elbow": [
+          0.22,
+          0.3,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.48,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.66,
+          0.0
+        ],
+        "l_shoulder": [
+          0.34,
+          0.26,
+          0.0
+        ],
+        "l_wrist": [
+          0.12,
+          0.28,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.14,
+          0.0
+        ],
+        "r_ankle": [
+          0.62,
+          0.84,
+          0.0
+        ],
+        "r_elbow": [
+          0.78,
+          0.3,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.48,
+          0.0
+        ],
+        "r_knee": [
+          0.6,
+          0.66,
+          0.0
+        ],
+        "r_shoulder": [
+          0.66,
+          0.26,
+          0.0
+        ],
+        "r_wrist": [
+          0.88,
+          0.28,
+          0.0
+        ]
+      },
+      "name": "Jump Midair Arms Open",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "action",
+        "jump",
+        "energy",
+        "portrait"
+      ],
+      "tips": [
+        "burst jump; chin slightly up; arms wide for silhouette",
+        "shoot burst mode; pick peak hang frame"
       ]
     },
     {
@@ -5920,6 +6006,7 @@
     "home",
     "indoor",
     "intimate",
+    "jump",
     "lean",
     "lifestyle",
     "lookback",
