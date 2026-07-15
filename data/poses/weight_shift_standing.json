@@ -1,0 +1,36 @@
+{
+  "id": "weight_shift_standing",
+  "name": "Weight Shift Standing",
+  "standing": true,
+  "tags": [
+    "portrait",
+    "casual",
+    "natural",
+    "waist-up",
+    "indoor"
+  ],
+  "tips": [
+    "Shift most weight to one hip",
+    "Let the free leg bend slightly at the knee",
+    "Keep shoulders level for a relaxed look"
+  ],
+  "camera_cues": [
+    "waist-up crop",
+    "soft window light from the side"
+  ],
+  "joints": {
+    "nose": [0.5, 0.13, 0.0],
+    "l_shoulder": [0.4, 0.28, 0.0],
+    "r_shoulder": [0.6, 0.27, 0.0],
+    "l_elbow": [0.35, 0.44, 0.0],
+    "r_elbow": [0.65, 0.43, 0.0],
+    "l_wrist": [0.33, 0.58, 0.0],
+    "r_wrist": [0.67, 0.57, 0.0],
+    "l_hip": [0.42, 0.56, 0.0],
+    "r_hip": [0.58, 0.55, 0.0],
+    "l_knee": [0.40, 0.74, 0.0],
+    "r_knee": [0.60, 0.73, 0.0],
+    "l_ankle": [0.39, 0.92, 0.0],
+    "r_ankle": [0.61, 0.92, 0.0]
+  }
+}
