@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.42",
+  "poseguide_version": "0.2.43",
   "poses": [
     {
       "camera_cues": [
@@ -2894,6 +2894,92 @@
     },
     {
       "camera_cues": [
+        "85mm-equivalent; eye-level; soft side key"
+      ],
+      "id": "over_shoulder_look",
+      "joints": {
+        "l_ankle": [
+          0.46,
+          0.94,
+          0.0
+        ],
+        "l_elbow": [
+          0.38,
+          0.44,
+          0.0
+        ],
+        "l_hip": [
+          0.46,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.46,
+          0.76,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.56,
+          0.0
+        ],
+        "nose": [
+          0.58,
+          0.18,
+          0.02
+        ],
+        "r_ankle": [
+          0.58,
+          0.94,
+          0.0
+        ],
+        "r_elbow": [
+          0.68,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.58,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.76,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.28,
+          -0.02
+        ],
+        "r_wrist": [
+          0.7,
+          0.54,
+          0.0
+        ]
+      },
+      "name": "Over Shoulder Look",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "profile",
+        "editorial",
+        "indoor",
+        "half body"
+      ],
+      "tips": [
+        "turn torso 45\u00b0; look back over the near shoulder",
+        "keep far shoulder soft; chin slightly down"
+      ]
+    },
+    {
+      "camera_cues": [
         "waist-up",
         "eye-level",
         "clean background"
@@ -4966,6 +5052,7 @@
     "green",
     "greeting",
     "grounded",
+    "half body",
     "headshot",
     "home",
     "indoor",
