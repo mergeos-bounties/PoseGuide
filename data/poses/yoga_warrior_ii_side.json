@@ -1,0 +1,81 @@
+{
+  "id": "yoga_warrior_ii_side",
+  "name": "Yoga Warrior II Side",
+  "standing": true,
+  "tags": [
+    "fitness",
+    "yoga",
+    "portrait"
+  ],
+  "tips": [
+    "Standard fitness pose",
+    "Focus on yoga form"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.2,
+      0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.32,
+      0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.32,
+      0
+    ],
+    "l_elbow": [
+      0.35,
+      0.5,
+      0
+    ],
+    "r_elbow": [
+      0.65,
+      0.5,
+      0
+    ],
+    "l_wrist": [
+      0.38,
+      0.45,
+      0
+    ],
+    "r_wrist": [
+      0.62,
+      0.45,
+      0
+    ],
+    "l_hip": [
+      0.42,
+      0.62,
+      0
+    ],
+    "r_hip": [
+      0.58,
+      0.62,
+      0
+    ],
+    "l_knee": [
+      0.42,
+      0.78,
+      0
+    ],
+    "r_knee": [
+      0.58,
+      0.78,
+      0
+    ],
+    "l_ankle": [
+      0.42,
+      0.95,
+      0
+    ],
+    "r_ankle": [
+      0.58,
+      0.95,
+      0
+    ]
+  }
+}
