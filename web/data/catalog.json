@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.38",
+  "poseguide_version": "0.2.39",
   "poses": [
     {
       "camera_cues": [
@@ -3758,6 +3758,92 @@
         ],
         "l_ankle": [
           0.42,
+          0.92,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "cross_arms_stand",
+      "name": "Crossed Arms Stand",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "studio",
+        "confident",
+        "waist-up",
+        "indoor"
+      ],
+      "tips": [
+        "Arms lightly crossed at chest; shoulders relaxed",
+        "Weight on one leg; soft smile to lens"
+      ],
+      "camera_cues": [
+        "waist-up; even studio light"
+      ],
+      "joints": {
+        "nose": [
+          0.5,
+          0.15,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.28,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.28,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.42,
+          0.0
+        ],
+        "r_elbow": [
+          0.64,
+          0.42,
+          0.0
+        ],
+        "l_wrist": [
+          0.52,
+          0.44,
+          0.0
+        ],
+        "r_wrist": [
+          0.48,
+          0.44,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.56,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.56,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.74,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.74,
+          0.0
+        ],
+        "l_ankle": [
+          0.44,
           0.92,
           0.0
         ],
