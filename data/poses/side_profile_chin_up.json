@@ -1,0 +1,87 @@
+{
+  "id": "side_profile_chin_up",
+  "name": "Side Profile Chin Up",
+  "standing": true,
+  "difficulty": "easy",
+  "tags": [
+    "studio",
+    "portrait",
+    "profile",
+    "standing",
+    "chin"
+  ],
+  "tips": [
+    "True side profile; soft stretch through neck",
+    "Chin slightly lifted; shoulders down and back"
+  ],
+  "camera_cues": [
+    "profile 90\u00b0; eye-level; soft key from front"
+  ],
+  "joints": {
+    "nose": [
+      0.62,
+      0.2,
+      0.04
+    ],
+    "l_shoulder": [
+      0.48,
+      0.34,
+      0.0
+    ],
+    "r_shoulder": [
+      0.52,
+      0.34,
+      -0.04
+    ],
+    "l_elbow": [
+      0.46,
+      0.48,
+      0.0
+    ],
+    "r_elbow": [
+      0.54,
+      0.48,
+      0.0
+    ],
+    "l_wrist": [
+      0.44,
+      0.6,
+      0.0
+    ],
+    "r_wrist": [
+      0.56,
+      0.6,
+      0.0
+    ],
+    "l_hip": [
+      0.48,
+      0.56,
+      0.0
+    ],
+    "r_hip": [
+      0.52,
+      0.56,
+      0.0
+    ],
+    "l_knee": [
+      0.48,
+      0.74,
+      0.0
+    ],
+    "r_knee": [
+      0.52,
+      0.74,
+      0.0
+    ],
+    "l_ankle": [
+      0.48,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.52,
+      0.92,
+      0.0
+    ]
+  }
+}
