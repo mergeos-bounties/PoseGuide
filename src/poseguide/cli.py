@@ -101,6 +101,65 @@ def poses_list() -> None:
     console.print(table)
 
 
+@poses_app.command("show")
+def poses_show(
+    pose_id: str = typer.Argument(..., help="Pose ID to display"),
+) -> None:
+    """Pretty-print a single pose by ID with joint summary and tips."""
+    for path in list_pose_files():
+        if path.stem == pose_id:
+            pose = load_pose(path)
+            break
+    else:
+        console.print(f"[red]Pose {pose_id!r} not found[/red]")
+        raise typer.Exit(code=1)
+
+    from rich.panel import Panel
+    from rich.text import Text
+
+    # Header
+    title = Text(f"{pose.get('name', pose_id)}", style="bold cyan")
+    subtitle = Text()
+    subtitle.append(f"  difficulty={pose.get('difficulty', 'medium')}", style="yellow")
+    if pose.get("standing", True):
+        subtitle.append("  standing", style="green")
+    else:
+        subtitle.append("  non-standing", style="red")
+    console.print(Panel(title + Text("\n") + subtitle, width=72))
+
+    # Tags
+    tags = pose.get("tags") or []
+    if tags:
+        console.print("[bold]Tags:[/bold] " + ", ".join(tags))
+
+    # Joints summary
+    joints = pose.get("joints") or {}
+    console.print(f"\n[bold]Joints:[/bold] {len(joints)} keypoints")
+    joint_table = Table(show_header=True, header_style="bold")
+    joint_table.add_column("Joint", style="cyan")
+    joint_table.add_column("X", justify="right")
+    joint_table.add_column("Y", justify="right")
+    joint_table.add_column("Z", justify="right")
+    for key, coords in joints.items():
+        z = coords[2] if len(coords) > 2 else 0.0
+        joint_table.add_row(key, f"{coords[0]:.3f}", f"{coords[1]:.3f}", f"{z:.3f}")
+    console.print(joint_table)
+
+    # Tips
+    tips = pose.get("tips") or []
+    if tips:
+        console.print(f"\n[bold]Tips:[/bold]")
+        for i, tip in enumerate(tips, 1):
+            console.print(f"  {i}. {tip}")
+
+    # Camera cues
+    cues = pose.get("camera_cues") or []
+    if cues:
+        console.print(f"\n[bold]Camera cues:[/bold]")
+        for cue in cues:
+            console.print(f"  • {cue}")
+
+
 @poses_app.command("svg")
 def poses_svg(
     pose: str = typer.Option(..., "--pose", "-p"),
