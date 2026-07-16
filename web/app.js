@@ -32,10 +32,12 @@ const TAG_HINTS = {
 const state = {
   catalog: null,
   selectedTags: new Set(),
+  catalogFilterTags: new Set(),
   backgroundTags: new Set(),
   backgroundName: "",
   backgroundImage: null,
   lastResults: [],
+  currentView: "recommend",
 };
 
 const els = {};
@@ -50,6 +52,7 @@ async function init() {
   selectScene(state.catalog.scenes[0].id);
   setStatus("Offline catalog ready");
   await recommend();
+  renderCatalogView();
 }
 
 function bindElements() {
@@ -66,6 +69,13 @@ function bindElements() {
   els.recommend = document.getElementById("recommend");
   els.results = document.getElementById("resultsList");
   els.canvas = document.getElementById("poseCanvas");
+  els.tabRecommend = document.getElementById("tabRecommend");
+  els.tabCatalog = document.getElementById("tabCatalog");
+  els.viewRecommend = document.getElementById("viewRecommend");
+  els.viewCatalog = document.getElementById("viewCatalog");
+  els.catalogTagChips = document.getElementById("catalogTagChips");
+  els.catalogGrid = document.getElementById("catalogGrid");
+  els.catalogCount = document.getElementById("catalogCount");
 }
 
 function wireEvents() {
@@ -88,6 +98,16 @@ function wireEvents() {
   els.useApi.addEventListener("change", recommend);
   els.topK.addEventListener("change", recommend);
   els.recommend.addEventListener("click", recommend);
+  els.tabRecommend.addEventListener("click", () => switchView("recommend"));
+  els.tabCatalog.addEventListener("click", () => switchView("catalog"));
+}
+
+function switchView(view) {
+  state.currentView = view;
+  els.tabRecommend.className = view === "recommend" ? "tab active" : "tab";
+  els.tabCatalog.className = view === "catalog" ? "tab active" : "tab";
+  els.viewRecommend.classList.toggle("hidden", view !== "recommend");
+  els.viewCatalog.classList.toggle("hidden", view !== "catalog");
 }
 
 async function loadCatalog() {
@@ -98,7 +118,6 @@ async function loadCatalog() {
         return await response.json();
       }
     } catch (error) {
-      // Try the next relative URL for repo-root or web-root serving.
     }
   }
   throw new Error("PoseGuide web catalog could not be loaded");
@@ -154,6 +173,75 @@ function addCustomTags() {
   renderTagChips();
 }
 
+// ─── Catalog view ───
+
+function renderCatalogView() {
+  renderCatalogTagChips();
+  renderCatalogGrid();
+}
+
+function renderCatalogTagChips() {
+  const active = [...state.catalogFilterTags];
+  const tags = [...new Set([...state.catalog.tags, ...active])].sort();
+  els.catalogTagChips.replaceChildren(
+    ...tags.map((tag) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = state.catalogFilterTags.has(tag) ? "chip active" : "chip";
+      chip.textContent = tag.replaceAll("_", " ");
+      chip.setAttribute("aria-pressed", state.catalogFilterTags.has(tag) ? "true" : "false");
+      chip.addEventListener("click", () => {
+        if (state.catalogFilterTags.has(tag)) {
+          state.catalogFilterTags.delete(tag);
+        } else {
+          state.catalogFilterTags.add(tag);
+        }
+        renderCatalogTagChips();
+        renderCatalogGrid();
+      });
+      return chip;
+    })
+  );
+}
+
+function renderCatalogGrid() {
+  const filterTags = [...state.catalogFilterTags];
+  const poses = state.catalog.poses.filter((pose) => {
+    if (filterTags.length === 0) return true;
+    const poseTags = new Set(pose.tags || []);
+    return filterTags.some((tag) => poseTags.has(tag));
+  });
+  els.catalogCount.textContent = `${poses.length} of ${state.catalog.poses.length} poses`;
+  els.catalogGrid.replaceChildren(
+    ...poses.map((pose) => {
+      const card = document.createElement("div");
+      card.className = "catalog-card";
+      card.addEventListener("click", () => {
+        switchView("recommend");
+        state.selectedTags = new Set(pose.tags || []);
+        renderTagChips();
+        recommend();
+      });
+      const svg = createPoseSvg(pose);
+      svg.setAttribute("width", "100");
+      svg.setAttribute("height", "128");
+      svg.classList.add("catalog-svg");
+      card.append(svg);
+      const name = document.createElement("span");
+      name.className = "catalog-name";
+      name.textContent = pose.name || pose.id;
+      card.append(name);
+      const tags = document.createElement("span");
+      tags.className = "catalog-tags";
+      tags.textContent = (pose.tags || []).slice(0, 3).join(", ");
+      card.append(tags);
+      return card;
+    })
+  );
+}
+
+// ─── Background ───
+
 async function handleBackground() {
   const file = els.backgroundFile.files[0];
   state.backgroundTags.clear();
@@ -180,6 +268,8 @@ async function handleBackground() {
   renderTagChips();
   return recommend();
 }
+
+// ─── Recommend ───
 
 async function recommend() {
   const tags = getActiveTags();

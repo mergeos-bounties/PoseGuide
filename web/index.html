@@ -11,62 +11,76 @@
     <header class="topbar">
       <div>
         <p class="eyebrow">PoseGuide</p>
-        <h1>Scene to pose</h1>
+        <nav class="tabs" aria-label="View">
+          <button id="tabRecommend" class="tab active" type="button">Recommend</button>
+          <button id="tabCatalog" class="tab" type="button">Catalog</button>
+        </nav>
       </div>
       <output id="runStatus" class="status-pill">Loading catalog</output>
     </header>
 
     <main class="workspace">
-      <section class="controls" aria-label="Scene controls">
-        <label class="field">
-          <span>Scene</span>
-          <select id="scenePreset"></select>
-        </label>
-
-        <fieldset class="tag-field">
-          <legend>Tags</legend>
-          <div id="tagChips" class="chip-grid" aria-live="polite"></div>
-          <div class="inline-control">
-            <input id="customTags" type="text" inputmode="text" autocomplete="off" placeholder="urban, daylight">
-            <button id="addTags" type="button">Add</button>
-          </div>
-        </fieldset>
-
-        <label class="field">
-          <span>Background</span>
-          <input id="backgroundFile" type="file" accept="image/*">
-        </label>
-
-        <div class="api-row">
-          <label class="switch">
-            <input id="useApi" type="checkbox">
-            <span>Local API</span>
+      <section id="viewRecommend" class="view" aria-label="Scene controls">
+        <section class="controls">
+          <label class="field">
+            <span>Scene</span>
+            <select id="scenePreset"></select>
           </label>
-          <input id="apiUrl" type="url" value="http://localhost:8000" aria-label="Local API URL">
-        </div>
 
-        <label class="field compact">
-          <span>Top poses</span>
-          <select id="topK">
-            <option value="3" selected>3</option>
-            <option value="5">5</option>
-            <option value="8">8</option>
-          </select>
-        </label>
+          <fieldset class="tag-field">
+            <legend>Tags</legend>
+            <div id="tagChips" class="chip-grid" aria-live="polite"></div>
+            <div class="inline-control">
+              <input id="customTags" type="text" inputmode="text" autocomplete="off" placeholder="urban, daylight">
+              <button id="addTags" type="button">Add</button>
+            </div>
+          </fieldset>
 
-        <button id="recommend" class="primary" type="button">Recommend</button>
+          <label class="field">
+            <span>Background</span>
+            <input id="backgroundFile" type="file" accept="image/*">
+          </label>
+
+          <div class="api-row">
+            <label class="switch">
+              <input id="useApi" type="checkbox">
+              <span>Local API</span>
+            </label>
+            <input id="apiUrl" type="url" value="http://localhost:8000" aria-label="Local API URL">
+          </div>
+
+          <label class="field compact">
+            <span>Top poses</span>
+            <select id="topK">
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="8">8</option>
+            </select>
+          </label>
+
+          <button id="recommend" class="primary" type="button">Recommend</button>
+        </section>
+
+        <section class="preview" aria-label="Pose preview">
+          <canvas id="poseCanvas" width="720" height="960"></canvas>
+        </section>
+
+        <section class="results" aria-label="Recommended poses">
+          <div class="section-heading">
+            <h2>Top poses</h2>
+            <output id="sourceLabel">Offline catalog</output>
+          </div>
+          <ol id="resultsList" class="result-list"></ol>
+        </section>
       </section>
 
-      <section class="preview" aria-label="Pose preview">
-        <canvas id="poseCanvas" width="720" height="960"></canvas>
-      </section>
-
-      <section class="results" aria-label="Recommended poses">
-        <div class="section-heading">
-          <h2>Top poses</h2>
-          <output id="sourceLabel">Offline catalog</output>
+      <section id="viewCatalog" class="view hidden" aria-label="Pose catalog">
+        <div class="catalog-header">
+          <h2>Pose Catalog</h2>
+          <span id="catalogCount" class="count-label"></span>
         </div>
-        <ol id="resultsList" class="result-list"></ol>
+        <div id="catalogTagChips" class="chip-grid" aria-live="polite"></div>
+        <div id="catalogGrid" class="catalog-grid"></div>
       </section>
     </main>
   </body>
