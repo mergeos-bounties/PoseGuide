@@ -4396,6 +4396,19 @@
         "calm",
         "minimal"
       ]
+    },
+    {
+      "id": "night_city_lean_against_rail",
+      "name": "Night City \u2014 Lean Against Rail",
+      "tags": [
+        "portrait",
+        "night",
+        "urban",
+        "lifestyle",
+        "moody"
+      ],
+      "standing": true,
+      "difficulty": "easy"
     }
   ],
   "schema": "poseguide.web.catalog.v1",
