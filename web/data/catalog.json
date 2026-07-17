@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.58",
+  "poseguide_version": "0.2.59",
   "poses": [
     {
       "camera_cues": [
@@ -4363,6 +4363,92 @@
         "sit tall with weight on one hip",
         "turn shoulders slightly toward camera",
         "hands relaxed on lap or chair arm"
+      ]
+    },
+    {
+      "camera_cues": [
+        "profile or three-quarter; eye-level; soft window key"
+      ],
+      "id": "seated_profile_window",
+      "joints": {
+        "l_ankle": [
+          0.5,
+          0.9,
+          0.02
+        ],
+        "l_elbow": [
+          0.4,
+          0.46,
+          0.02
+        ],
+        "l_hip": [
+          0.46,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.48,
+          0.74,
+          0.02
+        ],
+        "l_shoulder": [
+          0.42,
+          0.34,
+          0.02
+        ],
+        "l_wrist": [
+          0.44,
+          0.56,
+          0.02
+        ],
+        "nose": [
+          0.55,
+          0.22,
+          0.0
+        ],
+        "r_ankle": [
+          0.6,
+          0.88,
+          0.0
+        ],
+        "r_elbow": [
+          0.62,
+          0.45,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.57,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.33,
+          0.0
+        ],
+        "r_wrist": [
+          0.6,
+          0.54,
+          0.0
+        ]
+      },
+      "name": "Seated Profile Window",
+      "standing": false,
+      "tags": [
+        "studio",
+        "seated",
+        "portrait",
+        "window",
+        "profile"
+      ],
+      "tips": [
+        "sit upright near window; shoulders open toward light",
+        "chin slightly down; far hand rests on thigh"
       ]
     },
     {
