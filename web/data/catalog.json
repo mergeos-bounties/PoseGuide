@@ -5894,6 +5894,34 @@
     },
     {
       "composition": {
+        "foreground": "cup, notebook, or laptop on the counter",
+        "framing": "eye-level seated portrait",
+        "key_light": "side light from the cafe window"
+      },
+      "expected_poses": [
+        "seated_cafe_laptop",
+        "coffee_cup",
+        "seated_window_light",
+        "seated_profile"
+      ],
+      "id": "cafe_window_counter",
+      "mood": [
+        "casual",
+        "cozy"
+      ],
+      "name": "Cafe Window Counter",
+      "tags": [
+        "indoor",
+        "cafe",
+        "window",
+        "seated",
+        "portrait",
+        "lifestyle",
+        "warm-light"
+      ]
+    },
+    {
+      "composition": {
         "include": "skyline",
         "subject_placement": "left_third"
       },
@@ -6037,6 +6065,34 @@
         "soft_light",
         "portrait",
         "home"
+      ]
+    },
+    {
+      "composition": {
+        "background": "exposed brick and open floor plan",
+        "framing": "waist-up or three-quarter portrait",
+        "key_light": "large loft window at 45 degrees"
+      },
+      "expected_poses": [
+        "lean_window_portrait",
+        "window_gaze",
+        "hands_in_pockets",
+        "coffee_table_lean"
+      ],
+      "id": "indoor_loft",
+      "mood": [
+        "relaxed",
+        "editorial"
+      ],
+      "name": "Indoor Loft Window",
+      "tags": [
+        "indoor",
+        "loft",
+        "portrait",
+        "window",
+        "soft light",
+        "lean",
+        "lifestyle"
       ]
     },
     {
@@ -6318,6 +6374,7 @@
     "communication",
     "confident",
     "cool_light",
+    "cozy",
     "crouch",
     "crowd",
     "crowded",
@@ -6356,6 +6413,7 @@
     "kneeling",
     "lean",
     "lifestyle",
+    "loft",
     "lookback",
     "low angle",
     "military",

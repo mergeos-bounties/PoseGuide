@@ -1,0 +1,29 @@
+{
+  "id": "indoor_loft",
+  "name": "Indoor Loft Window",
+  "tags": [
+    "indoor",
+    "loft",
+    "portrait",
+    "window",
+    "soft light",
+    "lean",
+    "lifestyle"
+  ],
+  "mood": [
+    "relaxed",
+    "editorial"
+  ],
+  "expected_poses": [
+    "lean_window_portrait",
+    "window_gaze",
+    "hands_in_pockets",
+    "coffee_table_lean"
+  ],
+  "composition": {
+    "key_light": "large loft window at 45 degrees",
+    "background": "exposed brick and open floor plan",
+    "framing": "waist-up or three-quarter portrait"
+  },
+  "notes": "Use the window as a soft key and keep the subject separated from the brick background."
+}
