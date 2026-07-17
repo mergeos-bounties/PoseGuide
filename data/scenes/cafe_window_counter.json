@@ -1,0 +1,29 @@
+{
+  "id": "cafe_window_counter",
+  "name": "Cafe Window Counter",
+  "tags": [
+    "indoor",
+    "cafe",
+    "window",
+    "seated",
+    "portrait",
+    "lifestyle",
+    "warm-light"
+  ],
+  "mood": [
+    "casual",
+    "cozy"
+  ],
+  "expected_poses": [
+    "seated_cafe_laptop",
+    "coffee_cup",
+    "seated_window_light",
+    "seated_profile"
+  ],
+  "composition": {
+    "key_light": "side light from the cafe window",
+    "foreground": "cup, notebook, or laptop on the counter",
+    "framing": "eye-level seated portrait"
+  },
+  "notes": "Seat the subject at an angle to the glass so the face catches light without losing the cafe context."
+}
