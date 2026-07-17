@@ -1,0 +1,87 @@
+{
+  "id": "over_shoulder_look_soft",
+  "name": "Over Shoulder Look Soft",
+  "standing": true,
+  "difficulty": "easy",
+  "tags": [
+    "studio",
+    "standing",
+    "portrait",
+    "fashion",
+    "editorial"
+  ],
+  "tips": [
+    "Body angled 45\u00b0 from camera; head turns back to lens",
+    "Near hand lightly on hip; weight on back leg"
+  ],
+  "camera_cues": [
+    "three-quarter rear; eye-level; soft rim + key"
+  ],
+  "joints": {
+    "nose": [
+      0.58,
+      0.18,
+      0.02
+    ],
+    "l_shoulder": [
+      0.4,
+      0.3,
+      0.0
+    ],
+    "r_shoulder": [
+      0.62,
+      0.29,
+      0.02
+    ],
+    "l_elbow": [
+      0.36,
+      0.44,
+      0.0
+    ],
+    "r_elbow": [
+      0.66,
+      0.42,
+      0.02
+    ],
+    "l_wrist": [
+      0.42,
+      0.52,
+      0.0
+    ],
+    "r_wrist": [
+      0.6,
+      0.48,
+      0.02
+    ],
+    "l_hip": [
+      0.44,
+      0.54,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.54,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.73,
+      0.01
+    ],
+    "l_ankle": [
+      0.44,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.57,
+      0.93,
+      0.01
+    ]
+  }
+}
