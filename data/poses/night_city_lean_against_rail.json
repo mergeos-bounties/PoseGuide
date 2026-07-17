@@ -1,0 +1,76 @@
+{
+  "id": "night_city_lean_against_rail",
+  "name": "Night City Lean Against Rail",
+  "standing": true,
+  "tags": ["urban", "night", "moody", "cinematic", "low-light", "street"],
+  "difficulty": "intermediate",
+  "tips": [
+    "Lean casually against the rail with weight on one leg",
+    "Keep shoulders relaxed, one shoulder slightly higher",
+    "Chin slightly up for confident look",
+    "Eyes can be soft or looking into distance",
+    "Hands in pockets or one hand on rail"
+  ],
+  "camera_cues": [
+    "Full body or three-quarter body shot",
+    "Use leading lines from rail",
+    "Capture city lights in background",
+    "Low angle for dramatic effect",
+    "Consider silhouette against city lights"
+  ],
+  "lighting": {
+    "type": "low-light",
+    "sources": ["city lights", "street lamps", "neon signs"],
+    "mood": "moody, cinematic, urban",
+    "tips": [
+      "Use wide aperture (f/1.8-2.8)",
+      "Increase ISO (800-3200)",
+      "Slow shutter speed for light trails",
+      "Consider off-camera flash for fill"
+    ]
+  },
+  "joints": {
+    "nose": [0.5, 0.12, 0.0],
+    "l_shoulder": [0.42, 0.28, 0.0],
+    "r_shoulder": [0.58, 0.28, 0.0],
+    "l_elbow": [0.38, 0.42, 0.0],
+    "r_elbow": [0.62, 0.42, 0.0],
+    "l_wrist": [0.35, 0.55, 0.0],
+    "r_wrist": [0.65, 0.55, 0.0],
+    "l_hip": [0.45, 0.55, 0.0],
+    "r_hip": [0.55, 0.55, 0.0],
+    "l_knee": [0.42, 0.72, 0.0],
+    "r_knee": [0.58, 0.72, 0.0],
+    "l_ankle": [0.40, 0.9, 0.0],
+    "r_ankle": [0.60, 0.9, 0.0]
+  },
+  "variations": [
+    {
+      "name": "hands_in_pockets",
+      "description": "Both hands in jacket pockets",
+      "joints_adjustment": {
+        "l_wrist": [0.42, 0.52, 0.0],
+        "r_wrist": [0.58, 0.52, 0.0]
+      }
+    },
+    {
+      "name": "one_hand_on_rail",
+      "description": "One hand resting on rail behind",
+      "joints_adjustment": {
+        "r_wrist": [0.72, 0.48, 0.0]
+      }
+    }
+  ],
+  "best_for": [
+    "Street photography",
+    "Urban portraits",
+    "Night photography",
+    "Cinematic shots",
+    "Fashion editorials"
+  ],
+  "avoid": [
+    "Overly posed looks",
+    "Stiff posture",
+    "Looking directly at camera (unless intended)"
+  ]
+}
