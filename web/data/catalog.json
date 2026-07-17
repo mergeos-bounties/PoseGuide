@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.57",
+  "poseguide_version": "0.2.58",
   "poses": [
     {
       "camera_cues": [
@@ -2797,6 +2797,92 @@
         "one shoulder to wall",
         "soft knee bend",
         "look past camera"
+      ]
+    },
+    {
+      "camera_cues": [
+        "three-quarter; eye-level; soft side key"
+      ],
+      "id": "lean_wall_casual_soft",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.34,
+          0.42,
+          0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.46,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.36,
+          0.29,
+          0.02
+        ],
+        "l_wrist": [
+          0.38,
+          0.52,
+          0.02
+        ],
+        "nose": [
+          0.52,
+          0.17,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.93,
+          0.01
+        ],
+        "r_elbow": [
+          0.62,
+          0.44,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.54,
+          0.73,
+          0.01
+        ],
+        "r_shoulder": [
+          0.6,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.52,
+          0.0
+        ]
+      },
+      "name": "Lean Wall Casual Soft",
+      "standing": true,
+      "tags": [
+        "studio",
+        "standing",
+        "portrait",
+        "casual",
+        "urban"
+      ],
+      "tips": [
+        "one shoulder lightly on wall; opposite foot slightly forward",
+        "hands relaxed at pockets or belt; chin soft toward camera"
       ]
     },
     {
