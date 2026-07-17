@@ -39,6 +39,25 @@ app.add_typer(train_app, name="train")
 app.add_typer(eval_app, name="eval")
 app.add_typer(data_app, name="data")
 console = Console()
+POSE_DIFFICULTIES = ("easy", "medium", "hard")
+
+
+def _normalize_difficulty(value: Optional[str]) -> Optional[str]:
+    if value is None:
+        return None
+    difficulty = value.strip().lower()
+    if difficulty not in POSE_DIFFICULTIES:
+        console.print(f"[red]--difficulty must be one of: {', '.join(POSE_DIFFICULTIES)}[/red]")
+        raise typer.Exit(2)
+    return difficulty
+
+
+def _matches_pose_filters(pose: dict, *, tag: Optional[str], difficulty: Optional[str]) -> bool:
+    pose_tags = {str(value).strip().lower() for value in (pose.get("tags") or [])}
+    pose_difficulty = str(pose.get("difficulty") or "medium").strip().lower()
+    return (tag is None or tag in pose_tags) and (
+        difficulty is None or difficulty == pose_difficulty
+    )
 
 
 @app.command("version")
@@ -85,19 +104,33 @@ def demo_cmd(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
 
 
 @poses_app.command("list")
-def poses_list() -> None:
-    files = list_pose_files()
-    if not files:
-        console.print("[yellow]No poses in data/poses[/yellow]")
+def poses_list(
+    tag: Optional[str] = typer.Option(None, "--tag", "-t", help="Filter by an exact tag."),
+    difficulty: Optional[str] = typer.Option(
+        None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard."
+    ),
+) -> None:
+    tag = tag.strip().lower() if tag and tag.strip() else None
+    difficulty = _normalize_difficulty(difficulty)
+    poses = [
+        pose
+        for path in list_pose_files()
+        if _matches_pose_filters(pose := load_pose(path), tag=tag, difficulty=difficulty)
+    ]
+    if not poses:
+        console.print("[yellow]No poses match the selected filters[/yellow]")
         raise typer.Exit()
-    table = Table(title=f"Standing poses ({len(files)})")
+    table = Table(title=f"Standing poses ({len(poses)})")
     table.add_column("ID")
     table.add_column("Name")
     table.add_column("Tags")
-    for path in files:
-        pose = load_pose(path)
+    for pose in poses:
         tags = ", ".join(pose.get("tags") or [])
-        table.add_row(str(pose.get("id")), str(pose.get("name")), tags)
+        table.add_row(
+            str(pose.get("id")),
+            str(pose.get("name")),
+            tags,
+        )
     console.print(table)
 
 
@@ -310,14 +343,27 @@ def _build_markdown_report(report: dict, top: int) -> str:
 
 @poses_app.command("search")
 def poses_search(
-    query: str = typer.Argument(..., help="Substring over id/name/tags/tips/camera cues"),
+    query: Optional[str] = typer.Argument(
+        None, help="Optional substring over id/name/tags/tips/camera cues"
+    ),
+    tag: Optional[str] = typer.Option(None, "--tag", "-t", help="Filter by an exact tag."),
+    difficulty: Optional[str] = typer.Option(
+        None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard."
+    ),
     limit: int = typer.Option(15, "--limit", "-n", min=1, max=50),
 ) -> None:
     """Search standing pose catalog by id, name, tags, tips, or camera cues."""
-    q = query.strip().lower()
+    q = (query or "").strip().lower()
+    tag = tag.strip().lower() if tag and tag.strip() else None
+    difficulty = _normalize_difficulty(difficulty)
+    if not q and tag is None and difficulty is None:
+        console.print("[red]Provide a query, --tag, or --difficulty[/red]")
+        raise typer.Exit(2)
     hits = []
     for path in list_pose_files():
         pose = load_pose(path)
+        if not _matches_pose_filters(pose, tag=tag, difficulty=difficulty):
+            continue
         searchable = {
             "id": [str(pose.get("id") or "")],
             "name": [str(pose.get("name") or "")],
@@ -328,13 +374,14 @@ def poses_search(
         matched_fields = [
             field
             for field, values in searchable.items()
-            if any(q in value.lower() for value in values)
+            if q and any(q in value.lower() for value in values)
         ]
-        if matched_fields:
-            hits.append((pose, matched_fields))
+        if q and not matched_fields:
+            continue
+        hits.append((pose, matched_fields or ["filters"]))
         if len(hits) >= limit:
             break
-    table = Table(title=f"Pose search: {query} ({len(hits)})")
+    table = Table(title=f"Pose search: {query or 'filters'} ({len(hits)})")
     table.add_column("ID")
     table.add_column("Name")
     table.add_column("Tags")
