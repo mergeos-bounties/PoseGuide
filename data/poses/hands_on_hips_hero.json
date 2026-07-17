@@ -1,0 +1,87 @@
+{
+  "id": "hands_on_hips_hero",
+  "name": "Hands On Hips Hero",
+  "standing": true,
+  "difficulty": "easy",
+  "tags": [
+    "studio",
+    "standing",
+    "portrait",
+    "power",
+    "editorial"
+  ],
+  "tips": [
+    "Feet shoulder-width; elbows soft out; chest open",
+    "Chin level; slight weight shift to back hip"
+  ],
+  "camera_cues": [
+    "front or three-quarter; eye-level; soft key + fill"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.17,
+      0.0
+    ],
+    "l_shoulder": [
+      0.36,
+      0.29,
+      0.0
+    ],
+    "r_shoulder": [
+      0.64,
+      0.29,
+      0.0
+    ],
+    "l_elbow": [
+      0.3,
+      0.42,
+      0.02
+    ],
+    "r_elbow": [
+      0.7,
+      0.42,
+      0.02
+    ],
+    "l_wrist": [
+      0.38,
+      0.5,
+      0.02
+    ],
+    "r_wrist": [
+      0.62,
+      0.5,
+      0.02
+    ],
+    "l_hip": [
+      0.44,
+      0.54,
+      0.0
+    ],
+    "r_hip": [
+      0.56,
+      0.54,
+      0.0
+    ],
+    "l_knee": [
+      0.44,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.56,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.44,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.56,
+      0.92,
+      0.0
+    ]
+  }
+}
