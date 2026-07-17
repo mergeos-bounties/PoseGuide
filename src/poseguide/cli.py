@@ -72,16 +72,74 @@ def stats_cmd() -> None:
 
 
 @app.command("demo")
-def demo_cmd(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
-    """End-to-end demo: preset scene tags → pose recommendations + SVG stick figure."""
-    try:
-        result = run_demo(preset)
-    except KeyError as exc:
-        console.print(f"[red]{exc}[/red]")
-        console.print(f"Presets: {', '.join(PRESETS)}")
-        raise typer.Exit(1) from exc
-    console.print_json(data=result)
-    console.print(f"[green]SVG[/green] {result.get('svg_path')}")
+def demo_cmd(
+    preset: str = typer.Option("beach", "--preset", "-p", help="Scene preset to use when no image is provided"),
+    image: Optional[Path] = typer.Option(None, "--image", "-i", exists=True, dir_okay=False, help="Input background image for overlay demo"),
+    tags: Optional[str] = typer.Option(None, "--tags", "-t", help="Scene tags (comma-separated). If not provided with --image, attempt to infer from filename."),
+    out: Optional[Path] = typer.Option(None, "--out", "-o", help="Output overlay image path (default: <input>_overlay.png when using --image)"),
+    width: int = typer.Option(360, "--width", min=64, max=4096),
+    height: int = typer.Option(480, "--height", min=64, max=4096),
+) -> None:
+    """End-to-end demo: preset scene tags → pose recommendations + SVG stick figure.
+    If --image is provided, infer scene tags (or use provided tags) → recommend pose → render overlay on input image.
+    """
+    if image is not None:
+        # Image-based demo
+        # Infer tags from filename if not provided
+        if tags is None:
+            stem = image.stem.lower()
+            # Known scene presets
+            matched = [p for p in PRESETS if p in stem]
+            if matched:
+                tags = matched[0]
+            else:
+                tags = "beach"  # default
+            console.print(f"[dim]Inferred scene tags from filename: {tags}[/dim]")
+        else:
+            console.print(f"[dim]Using provided scene tags: {tags}[/dim]")
+        
+        # Get top pose recommendation for the scene tags
+        try:
+            recs = recommend_for_tags(tags, top_k=1)
+        except Exception as exc:
+            console.print(f"[red]Failed to get recommendations for tags '{tags}': {exc}[/red]")
+            raise typer.Exit(1) from exc
+        
+        if not recs or not recs.get("recommendations"):
+            console.print(f"[red]No recommendations found for tags '{tags}'[/red]")
+            raise typer.Exit(1)
+        
+        pose_id = str(recs["recommendations"][0]["pose_id"])
+        console.print(f"[dim]Recommended pose: {pose_id}[/dim]")
+        
+        # Determine output path
+        if out is None:
+            out = image.parent / f"{image.stem}_overlay.png"
+        
+        # Render overlay
+        try:
+            path = render_overlay_png(pose_id, out, background=image, width=width, height=height)
+        except VisionUnavailableError as exc:
+            console.print(f"[red]{exc}[/red]")
+            console.print("Please install the '[vision]' extra to use this feature: pip install -e '.[vision]'")
+            raise typer.Exit(1) from exc
+        except KeyError as exc:
+            console.print(f"[red]{exc}[/red]")
+            raise typer.Exit(1) from exc
+        
+        console.print(f"[green]Wrote overlay:[/green] {path}")
+        console.print(f"[dim]Scene tags: {tags}[/dim]")
+        console.print(f"[dim]Pose ID: {pose_id}[/dim]")
+    else:
+        # Preset-based demo (original behavior)
+        try:
+            result = run_demo(preset)
+        except KeyError as exc:
+            console.print(f"[red]{exc}[/red]")
+            console.print(f"Presets: {', '.join(PRESETS)}")
+            raise typer.Exit(1) from exc
+        console.print_json(data=result)
+        console.print(f"[green]SVG[/green] {result.get('svg_path')}")
 
 
 @poses_app.command("list")
@@ -231,12 +289,18 @@ def guide_coach(
 
 @guide_app.command("demo")
 def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
+    """End-to-end demo: preset scene tags → pose recommendations + SVG stick figure."""
     try:
         result = run_demo(preset)
     except KeyError as exc:
         console.print(f"[red]{exc}[/red]")
+        console.print(f"Presets: {', '.join(PRESETS)}")
         raise typer.Exit(1) from exc
     console.print_json(data=result)
+    console.print(f"[green]SVG[/green] {result.get('svg_path')}")
+
+
+
 
 
 @eval_app.command("scenes")
