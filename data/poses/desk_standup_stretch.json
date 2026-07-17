@@ -1,0 +1,79 @@
+{
+  "id": "desk_standup_stretch",
+  "name": "Desk Stand-Up Stretch",
+  "standing": true,
+  "tags": ["office", "ergonomic", "stretching", "wellness", "workplace", "health"],
+  "difficulty": "beginner",
+  "tips": [
+    "Stand up from desk with feet shoulder-width apart",
+    "Reach arms overhead, fingers interlaced",
+    "Stretch spine upward, feel the elongation",
+    "Hold for 10-15 seconds",
+    "Release arms slowly to sides",
+    "Repeat 2-3 times throughout workday"
+  ],
+  "camera_cues": [
+    "Full body shot showing desk context",
+    "Side profile to capture spine extension",
+    "Include desk and chair in frame",
+    "Natural office lighting preferred",
+    "Show relaxed, natural expression"
+  ],
+  "lighting": {
+    "type": "natural",
+    "sources": ["window light", "office overhead"],
+    "mood": "professional, healthy, energized",
+    "tips": [
+      "Use available window light",
+      "Avoid harsh overhead fluorescents",
+      "Soft shadows preferred",
+      "Consider backlight for silhouette effect"
+    ]
+  },
+  "joints": {
+    "nose": [0.5, 0.10, 0.0],
+    "l_shoulder": [0.42, 0.25, 0.0],
+    "r_shoulder": [0.58, 0.25, 0.0],
+    "l_elbow": [0.35, 0.12, 0.0],
+    "r_elbow": [0.65, 0.12, 0.0],
+    "l_wrist": [0.40, 0.02, 0.0],
+    "r_wrist": [0.60, 0.02, 0.0],
+    "l_hip": [0.45, 0.50, 0.0],
+    "r_hip": [0.55, 0.50, 0.0],
+    "l_knee": [0.43, 0.70, 0.0],
+    "r_knee": [0.57, 0.70, 0.0],
+    "l_ankle": [0.42, 0.90, 0.0],
+    "r_ankle": [0.58, 0.90, 0.0]
+  },
+  "variations": [
+    {
+      "name": "side_reach",
+      "description": "Reach one arm overhead to the side",
+      "joints_adjustment": {
+        "l_wrist": [0.30, 0.05, 0.0],
+        "r_wrist": [0.70, 0.05, 0.0]
+      }
+    },
+    {
+      "name": "forward_fold",
+      "description": "Fold forward from hips, arms hanging",
+      "joints_adjustment": {
+        "nose": [0.5, 0.35, 0.0],
+        "l_wrist": [0.40, 0.65, 0.0],
+        "r_wrist": [0.60, 0.65, 0.0]
+      }
+    }
+  ],
+  "best_for": [
+    "Office wellness content",
+    "Ergonomic guides",
+    "Workplace health campaigns",
+    "Corporate training materials",
+    "Remote work lifestyle content"
+  ],
+  "avoid": [
+    "Overexaggerated stretches",
+    "Painful expressions",
+    "Unsafe positions"
+  ]
+}
