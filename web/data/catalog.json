@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.61",
+  "poseguide_version": "0.2.62",
   "poses": [
     {
       "camera_cues": [
@@ -5667,6 +5667,92 @@
     },
     {
       "camera_cues": [
+        "front; slightly low angle; motion freeze"
+      ],
+      "id": "walking_toward_camera",
+      "joints": {
+        "l_ankle": [
+          0.4,
+          0.9,
+          0.06
+        ],
+        "l_elbow": [
+          0.34,
+          0.4,
+          0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.52,
+          0.0
+        ],
+        "l_knee": [
+          0.42,
+          0.7,
+          0.04
+        ],
+        "l_shoulder": [
+          0.38,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.36,
+          0.52,
+          0.02
+        ],
+        "nose": [
+          0.5,
+          0.16,
+          0.0
+        ],
+        "r_ankle": [
+          0.6,
+          0.92,
+          -0.02
+        ],
+        "r_elbow": [
+          0.68,
+          0.42,
+          -0.02
+        ],
+        "r_hip": [
+          0.56,
+          0.52,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.74,
+          -0.02
+        ],
+        "r_shoulder": [
+          0.62,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.7,
+          0.54,
+          -0.02
+        ]
+      },
+      "name": "Walking Toward Camera",
+      "standing": true,
+      "tags": [
+        "studio",
+        "standing",
+        "motion",
+        "editorial",
+        "full-body"
+      ],
+      "tips": [
+        "mid-stride; front foot heel-first; shoulders open to lens",
+        "arms relaxed swing; eyes to camera; soft smile optional"
+      ]
+    },
+    {
+      "camera_cues": [
         "three-quarter angle",
         "eye-level or slightly below"
       ],
@@ -6655,6 +6741,7 @@
     "forest",
     "formal",
     "full body",
+    "full-body",
     "full_body",
     "garden",
     "golden hour",
