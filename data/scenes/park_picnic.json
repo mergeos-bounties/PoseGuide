@@ -1,0 +1,24 @@
+{
+  "id": "park_picnic",
+  "name": "Park Picnic",
+  "tags": [
+    "park",
+    "outdoor",
+    "daylight",
+    "casual",
+    "nature"
+  ],
+  "mood": [
+    "cheerful",
+    "relaxed"
+  ],
+  "expected_poses": [
+    "sit_cross_legged",
+    "coffee_cup",
+    "book_reading"
+  ],
+  "composition": {
+    "horizon": "middle",
+    "subject_placement": "center"
+  }
+}
