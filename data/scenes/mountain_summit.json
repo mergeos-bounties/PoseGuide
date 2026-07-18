@@ -1,0 +1,24 @@
+{
+  "id": "mountain_summit",
+  "name": "Mountain Summit",
+  "tags": [
+    "mountain",
+    "outdoor",
+    "adventure",
+    "landscape",
+    "golden_hour"
+  ],
+  "mood": [
+    "inspiring",
+    "bold"
+  ],
+  "expected_poses": [
+    "power_stance",
+    "arms_raised",
+    "stretch_reach"
+  ],
+  "composition": {
+    "horizon": "upper_third",
+    "subject_placement": "left_third"
+  }
+}
