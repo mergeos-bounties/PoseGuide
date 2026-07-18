@@ -2,86 +2,22 @@
   "id": "seated_cafe_laptop",
   "name": "Seated Cafe Laptop",
   "standing": false,
-  "difficulty": "easy",
-  "tags": [
-    "indoor",
-    "seated",
-    "cafe",
-    "portrait",
-    "window"
-  ],
-  "tips": [
-    "Sit at 45\u00b0 to window; laptop/notebook just below chest line",
-    "Shoulders relaxed; slight lean toward key light"
-  ],
-  "camera_cues": [
-    "50\u201385mm; eye level; expose for face"
-  ],
+  "tags": ["indoor", "seated", "lifestyle", "workspace", "candid"],
+  "tips": ["Sit tall but relaxed", "Hands light on keyboard", "Eyes on screen for natural focus"],
+  "camera_cues": ["three-quarter angle from across table", "window light from side"],
   "joints": {
-    "nose": [
-      0.52,
-      0.24,
-      0.0
-    ],
-    "l_shoulder": [
-      0.4,
-      0.36,
-      0.0
-    ],
-    "r_shoulder": [
-      0.62,
-      0.36,
-      0.0
-    ],
-    "l_elbow": [
-      0.36,
-      0.5,
-      0.0
-    ],
-    "r_elbow": [
-      0.66,
-      0.5,
-      0.0
-    ],
-    "l_wrist": [
-      0.42,
-      0.6,
-      0.0
-    ],
-    "r_wrist": [
-      0.6,
-      0.6,
-      0.0
-    ],
-    "l_hip": [
-      0.44,
-      0.64,
-      0.0
-    ],
-    "r_hip": [
-      0.58,
-      0.64,
-      0.0
-    ],
-    "l_knee": [
-      0.44,
-      0.8,
-      0.0
-    ],
-    "r_knee": [
-      0.58,
-      0.8,
-      0.0
-    ],
-    "l_ankle": [
-      0.44,
-      0.94,
-      0.0
-    ],
-    "r_ankle": [
-      0.58,
-      0.94,
-      0.0
-    ]
+    "nose": [0.5, 0.35, 0.0],
+    "l_shoulder": [0.4, 0.45, 0.0],
+    "r_shoulder": [0.6, 0.45, 0.0],
+    "l_elbow": [0.35, 0.55, 0.0],
+    "r_elbow": [0.65, 0.55, 0.0],
+    "l_wrist": [0.45, 0.6, 0.0],
+    "r_wrist": [0.55, 0.6, 0.0],
+    "l_hip": [0.45, 0.7, 0.0],
+    "r_hip": [0.55, 0.7, 0.0],
+    "l_knee": [0.45, 0.85, 0.0],
+    "r_knee": [0.55, 0.85, 0.0],
+    "l_ankle": [0.45, 1.0, 0.0],
+    "r_ankle": [0.55, 1.0, 0.0]
   }
 }
