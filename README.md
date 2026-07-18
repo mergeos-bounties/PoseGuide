@@ -192,6 +192,10 @@ Star this repo + [mergeos](https://github.com/mergeos-bounties/mergeos) → clai
 
 Evidence: demo SVG / stick-figure screenshots + recommend JSON.
 
+### Pose Pack Contribution Guide
+
+Ready to contribute a pose pack? See [docs/CONTRIBUTE_POSE_PACK.md](docs/CONTRIBUTE_POSE_PACK.md) for schema, joints requirements, difficulty levels, and evidence checklist.
+
 ---
 
 ## License
