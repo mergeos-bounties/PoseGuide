@@ -104,6 +104,7 @@ poseguide demo -p studio
 | Area | Location |
 | --- | --- |
 | Pose catalog | `data/poses/` |
+| Pose families catalog | `docs/POSES.md` |
 | Scene samples | `data/scenes/` |
 | Demo presets | `poseguide.guide.demo.PRESETS` |
 | Web demo catalog | `web/data/catalog.json` |
