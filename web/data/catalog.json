@@ -1,5 +1,5 @@
 {
-  "poseguide_version": "0.2.64",
+  "poseguide_version": "0.2.65",
   "poses": [
     {
       "camera_cues": [
@@ -1306,6 +1306,92 @@
       "tips": [
         "drop into a low crouch; chest open toward camera",
         "hands free or on knee; keep spine long"
+      ]
+    },
+    {
+      "camera_cues": [
+        "three-quarter front; knee-level; shallow dof on hands"
+      ],
+      "id": "crouch_tie_shoe",
+      "joints": {
+        "l_ankle": [
+          0.38,
+          0.9,
+          0.05
+        ],
+        "l_elbow": [
+          0.4,
+          0.48,
+          0.04
+        ],
+        "l_hip": [
+          0.44,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.74,
+          0.04
+        ],
+        "l_shoulder": [
+          0.42,
+          0.36,
+          0.02
+        ],
+        "l_wrist": [
+          0.44,
+          0.58,
+          0.06
+        ],
+        "nose": [
+          0.52,
+          0.28,
+          0.03
+        ],
+        "r_ankle": [
+          0.6,
+          0.88,
+          0.02
+        ],
+        "r_elbow": [
+          0.56,
+          0.5,
+          0.05
+        ],
+        "r_hip": [
+          0.56,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.02
+        ],
+        "r_shoulder": [
+          0.58,
+          0.36,
+          -0.01
+        ],
+        "r_wrist": [
+          0.52,
+          0.6,
+          0.07
+        ]
+      },
+      "name": "Crouch Tie Shoe",
+      "standing": false,
+      "tags": [
+        "street",
+        "action",
+        "crouch",
+        "lifestyle",
+        "outdoor"
+      ],
+      "tips": [
+        "drop into a low crouch; one knee lower; hands near shoe laces",
+        "keep spine long; eyes up toward camera or down at the shoe"
       ]
     },
     {
@@ -3409,6 +3495,93 @@
     },
     {
       "camera_cues": [
+        "waist-up or 3/4; shallow dof with bokeh lights in background",
+        "low-light iso \u2014 use wide aperture for clean skin tones"
+      ],
+      "id": "night_city_lean_against_rail",
+      "joints": {
+        "l_ankle": [
+          0.38,
+          0.94,
+          0.0
+        ],
+        "l_elbow": [
+          0.28,
+          0.44,
+          0.0
+        ],
+        "l_hip": [
+          0.42,
+          0.58,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.76,
+          0.0
+        ],
+        "l_shoulder": [
+          0.37,
+          0.29,
+          0.0
+        ],
+        "l_wrist": [
+          0.26,
+          0.56,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.15,
+          0.0
+        ],
+        "r_ankle": [
+          0.64,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.4,
+          0.0
+        ],
+        "r_hip": [
+          0.58,
+          0.58,
+          0.0
+        ],
+        "r_knee": [
+          0.62,
+          0.74,
+          0.0
+        ],
+        "r_shoulder": [
+          0.63,
+          0.29,
+          0.0
+        ],
+        "r_wrist": [
+          0.68,
+          0.5,
+          0.0
+        ]
+      },
+      "name": "Night City \u2014 Lean Against Rail",
+      "standing": true,
+      "tags": [
+        "portrait",
+        "night",
+        "urban",
+        "lifestyle",
+        "moody"
+      ],
+      "tips": [
+        "lean one hip against the railing; cross arms or rest one hand on the rail",
+        "let ambient neon / city lights provide rim lighting; avoid harsh flash"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body; slight high angle optional"
       ],
       "id": "one_knee_down",
@@ -3495,73 +3668,74 @@
     },
     {
       "camera_cues": [
-        "full body; 1/500s+ shutter; slight pan"
+        "side angle catches stride",
+        "low angle for hero shot"
       ],
       "id": "outdoor_running_midstride",
       "joints": {
         "l_ankle": [
-          0.4,
-          0.92,
+          0.2,
+          0.9,
           0.0
         ],
         "l_elbow": [
-          0.38,
-          0.38,
+          0.32,
+          0.45,
           0.0
         ],
         "l_hip": [
-          0.46,
-          0.52,
+          0.45,
+          0.55,
           0.0
         ],
         "l_knee": [
-          0.42,
-          0.72,
+          0.3,
+          0.7,
           0.0
         ],
         "l_shoulder": [
-          0.44,
-          0.26,
+          0.4,
+          0.3,
           0.0
         ],
         "l_wrist": [
-          0.34,
-          0.48,
+          0.25,
+          0.4,
           0.0
         ],
         "nose": [
-          0.52,
-          0.14,
+          0.5,
+          0.15,
           0.0
         ],
         "r_ankle": [
-          0.64,
-          0.86,
+          0.85,
+          0.9,
           0.0
         ],
         "r_elbow": [
-          0.68,
-          0.36,
+          0.7,
+          0.45,
           0.0
         ],
         "r_hip": [
-          0.56,
-          0.52,
+          0.6,
+          0.55,
           0.0
         ],
         "r_knee": [
-          0.62,
-          0.68,
+          0.75,
+          0.7,
           0.0
         ],
         "r_shoulder": [
           0.6,
-          0.26,
+          0.3,
           0.0
         ],
         "r_wrist": [
-          0.74,
-          0.44,
+          0.78,
+          0.4,
           0.0
         ]
       },
@@ -3569,14 +3743,15 @@
       "standing": true,
       "tags": [
         "outdoor",
-        "motion",
-        "full body",
-        "sport",
-        "street"
+        "action",
+        "fitness",
+        "running",
+        "dynamic"
       ],
       "tips": [
-        "capture mid-stride with lead knee high",
-        "arms opposite legs; torso upright"
+        "land on midfoot",
+        "arms at 90 degrees",
+        "lean torso slightly forward"
       ]
     },
     {
@@ -4279,28 +4454,29 @@
     },
     {
       "camera_cues": [
-        "full body; expose for skin; rim light from sun"
+        "backlight for rim glow",
+        "eye-level for natural feel"
       ],
       "id": "rooftop_golden_hour_stand",
       "joints": {
         "l_ankle": [
-          0.46,
-          0.94,
+          0.45,
+          0.9,
           0.0
         ],
         "l_elbow": [
-          0.38,
+          0.4,
           0.42,
           0.0
         ],
         "l_hip": [
-          0.46,
-          0.56,
+          0.45,
+          0.55,
           0.0
         ],
         "l_knee": [
-          0.46,
-          0.74,
+          0.45,
+          0.72,
           0.0
         ],
         "l_shoulder": [
@@ -4309,43 +4485,43 @@
           0.0
         ],
         "l_wrist": [
-          0.36,
-          0.54,
+          0.38,
+          0.55,
           0.0
         ],
         "nose": [
-          0.52,
-          0.16,
+          0.5,
+          0.12,
           0.0
         ],
         "r_ankle": [
-          0.58,
-          0.94,
+          0.55,
+          0.9,
           0.0
         ],
         "r_elbow": [
-          0.66,
+          0.6,
           0.42,
           0.0
         ],
         "r_hip": [
-          0.56,
-          0.56,
+          0.55,
+          0.55,
           0.0
         ],
         "r_knee": [
-          0.58,
-          0.74,
+          0.55,
+          0.72,
           0.0
         ],
         "r_shoulder": [
-          0.62,
+          0.58,
           0.28,
           0.0
         ],
         "r_wrist": [
-          0.68,
-          0.54,
+          0.62,
+          0.55,
           0.0
         ]
       },
@@ -4353,84 +4529,86 @@
       "standing": true,
       "tags": [
         "outdoor",
-        "golden hour",
         "portrait",
-        "full body",
-        "skyline"
+        "golden-hour",
+        "urban",
+        "warm-light"
       ],
       "tips": [
-        "face 30\u00b0 toward the sun; shoulders open to skyline",
-        "weight on back leg; front knee soft"
+        "turn body 45 degrees from camera",
+        "relax shoulders",
+        "slight smile or candid gaze"
       ]
     },
     {
       "camera_cues": [
-        "50\u201385mm; eye level; expose for face"
+        "three-quarter angle from across table",
+        "window light from side"
       ],
       "id": "seated_cafe_laptop",
       "joints": {
         "l_ankle": [
-          0.44,
-          0.94,
+          0.45,
+          1.0,
           0.0
         ],
         "l_elbow": [
-          0.36,
-          0.5,
+          0.35,
+          0.55,
           0.0
         ],
         "l_hip": [
-          0.44,
-          0.64,
+          0.45,
+          0.7,
           0.0
         ],
         "l_knee": [
-          0.44,
-          0.8,
+          0.45,
+          0.85,
           0.0
         ],
         "l_shoulder": [
           0.4,
-          0.36,
+          0.45,
           0.0
         ],
         "l_wrist": [
-          0.42,
+          0.45,
           0.6,
           0.0
         ],
         "nose": [
-          0.52,
-          0.24,
+          0.5,
+          0.35,
           0.0
         ],
         "r_ankle": [
-          0.58,
-          0.94,
+          0.55,
+          1.0,
           0.0
         ],
         "r_elbow": [
-          0.66,
-          0.5,
+          0.65,
+          0.55,
           0.0
         ],
         "r_hip": [
-          0.58,
-          0.64,
+          0.55,
+          0.7,
           0.0
         ],
         "r_knee": [
-          0.58,
-          0.8,
+          0.55,
+          0.85,
           0.0
         ],
         "r_shoulder": [
-          0.62,
-          0.36,
+          0.6,
+          0.45,
           0.0
         ],
         "r_wrist": [
-          0.6,
+          0.55,
           0.6,
           0.0
         ]
@@ -4440,13 +4618,14 @@
       "tags": [
         "indoor",
         "seated",
-        "cafe",
-        "portrait",
-        "window"
+        "lifestyle",
+        "workspace",
+        "candid"
       ],
       "tips": [
-        "sit at 45\u00b0 to window; laptop/notebook just below chest line",
-        "shoulders relaxed; slight lean toward key light"
+        "sit tall but relaxed",
+        "hands light on keyboard",
+        "eyes on screen for natural focus"
       ]
     },
     {
@@ -5051,6 +5230,92 @@
       "tips": [
         "chin slightly forward",
         "far shoulder drop for length"
+      ]
+    },
+    {
+      "camera_cues": [
+        "true side; eye-level; soft key from front of face"
+      ],
+      "id": "side_profile_standing",
+      "joints": {
+        "l_ankle": [
+          0.48,
+          0.92,
+          0.01
+        ],
+        "l_elbow": [
+          0.46,
+          0.44,
+          0.02
+        ],
+        "l_hip": [
+          0.48,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.48,
+          0.72,
+          0.01
+        ],
+        "l_shoulder": [
+          0.48,
+          0.3,
+          0.02
+        ],
+        "l_wrist": [
+          0.45,
+          0.56,
+          0.02
+        ],
+        "nose": [
+          0.58,
+          0.18,
+          0.04
+        ],
+        "r_ankle": [
+          0.52,
+          0.93,
+          -0.01
+        ],
+        "r_elbow": [
+          0.54,
+          0.44,
+          -0.02
+        ],
+        "r_hip": [
+          0.52,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.52,
+          0.73,
+          -0.01
+        ],
+        "r_shoulder": [
+          0.52,
+          0.3,
+          -0.02
+        ],
+        "r_wrist": [
+          0.55,
+          0.56,
+          -0.02
+        ]
+      },
+      "name": "Side Profile Standing",
+      "standing": true,
+      "tags": [
+        "studio",
+        "standing",
+        "profile",
+        "portrait",
+        "editorial"
+      ],
+      "tips": [
+        "body in true profile; chin slightly forward; shoulders stacked",
+        "hands relaxed at sides or one on hip; weight on back leg"
       ]
     },
     {
@@ -6275,106 +6540,6 @@
         "knee opens to side without twisting hips",
         "hands at heart or overhead with soft shoulders"
       ]
-    },
-    {
-      "id": "side_profile_standing",
-      "name": "Side Profile Standing",
-      "standing": true,
-      "difficulty": "easy",
-      "tags": [
-        "studio",
-        "standing",
-        "profile",
-        "portrait",
-        "editorial"
-      ],
-      "tips": [
-        "Body in true profile; chin slightly forward; shoulders stacked",
-        "Hands relaxed at sides or one on hip; weight on back leg"
-      ],
-      "camera_cues": [
-        "true side; eye-level; soft key from front of face"
-      ],
-      "joints": {
-        "nose": [
-          0.58,
-          0.18,
-          0.04
-        ],
-        "l_shoulder": [
-          0.48,
-          0.3,
-          0.02
-        ],
-        "r_shoulder": [
-          0.52,
-          0.3,
-          -0.02
-        ],
-        "l_elbow": [
-          0.46,
-          0.44,
-          0.02
-        ],
-        "r_elbow": [
-          0.54,
-          0.44,
-          -0.02
-        ],
-        "l_wrist": [
-          0.45,
-          0.56,
-          0.02
-        ],
-        "r_wrist": [
-          0.55,
-          0.56,
-          -0.02
-        ],
-        "l_hip": [
-          0.48,
-          0.54,
-          0.0
-        ],
-        "r_hip": [
-          0.52,
-          0.54,
-          0.0
-        ],
-        "l_knee": [
-          0.48,
-          0.72,
-          0.01
-        ],
-        "r_knee": [
-          0.52,
-          0.73,
-          -0.01
-        ],
-        "l_ankle": [
-          0.48,
-          0.92,
-          0.01
-        ],
-        "r_ankle": [
-          0.52,
-          0.93,
-          -0.01
-        ]
-      }
-    },
-    {
-      "id": "night_city_lean_against_rail",
-      "name": "Night City \u2014 Lean Against Rail",
-      "tags": [
-        "portrait",
-        "night",
-        "urban",
-        "lifestyle",
-        "moody"
-      ],
-      "standing": true,
-      "difficulty": "easy"
     }
   ],
   "scenes": [
@@ -6875,19 +7040,6 @@
         "calm",
         "minimal"
       ]
-    },
-    {
-      "id": "night_city_lean_against_rail",
-      "name": "Night City \u2014 Lean Against Rail",
-      "tags": [
-        "portrait",
-        "night",
-        "urban",
-        "lifestyle",
-        "moody"
-      ],
-      "standing": true,
-      "difficulty": "easy"
     }
   ],
   "schema": "poseguide.web.catalog.v1",
@@ -6935,6 +7087,7 @@
     "event",
     "fashion",
     "festival",
+    "fitness",
     "floor",
     "flowers",
     "forest",
@@ -6943,7 +7096,7 @@
     "full-body",
     "full_body",
     "garden",
-    "golden hour",
+    "golden-hour",
     "golden_hour",
     "green",
     "greeting",
@@ -6984,10 +7137,10 @@
     "rain",
     "relaxed",
     "romantic",
+    "running",
     "seated",
     "selfie",
     "silhouette",
-    "skyline",
     "soft",
     "soft light",
     "soft-light",
@@ -7013,6 +7166,7 @@
     "wide",
     "window",
     "work",
+    "workspace",
     "yoga"
   ]
 }
