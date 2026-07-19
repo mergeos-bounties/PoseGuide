@@ -1,0 +1,87 @@
+{
+  "id": "night_city_lean_against_rail",
+  "name": "Night City \u2014 Lean Against Rail",
+  "standing": true,
+  "tags": [
+    "portrait",
+    "night",
+    "urban",
+    "lifestyle",
+    "moody"
+  ],
+  "tips": [
+    "Lean one hip against the railing; cross arms or rest one hand on the rail",
+    "Let ambient neon / city lights provide rim lighting; avoid harsh flash"
+  ],
+  "camera_cues": [
+    "waist-up or 3/4; shallow DOF with bokeh lights in background",
+    "low-light ISO \u2014 use wide aperture for clean skin tones"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.15,
+      0.0
+    ],
+    "l_shoulder": [
+      0.37,
+      0.29,
+      0.0
+    ],
+    "r_shoulder": [
+      0.63,
+      0.29,
+      0.0
+    ],
+    "l_elbow": [
+      0.28,
+      0.44,
+      0.0
+    ],
+    "r_elbow": [
+      0.72,
+      0.4,
+      0.0
+    ],
+    "l_wrist": [
+      0.26,
+      0.56,
+      0.0
+    ],
+    "r_wrist": [
+      0.68,
+      0.5,
+      0.0
+    ],
+    "l_hip": [
+      0.42,
+      0.58,
+      0.0
+    ],
+    "r_hip": [
+      0.58,
+      0.58,
+      0.0
+    ],
+    "l_knee": [
+      0.4,
+      0.76,
+      0.0
+    ],
+    "r_knee": [
+      0.62,
+      0.74,
+      0.0
+    ],
+    "l_ankle": [
+      0.38,
+      0.94,
+      0.0
+    ],
+    "r_ankle": [
+      0.64,
+      0.92,
+      0.0
+    ]
+  }
+}
