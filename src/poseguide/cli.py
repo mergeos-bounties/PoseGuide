@@ -159,6 +159,74 @@ def poses_list() -> None:
     console.print(table)
 
 
+@poses_app.command("show")
+def poses_show(
+    pose_id: str = typer.Argument(..., help="Pose ID (filename stem without .json)"),
+    json_output: bool = typer.Option(False, "--json", "-j", help="Output as JSON instead of table"),
+) -> None:
+    """Pretty-print a single pose by ID: joints summary + tips + camera cues."""
+    # Find the pose file by stem
+    pose_path = None
+    for path in list_pose_files():
+        if path.stem == pose_id:
+            pose_path = path
+            break
+
+    if pose_path is None:
+        available = [p.stem for p in list_pose_files()]
+        hint = ""
+        if available:
+            closest = sorted(available, key=lambda x: len(set(x) & set(pose_id)), reverse=True)[:5]
+            hint = f" Available: {', '.join(closest)}"
+        console.print(f"[red]Pose '{pose_id}' not found.{hint}[/red]")
+        raise typer.Exit(code=1)
+
+    pose = load_pose(pose_path)
+
+    if json_output:
+        # Strip the numpy joint_vector (not JSON serializable) and print clean JSON
+        pose_clean = {k: v for k, v in pose.items() if k != "joint_vector"}
+        console.print_json(data=pose_clean)
+        return
+
+    # Rich table output
+    table = Table(title=f"Pose: {pose.get('name', pose_id)} ({pose.get('id', pose_id)})")
+    table.add_column("Field", style="bold cyan")
+    table.add_column("Value", style="green")
+
+    table.add_row("ID", str(pose.get("id", pose_id)))
+    table.add_row("Name", str(pose.get("name", "")))
+    table.add_row("Standing", "yes" if pose.get("standing") else "no")
+    table.add_row("Tags", ", ".join(pose.get("tags") or []))
+    table.add_row("Tips", "\n".join(f"  • {t}" for t in (pose.get("tips") or [])) or "(none)")
+    table.add_row(
+        "Camera Cues",
+        "\n".join(f"  • {c}" for c in (pose.get("camera_cues") or [])) or "(none)",
+    )
+
+    # Joints summary table
+    joints = pose.get("joints") or {}
+    if joints:
+        joint_table = Table(title="Joints")
+        joint_table.add_column("Joint", style="bold")
+        joint_table.add_column("X", justify="right")
+        joint_table.add_column("Y", justify="right")
+        joint_table.add_column("Z", justify="right")
+        for joint_name in sorted(joints.keys()):
+            xyz = joints[joint_name]
+            x = f"{xyz[0]:.3f}" if len(xyz) > 0 else "-"
+            y = f"{xyz[1]:.3f}" if len(xyz) > 1 else "-"
+            z = f"{xyz[2]:.3f}" if len(xyz) > 2 else "-"
+            joint_table.add_row(joint_name, x, y, z)
+    else:
+        joint_table = Table(title="Joints")
+        joint_table.add_column("Joint", style="bold")
+        joint_table.add_row("(no joints defined)")
+
+    console.print(table)
+    console.print(joint_table)
+
+
 @poses_app.command("svg")
 def poses_svg(
     pose: str = typer.Option(..., "--pose", "-p"),
