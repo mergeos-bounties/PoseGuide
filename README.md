@@ -1,4 +1,5 @@
 # PoseGuide
+# Last updated: 2026-07-20T15:37:57.068415+00:00 (bounty automation)
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![Version](https://img.shields.io/badge/version-0.2.1-0E8A16.svg)](pyproject.toml)
