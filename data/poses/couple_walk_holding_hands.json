@@ -1,0 +1,13 @@
+{
+  "id": "couple_walk_holding_hands",
+  "name": "Couple Walk Holding Hands",
+  "standing": true,
+  "tags": ["generated", "bounty"],
+  "tips": ["Generated tip 1", "Generated tip 2"],
+  "camera_cues": ["full body", "eye level"],
+  "joints": {
+    "nose": [0.5, 0.2, 0.0],
+    "l_shoulder": [0.4, 0.3, 0.0],
+    "r_shoulder": [0.6, 0.3, 0.0]
+  }
+}
