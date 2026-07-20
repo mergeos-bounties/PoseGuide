@@ -1,0 +1,27 @@
+﻿{
+  "id": "yoga_warrior_ii_side",
+  "name": "Yoga Warrior II Side (Fitness)",
+  "standing": true,
+  "tags": ["fitness", "yoga", "side-view", "wellness", "active"],
+  "tips": [
+    "Stand in Warrior II with front knee at 90 degrees",
+    "Extend arms parallel to floor, gaze over front hand",
+    "Engage core, shoulders relaxed"
+  ],
+  "camera_cues": ["full-body side profile; natural daylight"],
+  "joints": {
+    "nose": [0.28, 0.12, 0.0],
+    "l_shoulder": [0.22, 0.26, 0.0],
+    "r_shoulder": [0.42, 0.26, 0.0],
+    "l_elbow": [0.12, 0.26, 0.0],
+    "r_elbow": [0.58, 0.26, 0.0],
+    "l_wrist": [0.06, 0.26, 0.0],
+    "r_wrist": [0.64, 0.26, 0.0],
+    "l_hip": [0.28, 0.50, 0.0],
+    "r_hip": [0.38, 0.50, 0.0],
+    "l_knee": [0.22, 0.72, 0.0],
+    "r_knee": [0.40, 0.72, 0.0],
+    "l_ankle": [0.18, 0.94, 0.0],
+    "r_ankle": [0.46, 0.94, 0.0]
+  }
+}
