@@ -1,4 +1,5 @@
 # PoseGuide
+# Last updated: 2026-07-20T15:37:57.068415+00:00 (bounty automation)
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![Version](https://img.shields.io/badge/version-0.2.1-0E8A16.svg)](pyproject.toml)
@@ -106,6 +107,7 @@ poseguide demo -p studio
 | Area | Location |
 | --- | --- |
 | Pose catalog | `data/poses/` |
+| Pose families catalog | `docs/POSES.md` |
 | Scene samples | `data/scenes/` |
 | Demo presets | `poseguide.guide.demo.PRESETS` |
 | Web demo catalog | `web/data/catalog.json` |
