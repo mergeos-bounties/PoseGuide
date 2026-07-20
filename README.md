@@ -18,6 +18,7 @@
 - [Quick start](#quick-start)
 - [CLI reference](#cli-reference)
 - [Presets & data](#presets--data)
+- [POSES catalog](#poses-catalog)
 - [Diagrams](#diagrams)
 - [Repository layout](#repository-layout)
 - [Development](#development)
