@@ -1,0 +1,27 @@
+﻿{
+  "id": "couple_walk_holding_hands",
+  "name": "Couple Walk Holding Hands (Duo Outdoor)",
+  "standing": true,
+  "tags": ["duo", "outdoor", "couple", "lifestyle", "walking", "street"],
+  "tips": [
+    "Two subjects walking side by side, inner hands clasped",
+    "Natural stride, relaxed shoulders, looking forward or at each other",
+    "Soft outdoor lighting, urban or nature backdrop"
+  ],
+  "camera_cues": ["full-body profile or three-quarter angle; golden hour preferred"],
+  "joints": {
+    "nose": [0.50, 0.14, 0.0],
+    "l_shoulder": [0.42, 0.28, 0.0],
+    "r_shoulder": [0.58, 0.28, 0.0],
+    "l_elbow": [0.38, 0.38, 0.0],
+    "r_elbow": [0.62, 0.38, 0.0],
+    "l_wrist": [0.44, 0.44, 0.0],
+    "r_wrist": [0.56, 0.44, 0.0],
+    "l_hip": [0.44, 0.54, 0.0],
+    "r_hip": [0.56, 0.54, 0.0],
+    "l_knee": [0.42, 0.74, 0.0],
+    "r_knee": [0.58, 0.74, 0.0],
+    "l_ankle": [0.40, 0.94, 0.0],
+    "r_ankle": [0.60, 0.94, 0.0]
+  }
+}
