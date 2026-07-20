@@ -1,0 +1,6 @@
+{
+  "id": "outdoor_scenes_pack",
+  "scenes": ["park", "beach", "city_street"],
+  "tags": ["outdoor"],
+  "recommend": "smoke"
+}
