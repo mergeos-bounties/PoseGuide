@@ -18,6 +18,7 @@
 - [Quick start](#quick-start)
 - [CLI reference](#cli-reference)
 - [Presets & data](#presets--data)
+- [POSES catalog](#poses-catalog)
 - [Diagrams](#diagrams)
 - [Repository layout](#repository-layout)
 - [Development](#development)
@@ -106,6 +107,7 @@ poseguide demo -p studio
 | Area | Location |
 | --- | --- |
 | Pose catalog | `data/poses/` |
+| Pose families catalog | `docs/POSES.md` |
 | Scene samples | `data/scenes/` |
 | Demo presets | `poseguide.guide.demo.PRESETS` |
 | Web demo catalog | `web/data/catalog.json` |
