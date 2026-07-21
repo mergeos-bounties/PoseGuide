@@ -1,0 +1,48 @@
+{
+  "id": "standing_power_pose",
+  "name": "Power Pose",
+  "difficulty": "medium",
+  "category": "standing",
+  "joints": {
+    "head": [
+      0,
+      1.75,
+      0
+    ],
+    "shoulders": [
+      0,
+      1.55,
+      0
+    ],
+    "arms": [
+      0.4,
+      1.3,
+      0
+    ],
+    "hips": [
+      0,
+      1.0,
+      0
+    ],
+    "knees": [
+      0,
+      0.5,
+      0
+    ],
+    "feet": [
+      0.3,
+      0,
+      0
+    ]
+  },
+  "tips": [
+    "Feet shoulder-width apart",
+    "Hands on hips or raised",
+    "Chin up, chest out"
+  ],
+  "camera_cues": [
+    "Slight low angle",
+    "Full body",
+    "Centered framing"
+  ]
+}

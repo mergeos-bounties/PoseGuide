@@ -1,0 +1,42 @@
+{
+  "id": "standing_neutral",
+  "name": "Neutral Standing",
+  "difficulty": "easy",
+  "category": "standing",
+  "joints": {
+    "head": [
+      0,
+      1.7,
+      0
+    ],
+    "shoulders": [
+      0,
+      1.5,
+      0
+    ],
+    "hips": [
+      0,
+      1.0,
+      0
+    ],
+    "knees": [
+      0,
+      0.5,
+      0
+    ],
+    "feet": [
+      0,
+      0,
+      0
+    ]
+  },
+  "tips": [
+    "Keep weight evenly distributed",
+    "Relax shoulders",
+    "Chin parallel to ground"
+  ],
+  "camera_cues": [
+    "Front view",
+    "Eye level"
+  ]
+}
