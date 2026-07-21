@@ -10,6 +10,8 @@ from rich.table import Table
 from poseguide import __version__
 from poseguide.config import OUT_DIR
 from poseguide.data.loader import list_pose_files, list_scene_files, load_pose, load_scene
+from poseguide.data.export import pose_to_coco
+from poseguide.models.catalog import get_pose_by_id
 from poseguide.guide.demo import PRESETS, run_demo
 from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_tags
 from poseguide.guide.score import score_subject_against_pose
@@ -23,7 +25,7 @@ from poseguide.eval.metrics import evaluate_scenes
 from poseguide.train.toy_train import train_toy
 
 app = typer.Typer(
-    help="PoseGuide — photography pose guidance (scene → standing pose coach).",
+    help="PoseGuide 鈥?photography pose guidance (scene 鈫?standing pose coach).",
     no_args_is_help=True,
 )
 poses_app = typer.Typer(help="Standing pose catalog")
@@ -92,7 +94,7 @@ def stats_cmd() -> None:
 
 @app.command("demo")
 def demo_cmd(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
-    """End-to-end demo: preset scene tags → pose recommendations + SVG stick figure."""
+    """End-to-end demo: preset scene tags 鈫?pose recommendations + SVG stick figure."""
     try:
         result = run_demo(preset)
     except KeyError as exc:
@@ -132,6 +134,42 @@ def poses_list(
             tags,
         )
     console.print(table)
+
+
+@poses_app.command("show")
+def poses_show(
+    pose_id: str = typer.Argument(..., help="Pose ID to display"),
+) -> None:
+    """Show full details of a pose by its ID with pretty-printed JSON."""
+    pose = get_pose_by_id(pose_id)
+    if pose is None:
+        console.print(f"[red]Pose {pose_id!r} not found[/red]")
+        raise typer.Exit(1)
+    console.print_json(
+        data={
+            "id": pose.get("id"),
+            "name": pose.get("name"),
+            "standing": pose.get("standing"),
+            "difficulty": pose.get("difficulty"),
+            "tags": pose.get("tags", []),
+            "tips": pose.get("tips", []),
+            "camera_cues": pose.get("camera_cues", []),
+            "joints": pose.get("joints", {}),
+        }
+    )
+
+
+@poses_app.command("export-coco")
+def poses_export_coco(
+    pose_id: str = typer.Argument(..., help="Pose ID to export"),
+) -> None:
+    """Export a pose to COCO keypoint format."""
+    pose = get_pose_by_id(pose_id)
+    if pose is None:
+        console.print(f"[red]Pose {pose_id!r} not found[/red]")
+        raise typer.Exit(1)
+    coco = pose_to_coco(pose)
+    console.print_json(data=coco)
 
 
 @poses_app.command("svg")
