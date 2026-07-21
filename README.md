@@ -176,6 +176,7 @@ web/
 
 ---
 
+- [Difficulty Guide](docs/DIFFICULTY_GUIDE.md) — pose complexity levels for contributors
 ## Development
 
 ```powershell
