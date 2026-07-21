@@ -46,3 +46,32 @@ def test_pose_search_rejects_unknown_difficulty() -> None:
 
     assert result.exit_code == 2
     assert "easy, medium, hard" in result.output
+
+
+def test_pose_show_known_id() -> None:
+    result = runner.invoke(app, ["poses", "show", "arms_crossed"])
+
+    assert result.exit_code == 0
+    assert "arms_crossed" in result.output
+    assert "joints" in result.output
+
+
+def test_pose_show_unknown_id() -> None:
+    result = runner.invoke(app, ["poses", "show", "nonexistent"])
+
+    assert result.exit_code == 1
+    assert "not found" in result.output
+
+
+def test_pose_export_coco_known_id() -> None:
+    result = runner.invoke(app, ["poses", "export-coco", "arms_crossed"])
+
+    assert result.exit_code == 0
+    assert "num_keypoints" in result.output
+
+
+def test_pose_export_coco_unknown_id() -> None:
+    result = runner.invoke(app, ["poses", "export-coco", "nonexistent"])
+
+    assert result.exit_code == 1
+    assert "not found" in result.output
