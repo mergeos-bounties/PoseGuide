@@ -15,7 +15,8 @@
 
 - [Highlights](#highlights)
 - [Screenshots](#screenshots)
-- [Quick start](#quick-start)
+- [Pose catalog](docs/POSES.md)
+- [Quick start](#quickstart)
 - [CLI reference](#cli-reference)
 - [Presets & data](#presets--data)
 - [Diagrams](#diagrams)
@@ -49,6 +50,12 @@ Live demo captures (recommend + stick figure).
 | *Beach preset* | *Urban preset* | *Studio preset* |
 
 ---
+
+## Pose catalog
+
+See [docs/POSES.md](docs/POSES.md) for the full catalog of 69 bundled standing
+and seated poses, with family groupings, when-to-use notes, and a pose-pack
+extension guide for adding new poses.
 
 ## Quick start
 
