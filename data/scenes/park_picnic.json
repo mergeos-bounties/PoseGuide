@@ -1,0 +1,28 @@
+{
+  "id": "park_picnic",
+  "name": "Park Picnic",
+  "tags": [
+    "outdoor",
+    "park",
+    "daylight",
+    "casual",
+    "portrait",
+    "lifestyle"
+  ],
+  "mood": [
+    "relaxed",
+    "summer",
+    "joyful"
+  ],
+  "expected_poses": [
+    "classic_portrait",
+    "hands_on_hips",
+    "laptop_desk",
+    "lean_forward_desk"
+  ],
+  "composition": {
+    "horizon": "upper_third",
+    "subject_placement": "center",
+    "background": "tree_canopy"
+  }
+}
