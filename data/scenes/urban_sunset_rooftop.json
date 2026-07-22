@@ -1,0 +1,28 @@
+{
+  "id": "urban_sunset_rooftop",
+  "name": "Urban Sunset Rooftop",
+  "tags": [
+    "outdoor",
+    "urban",
+    "rooftop",
+    "sunset",
+    "golden_hour",
+    "skyline"
+  ],
+  "mood": [
+    "warm",
+    "cinematic",
+    "lonely"
+  ],
+  "expected_poses": [
+    "side_profile_standing",
+    "hands_on_hips_hero",
+    "power_stance",
+    "looking_away"
+  ],
+  "composition": {
+    "horizon": "lower_third",
+    "subject_placement": "left_third",
+    "background": "cityscape"
+  }
+}

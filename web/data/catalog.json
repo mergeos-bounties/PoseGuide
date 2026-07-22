@@ -7299,6 +7299,34 @@
     },
     {
       "composition": {
+        "background": "forest_trees",
+        "horizon": "center",
+        "subject_placement": "right_third"
+      },
+      "expected_poses": [
+        "crouch_ready",
+        "side_profile_walk",
+        "over_shoulder_look",
+        "stretch_reach"
+      ],
+      "id": "forest_mountain_stream",
+      "mood": [
+        "fresh",
+        "peaceful",
+        "adventure"
+      ],
+      "name": "Forest Mountain Stream",
+      "tags": [
+        "outdoor",
+        "forest",
+        "nature",
+        "mountain",
+        "water",
+        "hiking"
+      ]
+    },
+    {
+      "composition": {
         "depth": "path_leading_lines"
       },
       "expected_poses": [
@@ -7532,6 +7560,34 @@
       ]
     },
     {
+      "composition": {
+        "background": "tree_canopy",
+        "horizon": "upper_third",
+        "subject_placement": "center"
+      },
+      "expected_poses": [
+        "classic_portrait",
+        "hands_on_hips",
+        "laptop_desk",
+        "lean_forward_desk"
+      ],
+      "id": "park_picnic",
+      "mood": [
+        "relaxed",
+        "summer",
+        "joyful"
+      ],
+      "name": "Park Picnic",
+      "tags": [
+        "outdoor",
+        "park",
+        "daylight",
+        "casual",
+        "portrait",
+        "lifestyle"
+      ]
+    },
+    {
       "composition": {},
       "expected_poses": [
         "power_stance",
@@ -7639,6 +7695,34 @@
     },
     {
       "composition": {
+        "background": "cityscape",
+        "horizon": "lower_third",
+        "subject_placement": "left_third"
+      },
+      "expected_poses": [
+        "side_profile_standing",
+        "hands_on_hips_hero",
+        "power_stance",
+        "looking_away"
+      ],
+      "id": "urban_sunset_rooftop",
+      "mood": [
+        "warm",
+        "cinematic",
+        "lonely"
+      ],
+      "name": "Urban Sunset Rooftop",
+      "tags": [
+        "outdoor",
+        "urban",
+        "rooftop",
+        "sunset",
+        "golden_hour",
+        "skyline"
+      ]
+    },
+    {
+      "composition": {
         "background": "texture_wall",
         "subject_placement": "center_left"
       },
@@ -7735,6 +7819,7 @@
     "flowers",
     "forest",
     "formal",
+    "fresh",
     "full body",
     "full-body",
     "full_body",
@@ -7746,14 +7831,17 @@
     "grounded",
     "half body",
     "headshot",
+    "hiking",
     "home",
     "indoor",
     "intimate",
+    "joyful",
     "jump",
     "kneeling",
     "lean",
     "lifestyle",
     "loft",
+    "lonely",
     "lookback",
     "low angle",
     "military",
@@ -7761,6 +7849,7 @@
     "moody",
     "morning",
     "motion",
+    "mountain",
     "natural",
     "natural light",
     "natural-light",
@@ -7769,6 +7858,8 @@
     "night",
     "office",
     "outdoor",
+    "park",
+    "peaceful",
     "phone",
     "portrait",
     "power",
@@ -7780,11 +7871,13 @@
     "rain",
     "relaxed",
     "romantic",
+    "rooftop",
     "running",
     "seated",
     "selfie",
     "side profile",
     "silhouette",
+    "skyline",
     "soft",
     "soft light",
     "soft-light",
@@ -7798,6 +7891,8 @@
     "stretch",
     "studio",
     "study",
+    "summer",
+    "sunset",
     "thoughtful",
     "three-quarter",
     "trail",
