@@ -441,6 +441,99 @@
     },
     {
       "camera_cues": [
+        "full body side view",
+        "low angle to include sky/sea",
+        "slow shutter (1/125+) to blur motion slightly",
+        "include shoreline or waves in background"
+      ],
+      "id": "beach_walk_side_profile",
+      "joints": {
+        "l_ankle": [
+          0.42,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.4,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.5,
+          0.56,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.76,
+          0.0
+        ],
+        "l_shoulder": [
+          0.46,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.56,
+          0.0
+        ],
+        "nose": [
+          0.56,
+          0.16,
+          0.0
+        ],
+        "r_ankle": [
+          0.68,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.4,
+          0.0
+        ],
+        "r_hip": [
+          0.6,
+          0.56,
+          0.0
+        ],
+        "r_knee": [
+          0.64,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.64,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.76,
+          0.52,
+          0.0
+        ]
+      },
+      "name": "Beach Walk Side Profile",
+      "standing": true,
+      "tags": [
+        "beach",
+        "outdoor",
+        "walking",
+        "side profile",
+        "motion",
+        "casual",
+        "vacation"
+      ],
+      "tips": [
+        "walk parallel to water's edge",
+        "mid-stride capture for sense of movement",
+        "allow hair and clothing to flow naturally",
+        "relax shoulders, enjoy the moment"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body 3/4; street background bokeh optional"
       ],
       "id": "bike_lean",
@@ -6206,6 +6299,98 @@
     },
     {
       "camera_cues": [
+        "front or slight three-quarter",
+        "eye-level",
+        "clean background",
+        "include waistline interest"
+      ],
+      "id": "studio_hand_on_hip_power",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.32,
+          0.4,
+          0.02
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.38,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.44,
+          0.5,
+          0.02
+        ],
+        "nose": [
+          0.5,
+          0.18,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.68,
+          0.4,
+          0.02
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.56,
+          0.5,
+          0.02
+        ]
+      },
+      "name": "Studio Hand on Hip Power",
+      "standing": true,
+      "tags": [
+        "studio",
+        "portrait",
+        "power",
+        "corporate",
+        "confident"
+      ],
+      "tips": [
+        "feet shoulder-width apart",
+        "hands rest on hips with thumbs forward",
+        "shoulders back, chest open",
+        "chin level, gaze steady",
+        "weight evenly distributed or slight back hip shift"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body 3/4; low street angle optional"
       ],
       "id": "umbrella_walk",
@@ -6901,6 +7086,99 @@
         "knee opens to side without twisting hips",
         "hands at heart or overhead with soft shoulders"
       ]
+    },
+    {
+      "camera_cues": [
+        "full body side profile",
+        "eye level",
+        "plain background",
+        "show ground line clearly"
+      ],
+      "id": "yoga_warrior_ii_side",
+      "joints": {
+        "l_ankle": [
+          0.38,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.32,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.52,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.42,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.3,
+          0.3,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.15,
+          0.0
+        ],
+        "r_ankle": [
+          0.62,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.64,
+          0.32,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.52,
+          0.0
+        ],
+        "r_knee": [
+          0.6,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.7,
+          0.3,
+          0.0
+        ]
+      },
+      "name": "Yoga Warrior II Side",
+      "standing": true,
+      "tags": [
+        "fitness",
+        "yoga",
+        "balance",
+        "full body",
+        "studio",
+        "strength"
+      ],
+      "tips": [
+        "front knee bends directly over ankle",
+        "back leg straight and strong",
+        "torso remains upright and centered",
+        "gaze over front arm fingertips",
+        "press feet firmly into floor for stability"
+      ]
     }
   ],
   "scenes": [
@@ -7430,6 +7708,7 @@
     "communication",
     "confident",
     "cool_light",
+    "corporate",
     "couple",
     "cozy",
     "crouch",
@@ -7504,6 +7783,7 @@
     "running",
     "seated",
     "selfie",
+    "side profile",
     "silhouette",
     "soft",
     "soft light",
@@ -7514,6 +7794,7 @@
     "stairs",
     "standing",
     "street",
+    "strength",
     "stretch",
     "studio",
     "study",
@@ -7523,6 +7804,7 @@
     "transit",
     "travel",
     "urban",
+    "vacation",
     "waist-up",
     "walking",
     "wall",
