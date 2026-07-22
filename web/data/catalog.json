@@ -1048,6 +1048,190 @@
     },
     {
       "camera_cues": [
+        "full body",
+        "side-angle or 3/4 view",
+        "include environment context",
+        "keep both subjects in frame"
+      ],
+      "id": "couple_walk_holding_hands_left",
+      "joints": {
+        "l_ankle": [
+          0.32,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.28,
+          0.42,
+          0.05
+        ],
+        "l_hip": [
+          0.36,
+          0.52,
+          0.0
+        ],
+        "l_knee": [
+          0.34,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.32,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.48,
+          0.42,
+          0.0
+        ],
+        "nose": [
+          0.42,
+          0.18,
+          0.0
+        ],
+        "r_ankle": [
+          0.6,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.58,
+          0.38,
+          0.0
+        ],
+        "r_hip": [
+          0.56,
+          0.52,
+          0.0
+        ],
+        "r_knee": [
+          0.58,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.52,
+          0.32,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.38,
+          0.0
+        ]
+      },
+      "name": "Couple Walk Holding Hands (Left Partner)",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "duo",
+        "walking",
+        "couple",
+        "portrait",
+        "dynamic"
+      ],
+      "tips": [
+        "step forward with left foot",
+        "right arm swings back naturally",
+        "torso slight twist toward partner",
+        "maintain eye contact with partner"
+      ]
+    },
+    {
+      "camera_cues": [
+        "full body",
+        "side-angle or 3/4 view",
+        "include environment context",
+        "keep both subjects in frame"
+      ],
+      "id": "couple_walk_holding_hands_right",
+      "joints": {
+        "l_ankle": [
+          0.5,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.42,
+          0.38,
+          0.0
+        ],
+        "l_hip": [
+          0.44,
+          0.52,
+          0.0
+        ],
+        "l_knee": [
+          0.48,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.48,
+          0.32,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.38,
+          0.0
+        ],
+        "nose": [
+          0.58,
+          0.18,
+          0.0
+        ],
+        "r_ankle": [
+          0.76,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.42,
+          0.05
+        ],
+        "r_hip": [
+          0.64,
+          0.52,
+          0.0
+        ],
+        "r_knee": [
+          0.72,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.68,
+          0.32,
+          0.0
+        ],
+        "r_wrist": [
+          0.72,
+          0.42,
+          0.0
+        ]
+      },
+      "name": "Couple Walk Holding Hands (Right Partner)",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "duo",
+        "walking",
+        "couple",
+        "portrait",
+        "dynamic"
+      ],
+      "tips": [
+        "step forward with right foot",
+        "left arm swings back naturally",
+        "torso slight twist toward partner",
+        "maintain eye contact with partner"
+      ]
+    },
+    {
+      "camera_cues": [
         "waist-up; even studio light"
       ],
       "id": "cross_arms_stand",
@@ -7246,6 +7430,7 @@
     "communication",
     "confident",
     "cool_light",
+    "couple",
     "cozy",
     "crouch",
     "crowd",
@@ -7255,6 +7440,7 @@
     "directional",
     "doorway",
     "dramatic",
+    "duo",
     "dynamic",
     "edgy",
     "editorial",
@@ -7338,6 +7524,7 @@
     "travel",
     "urban",
     "waist-up",
+    "walking",
     "wall",
     "warm",
     "warm-light",
