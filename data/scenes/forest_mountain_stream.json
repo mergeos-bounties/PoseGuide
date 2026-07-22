@@ -1,0 +1,28 @@
+{
+  "id": "forest_mountain_stream",
+  "name": "Forest Mountain Stream",
+  "tags": [
+    "outdoor",
+    "forest",
+    "nature",
+    "mountain",
+    "water",
+    "hiking"
+  ],
+  "mood": [
+    "fresh",
+    "peaceful",
+    "adventure"
+  ],
+  "expected_poses": [
+    "crouch_ready",
+    "side_profile_walk",
+    "over_shoulder_look",
+    "stretch_reach"
+  ],
+  "composition": {
+    "horizon": "center",
+    "subject_placement": "right_third",
+    "background": "forest_trees"
+  }
+}
