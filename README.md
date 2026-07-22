@@ -18,6 +18,7 @@
 - [Quick start](#quick-start)
 - [CLI reference](#cli-reference)
 - [Presets & data](#presets--data)
+- [Pose catalog](docs/POSES.md)
 - [Diagrams](#diagrams)
 - [Repository layout](#repository-layout)
 - [Development](#development)
@@ -75,6 +76,18 @@ python -m http.server 5173
 ```
 
 Open `http://localhost:5173/web/` and see [`web/README.md`](web/README.md) for the optional local API contract.
+
+---
+
+## Pose catalog
+
+PoseGuide includes **82 standing pose templates** in `data/poses/`.
+
+See [docs/POSES.md](docs/POSES.md) for a comprehensive catalog of all standing pose families with:
+- When-to-use notes for different backgrounds
+- Background matching guide
+- Creating custom poses
+- Usage examples
 
 ---
 
