@@ -13,7 +13,9 @@ from poseguide.data.loader import list_pose_files, list_scene_files, load_pose, 
 from poseguide.models.catalog import get_pose_by_id
 from poseguide.guide.demo import PRESETS, run_demo
 from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_tags
+from poseguide.guide.scene_tagger import infer_scene_tags
 from poseguide.guide.score import score_subject_against_pose
+from poseguide.models.toy import tags_from_text
 from poseguide.render.overlay import (
     VisionUnavailableError,
     render_overlay_png,
@@ -215,6 +217,17 @@ def scenes_list() -> None:
 def guide_recommend(
     scene: Optional[Path] = typer.Option(None, "--scene", "-s", exists=True, dir_okay=False),
     tags: Optional[str] = typer.Option(None, "--tags", "-t"),
+    background: Optional[Path] = typer.Option(
+        None,
+        "--background",
+        "-b",
+        exists=True,
+        dir_okay=False,
+        help="Infer scene tags from an image filename.",
+    ),
+    description: Optional[str] = typer.Option(
+        None, "--description", help="Infer scene tags from a background description."
+    ),
     top: int = typer.Option(3, "--top", "-k", min=1, max=20),
     subject: Optional[Path] = typer.Option(None, "--subject", exists=True, dir_okay=False),
     overlay_out: Optional[Path] = typer.Option(None, "--overlay-out"),
@@ -223,13 +236,21 @@ def guide_recommend(
         None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard"
     ),
 ) -> None:
-    if scene is None and not tags:
-        console.print("[red]Provide --scene or --tags[/red]")
+    if scene is None and not tags and background is None and not description:
+        console.print("[red]Provide --scene, --tags, --background, or --description[/red]")
         raise typer.Exit(code=1)
     if scene is not None:
         result = recommend_for_scene_path(scene, top_k=top, subject_path=subject)
     else:
-        result = recommend_for_tags(tags or "", top_k=top)
+        inferred_tags = infer_scene_tags(description=description, image_path=background)
+        scene_tags = tags_from_text(tags or "")
+        scene_tags.extend(tag for tag in inferred_tags if tag not in scene_tags)
+        if not scene_tags:
+            console.print("[red]No scene tags inferred; add --tags or a clearer description[/red]")
+            raise typer.Exit(code=1)
+        result = recommend_for_tags(scene_tags, top_k=top)
+        if inferred_tags:
+            result["inferred_scene_tags"] = inferred_tags
     if difficulty:
         recs = result.get("recommendations", [])
         before = len(recs)

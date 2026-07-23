@@ -64,6 +64,8 @@ poseguide poses list
 poseguide poses list --tag portrait --difficulty easy
 poseguide poses search --tag jump --difficulty medium
 poseguide scenes list
+poseguide guide recommend --description "sunset beach" --no-svg
+poseguide guide recommend --background photos/urban_wall.jpg --no-svg
 ```
 
 SVG / overlay outputs are written under the configured `OUT_DIR` (see `poseguide.config`).
@@ -109,6 +111,24 @@ poseguide demo -p studio
 | Scene samples | `data/scenes/` |
 | Demo presets | `poseguide.guide.demo.PRESETS` |
 | Web demo catalog | `web/data/catalog.json` |
+
+---
+
+## Offline scene tagging
+
+`guide recommend` can infer ranker tags from a background description or image
+filename without reading image pixels, making network requests, or downloading a
+model:
+
+```powershell
+poseguide guide recommend --description "studio business portrait"
+poseguide guide recommend --background photos/beach_sunset.jpg
+poseguide guide recommend --background photos/urban_wall.jpg --tags casual
+```
+
+The deterministic rules live in `poseguide.guide.scene_tagger.infer_scene_tags`.
+An optional CLIP implementation can later replace that function while preserving
+its `list[str]` output contract and the existing ranker integration.
 
 ---
 
