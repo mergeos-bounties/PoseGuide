@@ -288,12 +288,15 @@ def guide_coach(
 
 @guide_app.command("demo")
 def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
+    """Recommend poses for a built-in scene preset and print the top pose."""
     try:
         result = run_demo(preset)
     except KeyError as exc:
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1) from exc
     console.print_json(data=result)
+    if result.get("top_pose_id"):
+        console.print(f"[green]Top pose[/green] {result['top_pose_id']}")
 
 
 @eval_app.command("scenes")

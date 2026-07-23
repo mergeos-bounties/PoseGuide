@@ -84,6 +84,7 @@ Open `http://localhost:5173/web/` and see [`web/README.md`](web/README.md) for t
 | --- | --- |
 | `poseguide version` | Version + pose/scene counts |
 | `poseguide demo -p beach` | Full recommend + SVG for a preset |
+| `poseguide guide demo -p beach` | Print the top pose for a built-in scene preset |
 | `poseguide poses list [--tag TAG] [--difficulty LEVEL]` | Standing pose catalog with optional exact-tag and difficulty filters |
 | `poseguide poses search [keyword] [--tag TAG] [--difficulty LEVEL]` | Search pose fields and combine exact-tag/difficulty filters |
 | `poseguide poses svg -p <id>` | Render one pose SVG |
@@ -97,6 +98,10 @@ Open `http://localhost:5173/web/` and see [`web/README.md`](web/README.md) for t
 ```powershell
 poseguide demo -p urban
 poseguide demo -p studio
+
+poseguide guide demo --preset beach
+poseguide guide demo --preset urban
+poseguide guide demo --preset studio
 ```
 
 ---

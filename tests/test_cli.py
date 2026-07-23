@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import pytest
 from typer.testing import CliRunner
 
 from poseguide.cli import app
+from poseguide.guide import demo as demo_module
 
 
 runner = CliRunner()
@@ -61,3 +63,15 @@ def test_pose_show_unknown_id() -> None:
 
     assert result.exit_code == 1
     assert "not found" in result.output
+
+
+@pytest.mark.parametrize("preset", ["beach", "urban", "studio"])
+def test_guide_demo_prints_top_pose(preset: str, tmp_path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(demo_module, "OUT_DIR", tmp_path)
+
+    result = runner.invoke(app, ["guide", "demo", "--preset", preset])
+
+    assert result.exit_code == 0
+    assert f'"preset": "{preset}"' in result.output
+    assert '"top_pose_id":' in result.output
+    assert "Top pose" in result.output
