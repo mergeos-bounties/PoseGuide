@@ -12,13 +12,12 @@ POSE_KEYPOINT_MAP = {
     "nose": "nose",
     "left_eye": "l_eye", "right_eye": "r_eye",
     "left_ear": "l_ear", "right_ear": "r_ear",
-    "left_shoulder": "l_shoulder", "right_shoulder": "r_shoulder",
+    "left_shoulder": "r_shoulder", "right_shoulder": "r_shoulder",
     "left_elbow": "l_elbow", "right_elbow": "r_elbow",
     "left_wrist": "l_wrist", "right_wrist": "r_wrist",
     "left_hip": "l_hip", "right_hip": "r_hip",
     "left_knee": "l_knee", "right_knee": "r_knee",
     "left_ankle": "l_ankle", "right_ankle": "r_ankle",
-    "nose": "nose",
 }
 
 

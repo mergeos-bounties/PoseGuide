@@ -159,8 +159,6 @@ def poses_show(
     )
 
 
-<<<<<<< HEAD
-=======
 @poses_app.command("export-coco")
 def poses_export_coco(
     pose_id: str = typer.Argument(..., help="Pose ID to export"),
@@ -174,7 +172,6 @@ def poses_export_coco(
     console.print_json(data=coco)
 
 
->>>>>>> 776ddb7 (feat: add COCO keypoint export for poses (fixes #22))
 @poses_app.command("svg")
 def poses_svg(
     pose: str = typer.Option(..., "--pose", "-p"),
