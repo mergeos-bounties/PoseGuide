@@ -9,11 +9,12 @@ from rich.table import Table
 
 from poseguide import __version__
 from poseguide.config import OUT_DIR
+from poseguide.data.export import pose_to_coco
 from poseguide.data.loader import list_pose_files, list_scene_files, load_pose, load_scene
-from poseguide.models.catalog import get_pose_by_id
 from poseguide.guide.demo import PRESETS, run_demo
 from poseguide.guide.recommend import recommend_for_scene_path, recommend_for_tags
 from poseguide.guide.score import score_subject_against_pose
+from poseguide.models.catalog import get_pose_by_id
 from poseguide.render.overlay import (
     VisionUnavailableError,
     render_overlay_png,
@@ -156,6 +157,19 @@ def poses_show(
             "joints": pose.get("joints", {}),
         }
     )
+
+
+@poses_app.command("export-coco")
+def poses_export_coco(
+    pose_id: str = typer.Argument(..., help="Pose ID to export"),
+) -> None:
+    """Export a pose to COCO keypoint format."""
+    pose = get_pose_by_id(pose_id)
+    if pose is None:
+        console.print(f"[red]Pose {pose_id!r} not found[/red]")
+        raise typer.Exit(1)
+    coco = pose_to_coco(pose)
+    console.print_json(data=coco)
 
 
 @poses_app.command("svg")
