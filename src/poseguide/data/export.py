@@ -1,23 +1,45 @@
 """Export pose joints to COCO keypoint format."""
+
 from __future__ import annotations
 
 COCO_KEYPOINT_NAMES = [
-    "nose", "l_eye", "r_eye", "l_ear", "r_ear",
-    "l_shoulder", "r_shoulder", "l_elbow", "r_elbow",
-    "l_wrist", "r_wrist", "l_hip", "r_hip",
-    "l_knee", "r_knee", "l_ankle", "r_ankle",
+    "nose",
+    "l_eye",
+    "r_eye",
+    "l_ear",
+    "r_ear",
+    "l_shoulder",
+    "r_shoulder",
+    "l_elbow",
+    "r_elbow",
+    "l_wrist",
+    "r_wrist",
+    "l_hip",
+    "r_hip",
+    "l_knee",
+    "r_knee",
+    "l_ankle",
+    "r_ankle",
 ]
 
 POSE_KEYPOINT_MAP = {
     "nose": "nose",
-    "left_eye": "l_eye", "right_eye": "r_eye",
-    "left_ear": "l_ear", "right_ear": "r_ear",
-    "left_shoulder": "r_shoulder", "right_shoulder": "r_shoulder",
-    "left_elbow": "l_elbow", "right_elbow": "r_elbow",
-    "left_wrist": "l_wrist", "right_wrist": "r_wrist",
-    "left_hip": "l_hip", "right_hip": "r_hip",
-    "left_knee": "l_knee", "right_knee": "r_knee",
-    "left_ankle": "l_ankle", "right_ankle": "r_ankle",
+    "left_eye": "l_eye",
+    "right_eye": "r_eye",
+    "left_ear": "l_ear",
+    "right_ear": "r_ear",
+    "left_shoulder": "r_shoulder",
+    "right_shoulder": "r_shoulder",
+    "left_elbow": "l_elbow",
+    "right_elbow": "r_elbow",
+    "left_wrist": "l_wrist",
+    "right_wrist": "r_wrist",
+    "left_hip": "l_hip",
+    "right_hip": "r_hip",
+    "left_knee": "l_knee",
+    "right_knee": "r_knee",
+    "left_ankle": "l_ankle",
+    "right_ankle": "r_ankle",
 }
 
 
