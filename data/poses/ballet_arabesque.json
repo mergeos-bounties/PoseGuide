@@ -1,0 +1,88 @@
+{
+  "id": "ballet_arabesque",
+  "name": "Ballet Arabesque",
+  "standing": true,
+  "tags": [
+    "dance",
+    "elegant",
+    "graceful",
+    "studio",
+    "indoor"
+  ],
+  "tips": [
+    "Stand on one leg with the other extended behind",
+    "Keep arms open and aligned",
+    "Engage core for balance"
+  ],
+  "camera_cues": [
+    "full-body from side or three-quarter",
+    "capture the line from fingertips to toe"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.1,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.25,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.25,
+      0.0
+    ],
+    "l_elbow": [
+      0.35,
+      0.35,
+      0.0
+    ],
+    "r_elbow": [
+      0.65,
+      0.35,
+      0.0
+    ],
+    "l_wrist": [
+      0.3,
+      0.38,
+      0.0
+    ],
+    "r_wrist": [
+      0.7,
+      0.38,
+      0.0
+    ],
+    "l_hip": [
+      0.47,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.53,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.47,
+      0.75,
+      0.0
+    ],
+    "r_knee": [
+      0.6,
+      0.45,
+      0.0
+    ],
+    "l_ankle": [
+      0.47,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.65,
+      0.3,
+      0.0
+    ]
+  }
+}

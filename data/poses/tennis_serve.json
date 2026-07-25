@@ -1,0 +1,88 @@
+{
+  "id": "tennis_serve",
+  "name": "Tennis Serve",
+  "standing": true,
+  "tags": [
+    "sport",
+    "outdoor",
+    "action",
+    "daylight",
+    "court"
+  ],
+  "tips": [
+    "Toss the ball with your non-dominant hand",
+    "Reach up fully with the racket arm",
+    "Jump slightly into the serve"
+  ],
+  "camera_cues": [
+    "low angle for dramatic height",
+    "capture the racket at peak extension"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.08,
+      0.0
+    ],
+    "l_shoulder": [
+      0.43,
+      0.22,
+      0.0
+    ],
+    "r_shoulder": [
+      0.57,
+      0.22,
+      0.0
+    ],
+    "l_elbow": [
+      0.38,
+      0.3,
+      0.0
+    ],
+    "r_elbow": [
+      0.6,
+      0.1,
+      0.0
+    ],
+    "l_wrist": [
+      0.35,
+      0.38,
+      0.0
+    ],
+    "r_wrist": [
+      0.65,
+      0.05,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.43,
+      0.7,
+      0.0
+    ],
+    "r_knee": [
+      0.57,
+      0.7,
+      0.0
+    ],
+    "l_ankle": [
+      0.43,
+      0.88,
+      0.0
+    ],
+    "r_ankle": [
+      0.57,
+      0.88,
+      0.0
+    ]
+  }
+}
