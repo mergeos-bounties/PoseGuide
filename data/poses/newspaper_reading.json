@@ -1,0 +1,88 @@
+{
+  "id": "newspaper_reading",
+  "name": "Newspaper Reading",
+  "standing": true,
+  "tags": [
+    "indoor",
+    "casual",
+    "morning",
+    "daylight",
+    "coffee_shop"
+  ],
+  "tips": [
+    "Hold the newspaper open with both hands",
+    "Tilt head slightly down to read",
+    "One knee slightly bent for casual feel"
+  ],
+  "camera_cues": [
+    "profile or three-quarter showing the paper",
+    "capture the morning light on the scene"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.18,
+      0.0
+    ],
+    "l_shoulder": [
+      0.42,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.58,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.35,
+      0.35,
+      0.0
+    ],
+    "r_elbow": [
+      0.65,
+      0.35,
+      0.0
+    ],
+    "l_wrist": [
+      0.32,
+      0.42,
+      0.0
+    ],
+    "r_wrist": [
+      0.68,
+      0.42,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.42,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.58,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.42,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.58,
+      0.9,
+      0.0
+    ]
+  }
+}

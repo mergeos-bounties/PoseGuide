@@ -1,0 +1,89 @@
+{
+  "id": "bubble_blowing",
+  "name": "Bubble Blowing",
+  "standing": true,
+  "tags": [
+    "outdoor",
+    "playful",
+    "casual",
+    "daylight",
+    "park",
+    "whimsical"
+  ],
+  "tips": [
+    "Hold the bubble wand close to your mouth",
+    "Blow gently with a slight smile",
+    "Let the bubbles drift around you"
+  ],
+  "camera_cues": [
+    "close-up on face with bubbles in foreground",
+    "golden hour backlight makes bubbles iridescent"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.1,
+      0.0
+    ],
+    "l_shoulder": [
+      0.42,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.58,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.38,
+      0.35,
+      0.0
+    ],
+    "r_elbow": [
+      0.52,
+      0.22,
+      0.0
+    ],
+    "l_wrist": [
+      0.35,
+      0.42,
+      0.0
+    ],
+    "r_wrist": [
+      0.55,
+      0.15,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.45,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.9,
+      0.0
+    ]
+  }
+}

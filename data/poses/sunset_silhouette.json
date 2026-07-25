@@ -1,0 +1,88 @@
+{
+  "id": "sunset_silhouette",
+  "name": "Sunset Silhouette",
+  "standing": true,
+  "tags": [
+    "outdoor",
+    "dramatic",
+    "golden_hour",
+    "sunset",
+    "artistic"
+  ],
+  "tips": [
+    "Stand with the sun directly behind you",
+    "Keep arms slightly away from body for definition",
+    "Minimal clothing for cleaner silhouette lines"
+  ],
+  "camera_cues": [
+    "underexpose to create pure silhouette",
+    "full-body shot, low angle"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.1,
+      0.0
+    ],
+    "l_shoulder": [
+      0.38,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.62,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.3,
+      0.38,
+      0.0
+    ],
+    "r_elbow": [
+      0.7,
+      0.38,
+      0.0
+    ],
+    "l_wrist": [
+      0.28,
+      0.48,
+      0.0
+    ],
+    "r_wrist": [
+      0.72,
+      0.48,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.45,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.9,
+      0.0
+    ]
+  }
+}

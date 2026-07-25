@@ -1,0 +1,89 @@
+{
+  "id": "yoga_warrior_ii",
+  "name": "Yoga Warrior II",
+  "standing": true,
+  "tags": [
+    "yoga",
+    "fitness",
+    "outdoor",
+    "studio",
+    "daylight"
+  ],
+  "tips": [
+    "Front knee bent at 90 degrees",
+    "Back leg straight and strong",
+    "Arms extended parallel to the floor",
+    "Gaze over the front fingertips"
+  ],
+  "camera_cues": [
+    "full-body from front or side",
+    "show the 90-degree angle in the front knee"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.12,
+      0.0
+    ],
+    "l_shoulder": [
+      0.35,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.65,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.25,
+      0.28,
+      0.0
+    ],
+    "r_elbow": [
+      0.75,
+      0.28,
+      0.0
+    ],
+    "l_wrist": [
+      0.15,
+      0.28,
+      0.0
+    ],
+    "r_wrist": [
+      0.85,
+      0.28,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.35,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.78,
+      0.0
+    ],
+    "l_ankle": [
+      0.3,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.95,
+      0.0
+    ]
+  }
+}

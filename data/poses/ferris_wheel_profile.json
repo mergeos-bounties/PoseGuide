@@ -1,0 +1,88 @@
+{
+  "id": "ferris_wheel_profile",
+  "name": "Ferris Wheel Profile",
+  "standing": true,
+  "tags": [
+    "outdoor",
+    "night",
+    "urban",
+    "romantic",
+    "amusement_park"
+  ],
+  "tips": [
+    "Stand in profile against the lit ferris wheel",
+    "Look up slightly at the wheel",
+    "Hands in pockets or holding a jacket"
+  ],
+  "camera_cues": [
+    "profile view with ferris wheel as backlight",
+    "wide shot to show scale"
+  ],
+  "joints": {
+    "nose": [
+      0.55,
+      0.1,
+      0.0
+    ],
+    "l_shoulder": [
+      0.58,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.7,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.55,
+      0.38,
+      0.0
+    ],
+    "r_elbow": [
+      0.72,
+      0.38,
+      0.0
+    ],
+    "l_wrist": [
+      0.52,
+      0.45,
+      0.0
+    ],
+    "r_wrist": [
+      0.75,
+      0.45,
+      0.0
+    ],
+    "l_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.65,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.55,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.65,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.55,
+      0.9,
+      0.0
+    ],
+    "r_ankle": [
+      0.65,
+      0.9,
+      0.0
+    ]
+  }
+}
