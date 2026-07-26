@@ -321,12 +321,18 @@ def guide_recommend(
 @guide_app.command("score")
 def guide_score(
     pose: str = typer.Option(..., "--pose", "-p"),
-    subject: Path = typer.Option(..., "--subject", "-i", exists=True, dir_okay=False),
+    subject: Path = typer.Option(..., "--subject", "-i", exists=True, dir_okay=False, help="Path to subject JSON (toy) or image (when using --use-mediapipe)"),
+    use_mediapipe: bool = typer.Option(False, "--use-mediapipe", help="Use MediaPipe to extract pose from image (requires vision extra)"),
 ) -> None:
     """Score a subject photo against a reference pose."""
     try:
-        result = score_subject_against_pose(pose, subject)
+        from poseguide.guide.score import score_subject_against_pose
+        result = score_subject_against_pose(pose, subject, use_mediapipe=use_mediapipe)
     except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(code=1) from exc
+    except RuntimeError as exc:
+        # This is raised by score_subject_against_pose when mediapipe is not installed but --use-mediapipe is set
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(code=1) from exc
     console.print_json(data=result)
