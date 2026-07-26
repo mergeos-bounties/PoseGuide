@@ -1,3 +1,5 @@
+"""PoseGuide command-line interface."""
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -22,6 +24,14 @@ from poseguide.render.overlay import (
 from poseguide.render.svg import render_pose_svg
 from poseguide.eval.metrics import evaluate_scenes
 from poseguide.train.toy_train import train_toy
+from poseguide.export.formats import (
+    pose_to_coco,
+    pose_to_mediapipe,
+    coco_to_poseguide,
+    mediapipe_to_poseguide,
+    round_trip_test,
+    export_pose_to_file,
+)
 
 app = typer.Typer(
     help="PoseGuide 鈥?photography pose guidance (scene 鈫?standing pose coach).",
@@ -33,12 +43,14 @@ guide_app = typer.Typer(help="Recommend and score poses")
 train_app = typer.Typer(help="Training")
 eval_app = typer.Typer(help="Evaluation")
 data_app = typer.Typer(help="Data utilities (import/extract)")
+export_app = typer.Typer(help="Export poses to standard formats (COCO, MediaPipe)")
 app.add_typer(poses_app, name="poses")
 app.add_typer(scenes_app, name="scenes")
 app.add_typer(guide_app, name="guide")
 app.add_typer(train_app, name="train")
 app.add_typer(eval_app, name="eval")
 app.add_typer(data_app, name="data")
+app.add_typer(export_app, name="export")
 console = Console()
 POSE_DIFFICULTIES = ("easy", "medium", "hard")
 
@@ -63,6 +75,7 @@ def _matches_pose_filters(pose: dict, *, tag: Optional[str], difficulty: Optiona
 
 @app.command("version")
 def version_cmd() -> None:
+    """Show version and dataset statistics."""
     console.print(f"PoseGuide {__version__}")
     console.print(f"Poses: {len(list_pose_files())} | Scenes: {len(list_scene_files())}")
 
@@ -111,6 +124,7 @@ def poses_list(
         None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard."
     ),
 ) -> None:
+    """List standing poses with optional filtering."""
     tag = tag.strip().lower() if tag and tag.strip() else None
     difficulty = _normalize_difficulty(difficulty)
     poses = [
@@ -163,6 +177,7 @@ def poses_svg(
     pose: str = typer.Option(..., "--pose", "-p"),
     out: Optional[Path] = typer.Option(None, "--out", "-o"),
 ) -> None:
+    """Export pose as SVG stick figure."""
     out_path = out or (OUT_DIR / f"{pose}.svg")
     try:
         path = render_pose_svg(pose, out_path)
@@ -193,8 +208,64 @@ def poses_overlay(
     console.print(f"[green]Wrote[/green] {path}")
 
 
+@poses_app.command("search")
+def poses_search(
+    query: Optional[str] = typer.Argument(
+        None, help="Optional substring over id/name/tags/tips/camera cues"
+    ),
+    tag: Optional[str] = typer.Option(None, "--tag", "-t", help="Filter by an exact tag."),
+    difficulty: Optional[str] = typer.Option(
+        None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard."
+    ),
+    limit: int = typer.Option(15, "--limit", "-n", min=1, max=50),
+) -> None:
+    """Search standing pose catalog by id, name, tags, tips, or camera cues."""
+    q = (query or "").strip().lower()
+    tag = tag.strip().lower() if tag and tag.strip() else None
+    difficulty = _normalize_difficulty(difficulty)
+    if not q and tag is None and difficulty is None:
+        console.print("[red]Provide a query, --tag, or --difficulty[/red]")
+        raise typer.Exit(2)
+    hits = []
+    for path in list_pose_files():
+        pose = load_pose(path)
+        if not _matches_pose_filters(pose, tag=tag, difficulty=difficulty):
+            continue
+        searchable = {
+            "id": [str(pose.get("id") or "")],
+            "name": [str(pose.get("name") or "")],
+            "tags": [str(tag) for tag in (pose.get("tags") or [])],
+            "tips": [str(tip) for tip in (pose.get("tips") or [])],
+            "camera_cues": [str(cue) for cue in (pose.get("camera_cues") or [])],
+        }
+        matched_fields = [
+            field
+            for field, values in searchable.items()
+            if q and any(q in value.lower() for value in values)
+        ]
+        if q and not matched_fields:
+            continue
+        hits.append((pose, matched_fields or ["filters"]))
+        if len(hits) >= limit:
+            break
+    table = Table(title=f"Pose search: {query or 'filters'} ({len(hits)})")
+    table.add_column("ID")
+    table.add_column("Name")
+    table.add_column("Tags")
+    table.add_column("Matched")
+    for pose, matched_fields in hits:
+        table.add_row(
+            str(pose.get("id")),
+            str(pose.get("name")),
+            ", ".join((pose.get("tags") or [])[:6]),
+            ", ".join(matched_fields),
+        )
+    console.print(table)
+
+
 @scenes_app.command("list")
 def scenes_list() -> None:
+    """List background/scene samples."""
     files = list_scene_files()
     if not files:
         console.print("[yellow]No scenes in data/scenes[/yellow]")
@@ -223,6 +294,7 @@ def guide_recommend(
         None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard"
     ),
 ) -> None:
+    """Recommend poses for a scene or tags."""
     if scene is None and not tags:
         console.print("[red]Provide --scene or --tags[/red]")
         raise typer.Exit(code=1)
@@ -249,11 +321,18 @@ def guide_recommend(
 @guide_app.command("score")
 def guide_score(
     pose: str = typer.Option(..., "--pose", "-p"),
-    subject: Path = typer.Option(..., "--subject", "-i", exists=True, dir_okay=False),
+    subject: Path = typer.Option(..., "--subject", "-i", exists=True, dir_okay=False, help="Path to subject JSON (toy) or image (when using --use-mediapipe)"),
+    use_mediapipe: bool = typer.Option(False, "--use-mediapipe", help="Use MediaPipe to extract pose from image (requires vision extra)"),
 ) -> None:
+    """Score a subject photo against a reference pose."""
     try:
-        result = score_subject_against_pose(pose, subject)
+        from poseguide.guide.score import score_subject_against_pose
+        result = score_subject_against_pose(pose, subject, use_mediapipe=use_mediapipe)
     except KeyError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(code=1) from exc
+    except RuntimeError as exc:
+        # This is raised by score_subject_against_pose when mediapipe is not installed but --use-mediapipe is set
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(code=1) from exc
     console.print_json(data=result)
@@ -288,10 +367,12 @@ def guide_coach(
 
 @guide_app.command("demo")
 def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
+    """End-to-end demo: preset scene tags 鈫?pose recommendations + SVG stick figure."""
     try:
         result = run_demo(preset)
     except KeyError as exc:
         console.print(f"[red]{exc}[/red]")
+        console.print(f"Presets: {', '.join(PRESETS)}")
         raise typer.Exit(1) from exc
     console.print_json(data=result)
 
@@ -300,9 +381,7 @@ def guide_demo(preset: str = typer.Option("beach", "--preset", "-p")) -> None:
 def eval_scenes(
     top: int = typer.Option(3, "--top", "-k", min=1, max=20),
     table: bool = typer.Option(True, "--table/--json", help="Rich per-scene table vs raw JSON"),
-    markdown: Optional[Path] = typer.Option(
-        None, "--md", "--markdown", help="Export results as Markdown file"
-    ),
+    markdown: Optional[Path] = typer.Option(None, "--md", "--markdown", help="Export results as Markdown file"),
 ) -> None:
     """Evaluate hit@k / precision / recall over labeled scenes."""
     import json
@@ -365,63 +444,9 @@ def _build_markdown_report(report: dict, top: int) -> str:
     return "\n".join(lines) + "\n"
 
 
-@poses_app.command("search")
-def poses_search(
-    query: Optional[str] = typer.Argument(
-        None, help="Optional substring over id/name/tags/tips/camera cues"
-    ),
-    tag: Optional[str] = typer.Option(None, "--tag", "-t", help="Filter by an exact tag."),
-    difficulty: Optional[str] = typer.Option(
-        None, "--difficulty", "-d", help="Filter by difficulty: easy, medium, hard."
-    ),
-    limit: int = typer.Option(15, "--limit", "-n", min=1, max=50),
-) -> None:
-    """Search standing pose catalog by id, name, tags, tips, or camera cues."""
-    q = (query or "").strip().lower()
-    tag = tag.strip().lower() if tag and tag.strip() else None
-    difficulty = _normalize_difficulty(difficulty)
-    if not q and tag is None and difficulty is None:
-        console.print("[red]Provide a query, --tag, or --difficulty[/red]")
-        raise typer.Exit(2)
-    hits = []
-    for path in list_pose_files():
-        pose = load_pose(path)
-        if not _matches_pose_filters(pose, tag=tag, difficulty=difficulty):
-            continue
-        searchable = {
-            "id": [str(pose.get("id") or "")],
-            "name": [str(pose.get("name") or "")],
-            "tags": [str(tag) for tag in (pose.get("tags") or [])],
-            "tips": [str(tip) for tip in (pose.get("tips") or [])],
-            "camera_cues": [str(cue) for cue in (pose.get("camera_cues") or [])],
-        }
-        matched_fields = [
-            field
-            for field, values in searchable.items()
-            if q and any(q in value.lower() for value in values)
-        ]
-        if q and not matched_fields:
-            continue
-        hits.append((pose, matched_fields or ["filters"]))
-        if len(hits) >= limit:
-            break
-    table = Table(title=f"Pose search: {query or 'filters'} ({len(hits)})")
-    table.add_column("ID")
-    table.add_column("Name")
-    table.add_column("Tags")
-    table.add_column("Matched")
-    for pose, matched_fields in hits:
-        table.add_row(
-            str(pose.get("id")),
-            str(pose.get("name")),
-            ", ".join((pose.get("tags") or [])[:6]),
-            ", ".join(matched_fields),
-        )
-    console.print(table)
-
-
 @train_app.command("toy")
 def train_toy_cmd(epochs: int = typer.Option(3, "--epochs", "-e", min=1, max=50)) -> None:
+    """Run toy training experiment."""
     report = train_toy(epochs=epochs)
     last = report["history"][-1]["hit_rate_at_3"]
     console.print(f"[green]Training complete[/green] hit@3={last}")
@@ -446,11 +471,75 @@ def data_extract(
 
 @train_app.command("report")
 def train_report() -> None:
+    """Show toy training report."""
     path = Path("data/runs/toy_train_report.json")
     if not path.exists():
         console.print("[yellow]No report yet. Run: poseguide train toy[/yellow]")
         raise typer.Exit(code=1)
     console.print(path.read_text(encoding="utf-8"))
+
+
+# Export commands
+@export_app.command("coco")
+def export_coco(
+    pose_id: str = typer.Argument(..., help="Pose ID to export"),
+    output: Optional[Path] = typer.Option(None, "--output", "-o", help="Output file path"),
+) -> None:
+    """Export a pose to COCO keypoint format."""
+    out_path = output or (OUT_DIR / f"{pose_id}_coco.json")
+    success = export_pose_to_file(pose_id, "coco", out_path)
+    if success:
+        console.print(f"[green]Exported {pose_id} to COCO format[/green] {out_path}")
+        # Show the exported data
+        import json
+        data = json.loads(out_path.read_text())
+        console.print_json(data=data)
+    else:
+        console.print(f"[red]Failed to export {pose_id} to COCO format[/red]")
+        raise typer.Exit(1)
+
+
+@export_app.command("mediapipe")
+def export_mediapipe(
+    pose_id: str = typer.Argument(..., help="Pose ID to export"),
+    output: Optional[Path] = typer.Option(None, "--output", "-o", help="Output file path"),
+) -> None:
+    """Export a pose to MediaPipe pose landmark format."""
+    out_path = output or (OUT_DIR / f"{pose_id}_mediapipe.json")
+    success = export_pose_to_file(pose_id, "mediapipe", out_path)
+    if success:
+        console.print(f"[green]Exported {pose_id} to MediaPipe format[/green] {out_path}")
+        # Show the exported data
+        import json
+        data = json.loads(out_path.read_text())
+        console.print_json(data=data)
+    else:
+        console.print(f"[red]Failed to export {pose_id} to MediaPipe format[/red]")
+        raise typer.Exit(1)
+
+
+@export_app.command("roundtrip")
+def export_roundtrip(
+    pose_id: str = typer.Argument(..., help="Pose ID to test round-trip conversion"),
+) -> None:
+    """Test round-trip conversion: PoseGuide -> COCO/MediaPipe -> PoseGuide."""
+    console.print(f"Testing round-trip conversion for pose: {pose_id}")
+    coco_success, mp_success = round_trip_test(pose_id)
+    
+    if coco_success:
+        console.print(f"[green]COCO round-trip: SUCCESS[/green]")
+    else:
+        console.print(f"[red]COCO round-trip: FAILED[/red]")
+    
+    if mp_success:
+        console.print(f"[green]MediaPipe round-trip: SUCCESS[/green]")
+    else:
+        console.print(f"[red]MediaPipe round-trip: FAILED[/red]")
+    
+    if coco_success and mp_success:
+        console.print("[green]All round-trip tests passed![/green]")
+    else:
+        raise typer.Exit(1)
 
 
 if __name__ == "__main__":
