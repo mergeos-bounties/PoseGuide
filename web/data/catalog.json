@@ -1396,6 +1396,93 @@
     },
     {
       "camera_cues": [
+        "full-body 3/4 angle showing standing desk setup and overhead stretch"
+      ],
+      "id": "desk_standup_stretch",
+      "joints": {
+        "l_ankle": [
+          0.43,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.35,
+          0.18,
+          0.0
+        ],
+        "l_hip": [
+          0.43,
+          0.52,
+          0.0
+        ],
+        "l_knee": [
+          0.43,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.38,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.48,
+          0.08,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.15,
+          0.0
+        ],
+        "r_ankle": [
+          0.57,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.65,
+          0.18,
+          0.0
+        ],
+        "r_hip": [
+          0.57,
+          0.52,
+          0.0
+        ],
+        "r_knee": [
+          0.57,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.62,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.52,
+          0.08,
+          0.0
+        ]
+      },
+      "name": "Desk Standup Stretch (office ergonomics)",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "work",
+        "standing",
+        "stretch",
+        "office",
+        "ergonomics"
+      ],
+      "tips": [
+        "stand with feet shoulder-width apart at a standing desk",
+        "interlace fingers overhead and stretch upwards to relieve spine pressure"
+      ]
+    },
+    {
+      "camera_cues": [
         "head-and-shoulders",
         "soft key light",
         "shallow dof"
@@ -5931,6 +6018,93 @@
     },
     {
       "camera_cues": [
+        "studio portrait key light at 45 degrees; eye-level framing showing upper body and hip pose"
+      ],
+      "id": "studio_hand_on_hip_power",
+      "joints": {
+        "l_ankle": [
+          0.43,
+          0.94,
+          0.0
+        ],
+        "l_elbow": [
+          0.28,
+          0.42,
+          0.0
+        ],
+        "l_hip": [
+          0.42,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.43,
+          0.74,
+          0.0
+        ],
+        "l_shoulder": [
+          0.36,
+          0.28,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.54,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.16,
+          0.0
+        ],
+        "r_ankle": [
+          0.57,
+          0.94,
+          0.0
+        ],
+        "r_elbow": [
+          0.72,
+          0.42,
+          0.0
+        ],
+        "r_hip": [
+          0.58,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.57,
+          0.74,
+          0.0
+        ],
+        "r_shoulder": [
+          0.64,
+          0.28,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.54,
+          0.0
+        ]
+      },
+      "name": "Studio Hand on Hip Power (portrait)",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "studio",
+        "portrait",
+        "standing",
+        "power",
+        "confident"
+      ],
+      "tips": [
+        "stand confident with one hand resting firmly on hip",
+        "keep chest open and shoulders square to the camera for a powerful studio portrait stance"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body 3/4; low street angle optional"
       ],
       "id": "umbrella_walk",
@@ -7169,6 +7343,7 @@
     "editorial",
     "emotional",
     "energy",
+    "ergonomics",
     "evening",
     "event",
     "fashion",
@@ -7236,6 +7411,7 @@
     "stairs",
     "standing",
     "street",
+    "stretch",
     "studio",
     "study",
     "thoughtful",

@@ -1,0 +1,87 @@
+{
+  "id": "desk_standup_stretch",
+  "name": "Desk Standup Stretch (office ergonomics)",
+  "standing": true,
+  "tags": [
+    "indoor",
+    "work",
+    "standing",
+    "stretch",
+    "office",
+    "ergonomics"
+  ],
+  "tips": [
+    "Stand with feet shoulder-width apart at a standing desk",
+    "Interlace fingers overhead and stretch upwards to relieve spine pressure"
+  ],
+  "camera_cues": [
+    "Full-body 3/4 angle showing standing desk setup and overhead stretch"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.15,
+      0.0
+    ],
+    "l_shoulder": [
+      0.38,
+      0.28,
+      0.0
+    ],
+    "r_shoulder": [
+      0.62,
+      0.28,
+      0.0
+    ],
+    "l_elbow": [
+      0.35,
+      0.18,
+      0.0
+    ],
+    "r_elbow": [
+      0.65,
+      0.18,
+      0.0
+    ],
+    "l_wrist": [
+      0.48,
+      0.08,
+      0.0
+    ],
+    "r_wrist": [
+      0.52,
+      0.08,
+      0.0
+    ],
+    "l_hip": [
+      0.43,
+      0.52,
+      0.0
+    ],
+    "r_hip": [
+      0.57,
+      0.52,
+      0.0
+    ],
+    "l_knee": [
+      0.43,
+      0.72,
+      0.0
+    ],
+    "r_knee": [
+      0.57,
+      0.72,
+      0.0
+    ],
+    "l_ankle": [
+      0.43,
+      0.92,
+      0.0
+    ],
+    "r_ankle": [
+      0.57,
+      0.92,
+      0.0
+    ]
+  }
+}
