@@ -1,4 +1,8 @@
 import pytest
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.poseguide.preview import calculate_pose_placement
 
 def test_pose_placement_valid():
