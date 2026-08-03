@@ -1396,6 +1396,98 @@
     },
     {
       "camera_cues": [
+        "full body or three-quarter; eye level for ergonomics content",
+        "side or slight three-quarter to show arm reach and posture line",
+        "clean office backdrop; leave negative space above the hands"
+      ],
+      "id": "desk_standup_stretch",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.92,
+          0.0
+        ],
+        "l_elbow": [
+          0.34,
+          0.18,
+          0.04
+        ],
+        "l_hip": [
+          0.44,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.44,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.42,
+          0.08,
+          0.06
+        ],
+        "nose": [
+          0.5,
+          0.16,
+          0.0
+        ],
+        "r_ankle": [
+          0.56,
+          0.92,
+          0.0
+        ],
+        "r_elbow": [
+          0.66,
+          0.18,
+          0.04
+        ],
+        "r_hip": [
+          0.56,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.56,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.58,
+          0.08,
+          0.06
+        ]
+      },
+      "name": "Desk Standup Stretch",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "office",
+        "ergonomics",
+        "stretch",
+        "standing",
+        "wellness",
+        "full_body"
+      ],
+      "tips": [
+        "stand clear of the chair; feet hip-width and soft knees",
+        "interlace fingers and reach overhead; lengthen through both sides of the ribs",
+        "open the chest slightly without overarching the lower back",
+        "hold 5\u201310 seconds, then release arms and roll the shoulders back"
+      ]
+    },
+    {
+      "camera_cues": [
         "head-and-shoulders",
         "soft key light",
         "shallow dof"
@@ -7169,6 +7261,7 @@
     "editorial",
     "emotional",
     "energy",
+    "ergonomics",
     "evening",
     "event",
     "fashion",
@@ -7236,6 +7329,7 @@
     "stairs",
     "standing",
     "street",
+    "stretch",
     "studio",
     "study",
     "thoughtful",
@@ -7249,6 +7343,7 @@
     "warm",
     "warm-light",
     "water",
+    "wellness",
     "wide",
     "window",
     "work",
