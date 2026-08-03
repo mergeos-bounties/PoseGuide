@@ -1396,6 +1396,94 @@
     },
     {
       "camera_cues": [
+        "full-body or three-quarter; eye-level; leave headroom for raised arms"
+      ],
+      "id": "desk_standup_stretch",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.36,
+          0.14,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.54,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.72,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.26,
+          0.0
+        ],
+        "l_wrist": [
+          0.38,
+          0.04,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.1,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.64,
+          0.14,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.54,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.72,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.26,
+          0.0
+        ],
+        "r_wrist": [
+          0.62,
+          0.04,
+          0.0
+        ]
+      },
+      "name": "Desk Standup Stretch",
+      "standing": true,
+      "tags": [
+        "office",
+        "ergonomics",
+        "indoor",
+        "stretch",
+        "daylight",
+        "portrait"
+      ],
+      "tips": [
+        "stand tall away from the chair; soft bend in knees",
+        "reach both arms overhead and lengthen through the ribs",
+        "keep shoulders away from ears; gaze slightly upward"
+      ]
+    },
+    {
+      "camera_cues": [
         "head-and-shoulders",
         "soft key light",
         "shallow dof"
@@ -7169,6 +7257,7 @@
     "editorial",
     "emotional",
     "energy",
+    "ergonomics",
     "evening",
     "event",
     "fashion",
@@ -7236,6 +7325,7 @@
     "stairs",
     "standing",
     "street",
+    "stretch",
     "studio",
     "study",
     "thoughtful",
