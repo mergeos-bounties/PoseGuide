@@ -1,0 +1,94 @@
+{
+  "id": "beach_walk_side_profile",
+  "name": "Beach Walk Side Profile",
+  "standing": true,
+  "difficulty": "medium",
+  "tags": [
+    "beach",
+    "outdoor",
+    "lifestyle",
+    "profile",
+    "walking",
+    "motion",
+    "golden_hour",
+    "full_body"
+  ],
+  "tips": [
+    "Walk parallel to the shoreline; catch a natural mid-stride",
+    "Chin level; gaze toward the horizon, not the lens",
+    "Let arms swing opposite the stepping foot; keep shoulders soft",
+    "Barefoot or sandals low in frame so the sand line reads cleanly"
+  ],
+  "camera_cues": [
+    "true side profile; full body preferred with shoreline leading lines",
+    "eye level or slight low angle; leave negative space ahead of the stride",
+    "golden hour backlight or 45° rim; 1/250s+ shutter to freeze the step"
+  ],
+  "joints": {
+    "nose": [
+      0.62,
+      0.14,
+      0.05
+    ],
+    "l_shoulder": [
+      0.48,
+      0.28,
+      -0.02
+    ],
+    "r_shoulder": [
+      0.58,
+      0.28,
+      0.04
+    ],
+    "l_elbow": [
+      0.42,
+      0.42,
+      -0.04
+    ],
+    "r_elbow": [
+      0.66,
+      0.4,
+      0.06
+    ],
+    "l_wrist": [
+      0.38,
+      0.52,
+      -0.05
+    ],
+    "r_wrist": [
+      0.7,
+      0.5,
+      0.07
+    ],
+    "l_hip": [
+      0.48,
+      0.55,
+      -0.02
+    ],
+    "r_hip": [
+      0.56,
+      0.55,
+      0.03
+    ],
+    "l_knee": [
+      0.44,
+      0.74,
+      -0.03
+    ],
+    "r_knee": [
+      0.62,
+      0.7,
+      0.04
+    ],
+    "l_ankle": [
+      0.42,
+      0.92,
+      -0.03
+    ],
+    "r_ankle": [
+      0.66,
+      0.88,
+      0.05
+    ]
+  }
+}
