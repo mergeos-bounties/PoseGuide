@@ -1,0 +1,36 @@
+{
+  "id": "beach_walk_side_profile",
+  "name": "Beach Walk Side Profile",
+  "standing": true,
+  "tags": [
+    "beach",
+    "outdoor",
+    "lifestyle",
+    "profile",
+    "walking",
+    "golden-hour"
+  ],
+  "tips": [
+    "Walk parallel to the shoreline with a relaxed stride",
+    "Keep chin level; look toward the horizon, not the lens",
+    "Slight arm swing opposite to the stepping foot"
+  ],
+  "camera_cues": [
+    "side profile, waist-up or full-body; sun behind or 45° rim light"
+  ],
+  "joints": {
+    "nose": [0.62, 0.14, 0.05],
+    "l_shoulder": [0.48, 0.28, -0.02],
+    "r_shoulder": [0.58, 0.28, 0.04],
+    "l_elbow": [0.42, 0.42, -0.04],
+    "r_elbow": [0.66, 0.4, 0.06],
+    "l_wrist": [0.38, 0.52, -0.05],
+    "r_wrist": [0.7, 0.5, 0.07],
+    "l_hip": [0.48, 0.55, -0.02],
+    "r_hip": [0.56, 0.55, 0.03],
+    "l_knee": [0.46, 0.72, -0.03],
+    "r_knee": [0.6, 0.7, 0.04],
+    "l_ankle": [0.44, 0.9, -0.03],
+    "r_ankle": [0.64, 0.88, 0.05]
+  }
+}

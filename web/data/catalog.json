@@ -441,6 +441,94 @@
     },
     {
       "camera_cues": [
+        "side profile, waist-up or full-body; sun behind or 45\u00b0 rim light"
+      ],
+      "id": "beach_walk_side_profile",
+      "joints": {
+        "l_ankle": [
+          0.44,
+          0.9,
+          -0.03
+        ],
+        "l_elbow": [
+          0.42,
+          0.42,
+          -0.04
+        ],
+        "l_hip": [
+          0.48,
+          0.55,
+          -0.02
+        ],
+        "l_knee": [
+          0.46,
+          0.72,
+          -0.03
+        ],
+        "l_shoulder": [
+          0.48,
+          0.28,
+          -0.02
+        ],
+        "l_wrist": [
+          0.38,
+          0.52,
+          -0.05
+        ],
+        "nose": [
+          0.62,
+          0.14,
+          0.05
+        ],
+        "r_ankle": [
+          0.64,
+          0.88,
+          0.05
+        ],
+        "r_elbow": [
+          0.66,
+          0.4,
+          0.06
+        ],
+        "r_hip": [
+          0.56,
+          0.55,
+          0.03
+        ],
+        "r_knee": [
+          0.6,
+          0.7,
+          0.04
+        ],
+        "r_shoulder": [
+          0.58,
+          0.28,
+          0.04
+        ],
+        "r_wrist": [
+          0.7,
+          0.5,
+          0.07
+        ]
+      },
+      "name": "Beach Walk Side Profile",
+      "standing": true,
+      "tags": [
+        "beach",
+        "outdoor",
+        "lifestyle",
+        "profile",
+        "walking",
+        "golden-hour"
+      ],
+      "tips": [
+        "walk parallel to the shoreline with a relaxed stride",
+        "keep chin level; look toward the horizon, not the lens",
+        "slight arm swing opposite to the stepping foot"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body 3/4; street background bokeh optional"
       ],
       "id": "bike_lean",
@@ -7245,6 +7333,7 @@
     "travel",
     "urban",
     "waist-up",
+    "walking",
     "wall",
     "warm",
     "warm-light",
