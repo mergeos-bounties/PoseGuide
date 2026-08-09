@@ -1,0 +1,33 @@
+{
+  "id": "yoga_warrior_ii_side",
+  "name": "Yoga Warrior II (Side View)",
+  "standing": true,
+  "difficulty": "medium",
+  "tags": ["yoga", "fitness", "balance", "standing", "side-view"],
+  "description": "Yoga Warrior II pose captured from a side profile to emphasize alignment and balance.",
+  "tips": [
+    "Keep the front knee bent at 90 degrees, aligned over the ankle.",
+    "Extend arms parallel to the floor, stretching in opposite directions.",
+    "Maintain a straight spine and gaze over the front hand.",
+    "Distribute weight evenly between both feet for stability."
+  ],
+  "camera_cues": [
+    "Shoot from a true side profile to capture the L-shape of the front leg.",
+    "Ensure the background is clean to highlight the silhouette of the pose."
+  ],
+  "joints": {
+    "nose": [0.5, 0.15],
+    "l_shoulder": [0.5, 0.25],
+    "r_shoulder": [0.5, 0.25],
+    "l_elbow": [0.6, 0.25],
+    "r_elbow": [0.4, 0.25],
+    "l_wrist": [0.7, 0.25],
+    "r_wrist": [0.3, 0.25],
+    "l_hip": [0.5, 0.5],
+    "r_hip": [0.5, 0.5],
+    "l_knee": [0.6, 0.65],
+    "r_knee": [0.4, 0.65],
+    "l_ankle": [0.6, 0.9],
+    "r_ankle": [0.3, 0.9]
+  }
+}
