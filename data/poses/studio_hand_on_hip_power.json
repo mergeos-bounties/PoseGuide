@@ -1,0 +1,90 @@
+{
+  "name": "Studio Hand on Hip Power",
+  "standing": true,
+  "tags": [
+    "indoor",
+    "studio",
+    "portrait",
+    "power",
+    "confident",
+    "fashion"
+  ],
+  "tips": [
+    "Place one hand firmly on hip",
+    "Weight slightly shifted to one leg",
+    "Strong eye contact with camera"
+  ],
+  "camera_cues": [
+    "eye level",
+    "studio lighting",
+    "shallow depth of field"
+  ],
+  "joints": {
+    "nose": [
+      0.5,
+      0.15,
+      0.0
+    ],
+    "l_shoulder": [
+      0.4,
+      0.3,
+      0.0
+    ],
+    "r_shoulder": [
+      0.6,
+      0.3,
+      0.0
+    ],
+    "l_elbow": [
+      0.3,
+      0.4,
+      0.0
+    ],
+    "r_elbow": [
+      0.65,
+      0.45,
+      0.0
+    ],
+    "l_wrist": [
+      0.4,
+      0.55,
+      0.0
+    ],
+    "r_wrist": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_hip": [
+      0.45,
+      0.55,
+      0.0
+    ],
+    "r_hip": [
+      0.55,
+      0.55,
+      0.0
+    ],
+    "l_knee": [
+      0.45,
+      0.75,
+      0.0
+    ],
+    "r_knee": [
+      0.55,
+      0.75,
+      0.0
+    ],
+    "l_ankle": [
+      0.45,
+      0.95,
+      0.0
+    ],
+    "r_ankle": [
+      0.55,
+      0.95,
+      0.0
+    ]
+  },
+  "id": "studio_hand_on_hip_power"
+}

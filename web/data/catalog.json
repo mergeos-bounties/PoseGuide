@@ -441,6 +441,96 @@
     },
     {
       "camera_cues": [
+        "side angle",
+        "golden hour",
+        "blur background slightly"
+      ],
+      "id": "beach_walk_side_profile",
+      "joints": {
+        "l_ankle": [
+          0.35,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.4,
+          0.45,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.6,
+          0.0
+        ],
+        "l_knee": [
+          0.4,
+          0.75,
+          0.0
+        ],
+        "l_shoulder": [
+          0.45,
+          0.35,
+          0.0
+        ],
+        "l_wrist": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.2,
+          0.0
+        ],
+        "r_ankle": [
+          0.65,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.6,
+          0.45,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.6,
+          0.0
+        ],
+        "r_knee": [
+          0.6,
+          0.75,
+          0.0
+        ],
+        "r_shoulder": [
+          0.55,
+          0.35,
+          0.0
+        ],
+        "r_wrist": [
+          0.55,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Beach Walk Side Profile",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "beach",
+        "walking",
+        "casual",
+        "side profile",
+        "motion"
+      ],
+      "tips": [
+        "keep chin parallel to the ground",
+        "let arms swing naturally",
+        "capture mid-stride for dynamic feel"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body 3/4; street background bokeh optional"
       ],
       "id": "bike_lean",
@@ -1048,6 +1138,95 @@
     },
     {
       "camera_cues": [
+        "front angle",
+        "soft lighting",
+        "bokeh"
+      ],
+      "id": "couple_walk_holding_hands",
+      "joints": {
+        "l_ankle": [
+          0.25,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.25,
+          0.45,
+          0.0
+        ],
+        "l_hip": [
+          0.35,
+          0.6,
+          0.0
+        ],
+        "l_knee": [
+          0.3,
+          0.75,
+          0.0
+        ],
+        "l_shoulder": [
+          0.3,
+          0.35,
+          0.0
+        ],
+        "l_wrist": [
+          0.3,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.4,
+          0.2,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.55,
+          0.45,
+          0.0
+        ],
+        "r_hip": [
+          0.45,
+          0.6,
+          0.0
+        ],
+        "r_knee": [
+          0.5,
+          0.75,
+          0.0
+        ],
+        "r_shoulder": [
+          0.5,
+          0.35,
+          0.0
+        ],
+        "r_wrist": [
+          0.5,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Couple Walk Holding Hands",
+      "standing": true,
+      "tags": [
+        "outdoor",
+        "couple",
+        "walking",
+        "romantic",
+        "holding hands"
+      ],
+      "tips": [
+        "hold hands naturally",
+        "walk in sync",
+        "look at each other occasionally"
+      ]
+    },
+    {
+      "camera_cues": [
         "waist-up; even studio light"
       ],
       "id": "cross_arms_stand",
@@ -1392,6 +1571,96 @@
       "tips": [
         "drop into a low crouch; one knee lower; hands near shoe laces",
         "keep spine long; eyes up toward camera or down at the shoe"
+      ]
+    },
+    {
+      "camera_cues": [
+        "front angle",
+        "office environment",
+        "bright lighting"
+      ],
+      "id": "desk_standup_stretch",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.35,
+          0.15,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.5,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.7,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.25,
+          0.0
+        ],
+        "l_wrist": [
+          0.4,
+          0.05,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.1,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.65,
+          0.15,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.5,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.7,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.25,
+          0.0
+        ],
+        "r_wrist": [
+          0.6,
+          0.05,
+          0.0
+        ]
+      },
+      "name": "Desk Standup Stretch",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "office",
+        "ergonomics",
+        "stretching",
+        "wellness",
+        "break"
+      ],
+      "tips": [
+        "reach arms high above head",
+        "elongate spine",
+        "keep feet shoulder-width apart"
       ]
     },
     {
@@ -5931,6 +6200,96 @@
     },
     {
       "camera_cues": [
+        "eye level",
+        "studio lighting",
+        "shallow depth of field"
+      ],
+      "id": "studio_hand_on_hip_power",
+      "joints": {
+        "l_ankle": [
+          0.45,
+          0.95,
+          0.0
+        ],
+        "l_elbow": [
+          0.3,
+          0.4,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.45,
+          0.75,
+          0.0
+        ],
+        "l_shoulder": [
+          0.4,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.4,
+          0.55,
+          0.0
+        ],
+        "nose": [
+          0.5,
+          0.15,
+          0.0
+        ],
+        "r_ankle": [
+          0.55,
+          0.95,
+          0.0
+        ],
+        "r_elbow": [
+          0.65,
+          0.45,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.55,
+          0.75,
+          0.0
+        ],
+        "r_shoulder": [
+          0.6,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.55,
+          0.55,
+          0.0
+        ]
+      },
+      "name": "Studio Hand on Hip Power",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "studio",
+        "portrait",
+        "power",
+        "confident",
+        "fashion"
+      ],
+      "tips": [
+        "place one hand firmly on hip",
+        "weight slightly shifted to one leg",
+        "strong eye contact with camera"
+      ]
+    },
+    {
+      "camera_cues": [
         "full body 3/4; low street angle optional"
       ],
       "id": "umbrella_walk",
@@ -6626,6 +6985,96 @@
         "knee opens to side without twisting hips",
         "hands at heart or overhead with soft shoulders"
       ]
+    },
+    {
+      "camera_cues": [
+        "side angle",
+        "full body",
+        "bright lighting"
+      ],
+      "id": "yoga_warrior_ii_side",
+      "joints": {
+        "l_ankle": [
+          0.2,
+          0.9,
+          0.0
+        ],
+        "l_elbow": [
+          0.25,
+          0.3,
+          0.0
+        ],
+        "l_hip": [
+          0.45,
+          0.55,
+          0.0
+        ],
+        "l_knee": [
+          0.2,
+          0.7,
+          0.0
+        ],
+        "l_shoulder": [
+          0.45,
+          0.3,
+          0.0
+        ],
+        "l_wrist": [
+          0.1,
+          0.3,
+          0.0
+        ],
+        "nose": [
+          0.3,
+          0.2,
+          0.0
+        ],
+        "r_ankle": [
+          0.8,
+          0.9,
+          0.0
+        ],
+        "r_elbow": [
+          0.75,
+          0.3,
+          0.0
+        ],
+        "r_hip": [
+          0.55,
+          0.55,
+          0.0
+        ],
+        "r_knee": [
+          0.8,
+          0.7,
+          0.0
+        ],
+        "r_shoulder": [
+          0.55,
+          0.3,
+          0.0
+        ],
+        "r_wrist": [
+          0.9,
+          0.3,
+          0.0
+        ]
+      },
+      "name": "Yoga Warrior II Side",
+      "standing": true,
+      "tags": [
+        "indoor",
+        "yoga",
+        "fitness",
+        "strength",
+        "balance",
+        "side profile"
+      ],
+      "tips": [
+        "front knee bent at 90 degrees",
+        "arms parallel to the floor",
+        "gaze over front fingers"
+      ]
     }
   ],
   "scenes": [
@@ -7138,6 +7587,7 @@
     "beach",
     "blue",
     "books",
+    "break",
     "business",
     "cafe",
     "calm",
@@ -7155,6 +7605,7 @@
     "communication",
     "confident",
     "cool_light",
+    "couple",
     "cozy",
     "crouch",
     "crowd",
@@ -7169,6 +7620,7 @@
     "editorial",
     "emotional",
     "energy",
+    "ergonomics",
     "evening",
     "event",
     "fashion",
@@ -7189,6 +7641,7 @@
     "grounded",
     "half body",
     "headshot",
+    "holding hands",
     "home",
     "indoor",
     "intimate",
@@ -7226,6 +7679,7 @@
     "running",
     "seated",
     "selfie",
+    "side profile",
     "silhouette",
     "soft",
     "soft light",
@@ -7236,6 +7690,8 @@
     "stairs",
     "standing",
     "street",
+    "strength",
+    "stretching",
     "studio",
     "study",
     "thoughtful",
@@ -7245,10 +7701,12 @@
     "travel",
     "urban",
     "waist-up",
+    "walking",
     "wall",
     "warm",
     "warm-light",
     "water",
+    "wellness",
     "wide",
     "window",
     "work",
