@@ -79,5 +79,81 @@ pose_packs["desk_stretch"] = {
     ],
 }
 
+
+pose_packs["beach_swimwear"] = {
+    "name": "Beach Swimwear",
+    "description": "A pose for beach and swimwear photography",
+    "poses": [
+        {
+            "name": "Beach Pose",
+            "description": "Stand casually with one hand on hip, looking at the ocean",
+            "joints": [
+                {"name": "Left Foot", "x": 0, "y": 0},
+                {"name": "Right Foot", "x": 0, "y": 0},
+                {"name": "Left Knee", "x": 0, "y": 0},
+                {"name": "Right Knee", "x": 0, "y": 0},
+                {"name": "Left Hip", "x": 0, "y": 0},
+                {"name": "Right Hip", "x": 0, "y": 0},
+                {"name": "Left Shoulder", "x": 0, "y": 0},
+                {"name": "Right Shoulder", "x": 0, "y": 0},
+                {"name": "Left Elbow", "x": 0, "y": 0},
+                {"name": "Right Elbow", "x": 0, "y": 0},
+                {"name": "Left Wrist", "x": 0, "y": 0},
+                {"name": "Right Wrist", "x": 0, "y": 0},
+            ],
+        },
+    ],
+}
+
+pose_packs["studio_fashion"] = {
+    "name": "Studio Fashion",
+    "description": "A pose for high fashion studio photography",
+    "poses": [
+        {
+            "name": "Fashion Pose",
+            "description": "Stand straight with fierce expression, hands resting lightly",
+            "joints": [
+                {"name": "Left Foot", "x": 0, "y": 0},
+                {"name": "Right Foot", "x": 0, "y": 0},
+                {"name": "Left Knee", "x": 0, "y": 0},
+                {"name": "Right Knee", "x": 0, "y": 0},
+                {"name": "Left Hip", "x": 0, "y": 0},
+                {"name": "Right Hip", "x": 0, "y": 0},
+                {"name": "Left Shoulder", "x": 0, "y": 0},
+                {"name": "Right Shoulder", "x": 0, "y": 0},
+                {"name": "Left Elbow", "x": 0, "y": 0},
+                {"name": "Right Elbow", "x": 0, "y": 0},
+                {"name": "Left Wrist", "x": 0, "y": 0},
+                {"name": "Right Wrist", "x": 0, "y": 0},
+            ],
+        },
+    ],
+}
+
+pose_packs["standing_poses"] = {
+    "name": "Standing Poses",
+    "description": "A collection of standing poses",
+    "poses": [
+        {
+            "name": "Standing Casual",
+            "description": "A casual standing pose",
+            "joints": [
+                {"name": "Left Foot", "x": 0, "y": 0},
+                {"name": "Right Foot", "x": 0, "y": 0},
+                {"name": "Left Knee", "x": 0, "y": 0},
+                {"name": "Right Knee", "x": 0, "y": 0},
+                {"name": "Left Hip", "x": 0, "y": 0},
+                {"name": "Right Hip", "x": 0, "y": 0},
+                {"name": "Left Shoulder", "x": 0, "y": 0},
+                {"name": "Right Shoulder", "x": 0, "y": 0},
+                {"name": "Left Elbow", "x": 0, "y": 0},
+                {"name": "Right Elbow", "x": 0, "y": 0},
+                {"name": "Left Wrist", "x": 0, "y": 0},
+                {"name": "Right Wrist", "x": 0, "y": 0},
+            ],
+        },
+    ],
+}
+
 # Export the pose packs
 pose_packs
