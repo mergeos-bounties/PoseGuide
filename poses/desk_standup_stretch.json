@@ -1,0 +1,30 @@
+{
+  "id": "desk_standup_stretch",
+  "name": "Desk Standup Stretch",
+  "category": "office",
+  "description": "Ergonomic stretch for office workers",
+  "difficulty": "easy",
+  "joints": {
+    "nose": [0.5, 0.15],
+    "left_shoulder": [0.4, 0.3],
+    "right_shoulder": [0.6, 0.3],
+    "left_elbow": [0.35, 0.45],
+    "right_elbow": [0.65, 0.45],
+    "left_wrist": [0.3, 0.6],
+    "right_wrist": [0.7, 0.35],
+    "left_hip": [0.42, 0.6],
+    "right_hip": [0.58, 0.6],
+    "left_knee": [0.42, 0.8],
+    "right_knee": [0.58, 0.8],
+    "left_ankle": [0.42, 0.95],
+    "right_ankle": [0.58, 0.95]
+  },
+  "tips": [
+    "Stand up straight, feet shoulder-width",
+    "Raise arms overhead, interlace fingers",
+    "Stretch upwards, look up slightly",
+    "Hold 5-10 seconds, breathe deeply",
+    "Great for posture and back relief"
+  ],
+  "tags": ["office", "ergonomics", "stretch", "wellness"]
+}
