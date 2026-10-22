@@ -81,3 +81,4 @@ pose_packs["desk_stretch"] = {
 
 # Export the pose packs
 pose_packs
+pose_packs["desk_standup_stretch"]={"name":"Desk Standup Stretch","description":"Ergonomic stretch","poses":[{"name":"Desk Stretch","description":"Stand and stretch arms up","joints":[{"name":"Head","x":0,"y":10},{"name":"Left Shoulder","x":-10,"y":20},{"name":"Right Shoulder","x":10,"y":20}]}]}
